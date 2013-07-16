@@ -148,16 +148,17 @@
                           
                           <strong>Panera 2.0 Audit</strong> &raquo; Overview<br>
                           <div class="report_subnav">
+                            <div class="btn-group pull-right">
+                              <button class="glow left"><i class="icon-envelope"></i> Email</button>
+                              <button class="glow right"><i class="icon-download"></i> Export</button>
+                            </div>
                             <div class="btn-group">
                               <button class="glow left active">Overview</button>
                               <button class="glow middle">Weekend vs. Weekday</button>
                               <button class="glow middle">Lunch vs. Dinner</button>
                               <button class="glow right">Employees</button>
                             </div>
-                            <div class="btn-group pull-right">
-                              <button class="glow left"><i class="icon-envelope"></i> Email</button>
-                              <button class="glow right"><i class="icon-download"></i> Export</button>
-                            </div>
+                            
                           </div>
                           <div class="clearfix"></div>
                         </h4>

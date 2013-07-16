@@ -79,13 +79,13 @@ $(function () {
   function setColor(knobvalue){
       knobvalue = parseFloat(knobvalue);
       switch(true){
-      case (knobvalue < 40):
+      case (knobvalue <= 50):
         return 'red';
         break;
-      case (knobvalue > 40 && knobvalue < 70):
+      case (knobvalue > 50 && knobvalue <= 79):
         return 'orange';
         break;
-      case (knobvalue > 70):
+      case (knobvalue > 79):
         return '#36abff';
         break;
       default:

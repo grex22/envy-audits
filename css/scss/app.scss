@@ -568,6 +568,10 @@ th.sortable:after{
   
   border-left: 2px solid $brightblue;
   
+  .btn-group{
+    margin-top:-3px;
+  }
+  
   
   i{
     font-size:14px;
@@ -623,7 +627,7 @@ h5.widget_sub_title{font-weight:500}
 
 .chart{padding:15px 0 45px 0;box-sizing:border-box}
 .flotchartcontainer .tab-pane{height:220px;}
-.flot_fix{padding:10px!important;height:200px;}
+.flot_fix{padding:10px 0!important;height:200px;}
 
 .chart_data_column{
   height: 175px;

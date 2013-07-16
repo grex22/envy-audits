@@ -150,31 +150,41 @@
                           
                           <strong>Panera 2.0 Audit</strong> &raquo; Cashier Metric<br>
                           <div class="report_subnav">
+                            <div class="btn-group pull-right">
+                              <button class="glow left">Email <i class="icon-envelope"></i></button>
+                              <button class="glow right">Export <i class="icon-download-alt"></i></button>
+                            </div>
                             <div class="btn-group">
                               <button class="glow left active">Overview</button>
                               <button class="glow middle">Weekend vs. Weekday</button>
                               <button class="glow middle">Lunch vs. Dinner</button>
                               <button class="glow right">Employees</button>
                             </div>
-                            <div class="btn-group pull-right">
-                              <button class="glow left"><i class="icon-envelope"></i> Email</button>
-                              <button class="glow right"><i class="icon-download"></i> Export</button>
-                            </div>
+                            
                           </div>
                           <div class="clearfix"></div>
                         </h4>
                         <div class="padded">
-                        <h4 class="data_table_header">Report Overview:</h4>
+                        <h4 class="widget_sub_title">Report Overview:</h4>
                         
                         <div class="knobs row-fluid knob_box">
                         
                           <?php for($i=0; $i<4; $i++){ ?>
                           <div class="span3">
-                          <a href="#" class="knob-wrapper <?php if($i == 1) echo "active"; ?>">
+                          <a href="client-report-detail-cashier.php" class="knob-wrapper <?php if($i == 1) echo "active"; ?>">
                             <table>
                               <tr>
                                 <td>
-                                  <input type="text" value="<?php echo rand(60,100); ?>" class="knob" data-thickness=".3" data-inputColor="#333" data-bgColor="#dddddd" data-width="80" data-height="50" data-readOnly="true" data-angleOffset="-100" data-angleArc="200">
+                                  <input type="text" value="<?php 
+                                  
+                                    switch($i){
+                                      case 0: echo "75"; break;
+                                      case 1: echo "49"; break;
+                                      case 2: echo "95"; break;
+                                      case 3: echo "81"; break;
+                                    }
+
+                                  ?>" class="knob" data-thickness=".3" data-inputColor="#333" data-bgColor="#dddddd" data-width="80" data-height="50" data-readOnly="true" data-angleOffset="-100" data-angleArc="200">
                                 </td>
                                 <td class="gauge_score">
                                   <?php
@@ -199,14 +209,16 @@
                                                       
                             <div class="chart">
                               
-                              <div class="tab-content flotchartcontainer">
                                 <div class="tab-pane active" id="overall">
                                   <div class="row-fluid">
-                                    <div class="span12 align-right">
-                                      <div class="btn-group">
+                                    <div class="span12">
+                                      
+                                      <h4 class="widget_sub_title">
+                                        <div class="btn-group pull-right">
                                           <button class="glow left active">TREND</button>
                                           <button class="glow right">DAILY</button>
-                                      </div>
+                                        </div>
+                                      Cashier Metric Score:</h4>
                                     </div>
                                   </div>
                                   <div class="row-fluid">
@@ -214,13 +226,97 @@
                                   </div>
                                 </div>
                                 
-                              </div>
                               
                             </div>
                               
                               
                           </div>
                         </div>
+                        
+                        <div class="row-fluid">
+                          <div class="span6">
+                                                      
+                            <div class="chart">
+                              
+                                  <div class="row-fluid">
+                                    <div class="span12">
+                                      
+                                      <h4 class="widget_sub_title">
+                                        <div class="btn-group pull-right">
+                                          <button class="glow left active">TREND</button>
+                                          <button class="glow right">DAILY</button>
+                                        </div>
+                                      Lunch vs. Dinner:</h4>
+                                    </div>
+                                  </div>
+                                  <div class="row-fluid">
+                                    <div id="lunchvdinner" class="span12 flot_fix"></div>
+                                  </div>
+                                
+                              
+                            </div>
+                              
+                              
+                          </div>
+                          <div class="span6">
+                                                      
+                            <div class="chart">
+                              
+                                  <div class="row-fluid">
+                                    <div class="span12">
+                                      
+                                      <h4 class="widget_sub_title">
+                                        <div class="btn-group pull-right">
+                                          <button class="glow left active">TREND</button>
+                                          <button class="glow right">DAILY</button>
+                                        </div>
+                                      Weekday vs. Weekend:</h4>
+                                    </div>
+                                  </div>
+                                  <div class="row-fluid">
+                                    <div id="weekendvweekday" class="span12 flot_fix"></div>
+                                  </div>
+                                
+                              
+                            </div>
+                              
+                              
+                          </div>
+                        </div>
+                        
+                          <div class="row-fluid chart">
+                          <div class="row-fluid">
+                            <div class="span12"><h4 class="widget_sub_title">Employee Scores:</h4></div>
+                          </div>
+                          <div class="row-fluid">
+                          <div class="span6">
+                            <h6>Best Scores this Period:</h6>
+                            <table class="table block_table graph_table">
+                              <tbody>
+                                <tr><td>1</td><td><a href="client-report-detail.php">Jasper Collins</a></td><td><span class="hgraph" style="width:81%"></span>95%</td></tr>
+                                <tr><td>2</td><td><a href="client-report-detail.php">Elizabeth Jones</a></td><td><span class="hgraph" style="width:80%"></span>94%</td></tr>
+                                <tr><td>3</td><td><a href="client-report-detail.php">Connie Seiffert</a></td><td><span class="hgraph" style="width:78%"></span>93%</td></tr>
+                                <tr><td>4</td><td><a href="client-report-detail.php">Martin Scoles</a></td><td><span class="hgraph" style="width:77.5%"></span>92%</td></tr>
+                                <tr><td>5</td><td><a href="client-report-detail.php">Susan Brafton</a></td><td><span class="hgraph" style="width:74.5%"></span>90%</td></tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="span6">
+                            <h6>Lowest Scores this Period:</h6>
+                            <table class="table block_table graph_table gray_graphs">
+                              <tbody>
+                                <tr><td>1</td><td><a href="client-report-detail.php">James Sligh</a></td><td><span class="hgraph" style="width:61%"></span>75%</td></tr>
+                                <tr><td>2</td><td><a href="client-report-detail.php">Monica Farwell</a></td><td><span class="hgraph" style="width:60%"></span>74%</td></tr>
+                                <tr><td>3</td><td><a href="client-report-detail.php">Stacy Paige</a></td><td><span class="hgraph" style="width:58%"></span>70%</td></tr>
+                                <tr><td>4</td><td><a href="client-report-detail.php">Alex Kopp</a></td><td><span class="hgraph" style="width:52.5%"></span>66%</td></tr>
+                                <tr><td>5</td><td><a href="client-report-detail.php">Kris Martin</a></td><td><span class="hgraph" style="width:50.5%"></span>60%</td></tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          </div>
+
+                        </div>
+
 
                         <div class="row-fluid">
                           <div class="pull-right pagination_well">
@@ -229,7 +325,7 @@
                             <option>50 rows</option>
                             <option>100 rows</option>
                           </select>
-                          &nbsp;|&nbsp; Viewing 1-25 of 62 &nbsp;|&nbsp;
+                          &nbsp;|&nbsp; Viewing 1-15 of 15 &nbsp;|&nbsp;
                           
                           <div class="btn-group">
                             <a class="btn-flat btn-flat-small white left"><i class="icon-chevron-left"></i></a>
@@ -237,7 +333,7 @@
                           </div>
                           </div>
                           <h4 class="data_table_header">Scored Events <div class="filter_links">
-                          Show: &nbsp; <a href="#" class="active">All (62)</a> | <a href="#">Fails (13)</a> | <a href="#">Passes (49)</a>
+                          Show: &nbsp; <a href="#" data-show="all" class="active">All (15)</a> | <a href="#" data-show="fail">Fails (3)</a> | <a href="#" data-show="pass">Passes (12)</a>
                         </div></h4>
                           
                           <table class="table table-hover block_table samples_table">
@@ -254,10 +350,10 @@
                               </tr>
                             </thead>
                             <tbody>
-                            <?php for($i=1; $i<25; $i++){ ?>
-                              <tr>
+                            <?php for($i=1; $i<15; $i++){ $pf = rand(0,2); ?>
+                              <tr class="<?php $pf ? print"pass" : print"fail"; ?>">
                                 <td><img class="sample_thumb" src="img/custom/panera-cam-thumb.jpg"></td>
-                                <td><strong><?php $pf = rand(0,2); $pf ? print "<span style='color:#36abff'>Pass</span>" : print "<span style='color:orange'>Fail</span>" ?></strong></td>
+                                <td><strong><?php $pf ? print "<span style='color:#36abff'>Pass</span>" : print "<span style='color:orange'>Fail</span>" ?></strong></td>
                                 <td>#<?php echo rand(1000,3000); ?></td>
                                 <td>7/13/13</td>
                                 <td>3:32 pm EST</td>
@@ -265,7 +361,7 @@
                                 <td><?php rand(0,1) ? print '<i class="icon-list-alt"></i>' : print ''; ?></td>
                                 <td class="close_holder"><i class="icon-remove"></i></td>
                               </tr>
-                              <tr class="detail_row">
+                              <tr class="detail_row <?php $pf ? print"pass" : print"fail"; ?>">
                                 <td colspan=20>
                                   <div class="sample_wrapper row-fluid">
                                     <div class="span4">
@@ -317,7 +413,7 @@
                             </tbody>
                           </table>
                           <div class="pull-right pagination_well">
-                          Viewing 1-25 of 60 &nbsp;|&nbsp;
+                          Viewing 1-15 of 15 &nbsp;|&nbsp;
                           
                           <div class="btn-group">
                             <a class="btn-flat btn-flat-small white left"><i class="icon-chevron-left"></i></a>

@@ -121,7 +121,7 @@ var flotDefaultsLines = {
               }
           },
           yaxis: {
-              ticks:5, 
+              ticks:2, 
               tickDecimals: 0,
               font: {size:11, color: "#9da3a9"},
               min:0,
@@ -139,30 +139,30 @@ var flotDefaultsLines = {
   var dashboard2 = [[1, 20], [2, 40], [3, 50], [4, 43],[5, 68],[6, 80],[7, 82]];
   var dashboard3 = [[1, 30], [2, 38], [3, 45], [4, 53],[5, 66],[6, 50],[7, 77]];
   var dashboard4 = [[1, 42], [2, 22], [3, 64], [4, 43],[5, 45],[6, 75],[7, 95]];
-  var dailyoverallpass = [[1, 50], [2, 40], [3, 45], [4, 23],[5, 55],[6, 65],[7, 61]];
-  var dailyoverallfail = [[1, 80], [2, 75], [3, 15], [4, 3],[5, 13],[6, 11],[7, 6]];
-  var dailyoverallmetric1 = [[1, 80], [2, 75], [3, 15], [4, 80],[5, 18],[6, 14],[7, 20]];
-  var dailyoverallmetric2 = [[1, 70], [2, 65], [3, 25], [4, 77],[5, 13],[6, 11],[7, 6]];
-  var dailyoverallmetric3 = [[1, 60], [2, 60], [3, 35], [4, 66],[5, 23],[6, 21],[7, 1]];
   
-  var overall = [[1, 50], [2, 40], [3, 45], [4, 23],[5, 55],[6, 65],[7, 61],[8, 50], [9, 40], [10, 45]];
-  var visitors = [[1, 25], [2, 50], [3, 23], [4, 48],[5, 38],[6, 40],[7, 47],[8, 25], [9, 50], [10, 23]];
+  var weekday = [[1, 75], [2, 82], [3, 97], [4, 81],[5, 88],[6, 85],[7, 91],[8, 80], [9, 81], [10, 97]];
+  var weekend = [[1, 70], [2, 65], [3, 75], [4, 72],[5, 68],[6, 95],[7, 82],[8, 75], [9, 70], [10, 82]];
   
-  var lunch = [[1, 60], [2, 60], [3, 55], [4, 43],[5, 88],[6, 85],[7, 91],[8, 90], [9, 10], [10, 45]];
-  var dinner = [[1, 25], [2, 50], [3, 23], [4, 48],[5, 38],[6, 40],[7, 47],[8, 25], [9, 50], [10, 23]];
+  var lunch = [[1, 70], [2, 76], [3, 89], [4, 81],[5, 80],[6, 85],[7, 82],[8, 80], [9, 95], [10, 97]];
+  var dinner = [[1, 65], [2, 65], [3, 55], [4, 62],[5, 73],[6, 82],[7, 71],[8, 89], [9, 98], [10, 93]];
 
-  var met1 = [[1, 30], [2, 33], [3, 50], [4, 37],[5, 64],[6, 72],[7, 90],[8, 72], [9, 90], [10, 95]];
+  var met1 = [[1, 30], [2, 33], [3, 50], [4, 37],[5, 64],[6, 72],[7, 90],[8, 72], [9, 70], [10, 45]];
   var met2 = [[1, 28], [2, 52], [3, 25], [4, 52],[5, 44],[6, 39],[7, 42],[8, 50], [9, 52], [10, 33]];
   
   var plot = $.plot($("#statsChartdetail4"),
       [ { data: met1, label: "Cashier Score"}], flotDefaultsLines);
+  var plot = $.plot($("#lunchvdinner"),
+      [ { data: lunch, label: "Lunch Score"},{ data: dinner, label: "Dinner Score" }], flotDefaultsLines);
+      
+  var plot = $.plot($("#weekendvweekday"),
+      [ { data: weekday, label: "Weekday"},{ data: weekend, label: "Weekend" }], flotDefaultsLines);
+      
+      
   /*
-  var plot = $.plot($("#statsChartoverview1"),
-      [ { data: dashboard1, label: "Overall" },{ data: dashboard2, label: "Cashier"},{ data: dashboard3, label: "Expeditor"},{ data: dashboard4, label: "QC"}], flotDefaultsLines);
+
   var plot = $.plot($("#statsChartdetail1"),
       [ { data: dailyoverallpass, label: "Passes" },{ data: dailyoverallfail, label: "Fails"}], flotDefaultsLines);
-  var plot = $.plot($("#statsChartdetail2"),
-      [ { data: lunch, label: "Lunch Score"},{ data: dinner, label: "Dinner Score" }], flotDefaultsLines);
+  
   var plot = $.plot($("#statsChartdetail3"),
       [ { data: met1, label: "Cashier Score"},{ data: met2, label: "Expeditor Score" }], flotDefaultsLines);
   
@@ -235,5 +235,20 @@ var flotDefaultsLines = {
 		$('#report_daterange span').html(moment(start).format('MMM D, YYYY') + ' - ' + moment(end).format('MMM D, YYYY'));
 	});
   $('#report_daterange span').html(moment().subtract('days', 6).format('MMM D, YYYY') + ' -- ' + moment().format('MMM D, YYYY'));
+  
+  
+  $('.filter_links a').click(function(e){
+    e.preventDefault();
+    $('.filter_links a').removeClass('active');
+    $(this).addClass('active');
+    var intent = $(this).attr('data-show');
+    if(intent == 'all'){
+      $('.samples_table > tbody > tr').show();
+    }else{
+      $('.samples_table > tbody > tr.'+intent).show();
+      $('.samples_table > tbody > tr').not("."+intent).hide();
+    }
+  });
+  
   
 });
