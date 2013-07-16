@@ -179,6 +179,7 @@ table th span.line{left:0;}
 .label-fail{background-color:orange!important;}
 
 select{font-size:11px;}
+.glow.active{color:$brightblue!important;}
 
 /*                                  */
 /* Main Elements                    */
@@ -844,7 +845,7 @@ h5.widget_sub_title{font-weight:500}
   display: inline;
   background: #fff;
   padding: 7px 30px 7px 10px;
-  margin: -7px 10px -7px 10px;
+  margin: -7px 0px -1px 10px;
   border: 1px solid #ccd;
   position:relative;
   @include border-radius(3px);
@@ -860,6 +861,9 @@ h5.widget_sub_title{font-weight:500}
     color:$warmgray;
     font-size:11px;
   }
+  
+  
+  
 }
 .header_jump{
   font-size:13px;
@@ -868,7 +872,9 @@ h5.widget_sub_title{font-weight:500}
     padding:8px;
     margin-top:-4px;
   }
+  .selected{font-weight:700}
 }
+
 .jump_list{
   font-size:12px;
   margin-left: 10px;
@@ -895,6 +901,17 @@ h5.widget_sub_title{font-weight:500}
     border-bottom: 6px solid #ffffff;
     border-left: 6px solid transparent;
     content: '';
+  }
+}
+
+.report_subnav{
+  margin-top:20px;
+  display:block;
+  padding-top:10px;
+  border-top:1px solid #eee;
+  
+  .glow{
+    padding:10px 13px!important;
   }
 }
 

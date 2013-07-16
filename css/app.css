@@ -34,6 +34,9 @@ table th span.line {
 select {
   font-size: 11px; }
 
+.glow.active {
+  color: #36abff !important; }
+
 /*                                  */
 /* Main Elements                    */
 /*                                  */
@@ -609,7 +612,7 @@ h5.widget_sub_title {
   display: inline;
   background: #fff;
   padding: 7px 30px 7px 10px;
-  margin: -7px 10px -7px 10px;
+  margin: -7px 0px -1px 10px;
   border: 1px solid #ccd;
   position: relative;
   -webkit-border-radius: 3px;
@@ -632,6 +635,8 @@ h5.widget_sub_title {
   .header_jump button {
     padding: 8px;
     margin-top: -4px; }
+  .header_jump .selected {
+    font-weight: 700; }
 
 .jump_list {
   font-size: 12px;
@@ -657,6 +662,14 @@ h5.widget_sub_title {
     border-bottom: 6px solid #ffffff;
     border-left: 6px solid transparent;
     content: ''; }
+
+.report_subnav {
+  margin-top: 20px;
+  display: block;
+  padding-top: 10px;
+  border-top: 1px solid #eee; }
+  .report_subnav .glow {
+    padding: 10px 13px !important; }
 
 /* Auditor Pages                    */
 .audit_wrapper {

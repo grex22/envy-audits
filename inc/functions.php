@@ -30,6 +30,7 @@ function get_nav_menus(){
       break;
     case ("/envysion/client-report-overview.php"):
     case ("/envysion/client-report-detail.php"):
+    case ("/envysion/client-report-detail-cashier.php"):
       $menu_array = array(
         array("index.php","",'icon-tasks',"Dashboard"),
         array("#","",'icon-play-circle',"Watch Video"),
@@ -98,6 +99,7 @@ function get_nav_menus(){
                         <li><a href="index.php">Dashboard</a></li>
                         <li><a href="client-report-overview.php">Audit Overview</a></li>
                         <li><a href="client-report-detail.php">Audit Detail</a></li>
+                        <li><a href="client-report-detail-cashier.php">Cashier Audit Detail</a></li>
                         <li style="margin-left:20px;"><strong>Auditor</strong></li>
                         <li><a href="auditor-dashboard.php">Auditor Dashboard</a></li>
                         <li><a href="auditor-scoring.php">Scoring Sample</a></li>

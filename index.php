@@ -52,7 +52,7 @@
                                     switch($i){
                                       case 0: echo "Overall Score"; break;
                                       case 1: echo "Cashier Metric"; break;
-                                      case 2: echo "Expeditor Greeting"; break;
+                                      case 2: echo "Expeditor"; break;
                                       case 3: echo "Quality Control"; break;
                                     }
                                   ?>

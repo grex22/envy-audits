@@ -35,6 +35,9 @@
     <?php if($_SERVER['PHP_SELF']=="/envysion/client-report-detail.php"): ?>
       <script src="js/pages/client-report-detail.js"></script>
     <?php endif; ?>
+    <?php if($_SERVER['PHP_SELF']=="/envysion/client-report-detail-cashier.php"): ?>
+      <script src="js/pages/client-report-detail-cashier.js"></script>
+    <?php endif; ?>
     
 
     <script type="text/javascript">

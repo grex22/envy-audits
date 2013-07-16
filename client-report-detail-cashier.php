@@ -34,7 +34,7 @@
                                   <i class="icon-pushpin"></i> My Locations
                                 </span>
                               </div>
-                              <div id="collapseTwo" class="accordion-body collapse">
+                              <div id="collapseTwo" class="accordion-body collapse in">
                                 <div class="accordion-inner">
                                   <ul>
                                     <li>
@@ -46,7 +46,7 @@
                                       <a href="#" data-toggle="collapse" class="collapsed has_submenu" data-target="#demo">
                                       Southwest Stores
                                       </a>
-                                      <div id="demo" class="collapse">
+                                      <div id="demo" class="in collapse">
                                       <ul>
                                         <li class="active"><a href="#">Braintree</a></li>
                                         <li><a href="#">Milford</a></li>
@@ -76,7 +76,7 @@
                                   <i class="icon-lightbulb"></i> Metrics
                                 </span>
                               </div>
-                              <div id="collapseThree" class="accordion-body collapse">
+                              <div id="collapseThree" class="accordion-body collapse in">
                                 <div class="accordion-inner">
                                   <ul>
                                     <li>
@@ -135,18 +135,20 @@
                           <div class="dropdown pull-right"> 
                             <div id="location_jump" class="dropdown-toggle report_jump_menu pull-right" data-toggle="dropdown" href="#">
                               <i class="icon-pushpin"></i> 
-                                <span>All Locations</span>
+                                <span>Braintree</span>
                             </div>
+                            
                             <ul id="menu1" class="dropdown-menu header_jump" role="menu" aria-labelledby="location_jump">
-                              <li><a tabindex="-1" href="#" class="selected">All Locations</a></li>
-                              <li><a tabindex="-1" href="#">Braintree</a></li>
+                              <li><a tabindex="-1" href="#">All Locations</a></li>
+                              <li><a tabindex="-1" href="#" class="selected">Braintree</a></li>
                               <li><a tabindex="-1" href="#">Milford</a></li>
                               <li><a tabindex="-1" href="#">Lexington</a></li>
                             </ul>
+                            
                           </div>
                           
                           
-                          <strong>Panera 2.0 Audit</strong> &raquo; Overview<br>
+                          <strong>Panera 2.0 Audit</strong> &raquo; Cashier Metric<br>
                           <div class="report_subnav">
                             <div class="btn-group">
                               <button class="glow left active">Overview</button>
@@ -168,7 +170,7 @@
                         
                           <?php for($i=0; $i<4; $i++){ ?>
                           <div class="span3">
-                          <a href="#" class="knob-wrapper <?php if($i == 0) echo "active"; ?>">
+                          <a href="#" class="knob-wrapper <?php if($i == 1) echo "active"; ?>">
                             <table>
                               <tr>
                                 <td>
@@ -196,64 +198,9 @@
                           <div class="span12">
                                                       
                             <div class="chart">
-                              <ul class="nav nav-tabs">
                               
-                                <li class="active"><a href="#overall" data-toggle="tab">Overall Score</a></li>
-                                <li><a href="#lvd" data-toggle="tab">Lunch vs. Dinner</a></li>
-                                <li><a href="#wdwe" data-toggle="tab">Weekday vs. Weekend</a></li>
-                                <li class="dropdown">
-                                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                      Metrics
-                                      <b class="caret"></b>
-                                    </a>
-                                  <ul class="dropdown-menu">
-                                    <li><a href="#met-all" data-toggle="tab">All Metrics</a></li>
-                                    <li><a href="#met-1" data-toggle="tab">Cashier Verbal Confirmation</a></li>
-                                    <li><a href="#met-2" data-toggle="tab">Expeditor Dine-In vs To-Go</a></li>
-                                  </ul>
-                                </li>
-                              </ul>
                               <div class="tab-content flotchartcontainer">
                                 <div class="tab-pane active" id="overall">
-                                  <div class="row-fluid">
-                                    <div class="span12 align-right">
-                                      <div class="btn-group">
-                                          <button class="glow left active">TREND</button>
-                                          <button class="glow right">DAILY</button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="row-fluid">
-                                    <div id="statsChartoverview1" class="span12 flot_fix"></div>
-                                  </div>
-                                </div>
-                                <div class="tab-pane" id="lvd">
-                                  <div class="row-fluid">
-                                    <div class="span12 align-right">
-                                      <div class="btn-group">
-                                          <button class="glow left active">TREND</button>
-                                          <button class="glow right">DAILY</button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="row-fluid">
-                                    <div id="statsChartdetail2" class="span12 flot_fix"></div>
-                                  </div>
-                                </div>
-                                <div class="tab-pane" id="met-all">
-                                  <div class="row-fluid">
-                                    <div class="span12 align-right">
-                                      <div class="btn-group">
-                                          <button class="glow left active">TREND</button>
-                                          <button class="glow right">DAILY</button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="row-fluid">
-                                    <div id="statsChartdetail3" class="span12 flot_fix"></div>
-                                  </div>
-                                </div>
-                                <div class="tab-pane" id="met-1">
                                   <div class="row-fluid">
                                     <div class="span12 align-right">
                                       <div class="btn-group">
@@ -266,19 +213,7 @@
                                     <div id="statsChartdetail4" class="span12 flot_fix"></div>
                                   </div>
                                 </div>
-                                <div class="tab-pane" id="met-2">
-                                  <div class="row-fluid">
-                                    <div class="span12 align-right">
-                                      <div class="btn-group">
-                                          <button class="glow left active">TREND</button>
-                                          <button class="glow right">DAILY</button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="row-fluid">
-                                    <div id="statsChartdetail5" class="span12 flot_fix"></div>
-                                  </div>
-                                </div>
+                                
                               </div>
                               
                             </div>
