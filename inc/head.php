@@ -16,6 +16,7 @@ include('inc/functions.php');
     <link href="css/lib/jquery-ui-1.10.2.custom.css" rel="stylesheet" type="text/css" />
     <link href="css/lib/font-awesome.css" type="text/css" rel="stylesheet" />
     <link href="css/lib/daterangepicker.css" type="text/css" rel="stylesheet" />
+    <link href="css/lib/bootstrap.datepicker.css" type="text/css" rel="stylesheet" />
 
     <!-- global styles -->
     <link rel="stylesheet" type="text/css" href="css/compiled/layout.css">

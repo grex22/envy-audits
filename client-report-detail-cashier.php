@@ -23,9 +23,9 @@
                           <div class="accordion" id="accordion2">
                             <div class="accordion-group">
                               <div class="accordion-heading">
-                                <span class="accordion-toggle active" >
+                                <a href="client-report-detail.php" class="accordion-toggle active" >
                                   <i class="icon-th-large"></i> Overview
-                                </span>
+                                </a>
                               </div>
                             </div>
                             <div class="accordion-group">
@@ -152,7 +152,8 @@
                           <div class="report_subnav">
                             <div class="btn-group pull-right">
                               <button class="glow left">Email <i class="icon-envelope"></i></button>
-                              <button class="glow right">Export <i class="icon-download-alt"></i></button>
+                              <button class="glow middle">Export <i class="icon-download-alt"></i></button>
+                              <button class="glow right">Print <i class="icon-print"></i></button>
                             </div>
                             <div class="btn-group">
                               <button class="glow left active">Overview</button>
@@ -167,40 +168,22 @@
                         <div class="padded">
                         <h4 class="widget_sub_title">Report Overview:</h4>
                         
-                        <div class="knobs row-fluid knob_box">
+                        <div class="knobs row-fluid knob_box" style="display:inline-block;width:auto">
                         
-                          <?php for($i=0; $i<4; $i++){ ?>
                           <div class="span3">
-                          <a href="client-report-detail-cashier.php" class="knob-wrapper <?php if($i == 1) echo "active"; ?>">
-                            <table>
-                              <tr>
+                          <a href="client-report-detail-cashier.php" class="knob-wrapper active">
+                            <table style="width:200px;">
+                              <tr style="width:200px;">
                                 <td>
-                                  <input type="text" value="<?php 
-                                  
-                                    switch($i){
-                                      case 0: echo "75"; break;
-                                      case 1: echo "49"; break;
-                                      case 2: echo "95"; break;
-                                      case 3: echo "81"; break;
-                                    }
-
-                                  ?>" class="knob" data-thickness=".3" data-inputColor="#333" data-bgColor="#dddddd" data-width="80" data-height="50" data-readOnly="true" data-angleOffset="-100" data-angleArc="200">
+                                  <input type="text" value="49" class="knob" data-thickness=".3" data-inputColor="#333" data-bgColor="#dddddd" data-width="80" data-height="50" data-readOnly="true" data-angleOffset="-100" data-angleArc="200">
                                 </td>
                                 <td class="gauge_score">
-                                  <?php
-                                    switch($i){
-                                      case 0: echo "Overall Score"; break;
-                                      case 1: echo "Cashier Metric"; break;
-                                      case 2: echo "Expeditor"; break;
-                                      case 3: echo "Quality Control"; break;
-                                    }
-                                  ?>
+                                  Cashier Metric
                                 </td>
                               </tr>
                             </table>
                           </a>
                           </div>
-                          <?php } ?>
                         </div>
 
 
@@ -294,7 +277,7 @@
                             <table class="table block_table graph_table">
                               <tbody>
                                 <tr><td>1</td><td><a href="client-report-detail.php">Jasper Collins</a></td><td><span class="hgraph" style="width:81%"></span>95%</td></tr>
-                                <tr><td>2</td><td><a href="client-report-detail.php">Elizabeth Jones</a></td><td><span class="hgraph" style="width:80%"></span>94%</td></tr>
+                                <tr><td>2</td><td><a href="client-report-detail.php">James Sligh</a></td><td><span class="hgraph" style="width:80%"></span>94%</td></tr>
                                 <tr><td>3</td><td><a href="client-report-detail.php">Connie Seiffert</a></td><td><span class="hgraph" style="width:78%"></span>93%</td></tr>
                                 <tr><td>4</td><td><a href="client-report-detail.php">Martin Scoles</a></td><td><span class="hgraph" style="width:77.5%"></span>92%</td></tr>
                                 <tr><td>5</td><td><a href="client-report-detail.php">Susan Brafton</a></td><td><span class="hgraph" style="width:74.5%"></span>90%</td></tr>
@@ -305,7 +288,7 @@
                             <h6>Lowest Scores this Period:</h6>
                             <table class="table block_table graph_table gray_graphs">
                               <tbody>
-                                <tr><td>1</td><td><a href="client-report-detail.php">James Sligh</a></td><td><span class="hgraph" style="width:61%"></span>75%</td></tr>
+                                <tr><td>1</td><td><a href="client-report-detail.php">Elizabeth Jones</a></td><td><span class="hgraph" style="width:61%"></span>75%</td></tr>
                                 <tr><td>2</td><td><a href="client-report-detail.php">Monica Farwell</a></td><td><span class="hgraph" style="width:60%"></span>74%</td></tr>
                                 <tr><td>3</td><td><a href="client-report-detail.php">Stacy Paige</a></td><td><span class="hgraph" style="width:58%"></span>70%</td></tr>
                                 <tr><td>4</td><td><a href="client-report-detail.php">Alex Kopp</a></td><td><span class="hgraph" style="width:52.5%"></span>66%</td></tr>
@@ -366,7 +349,7 @@
                                   <div class="sample_wrapper row-fluid">
                                     <div class="span4">
                                       <h5>Video</h5>
-                                      <img src="img/custom/panera-cam-condensed.jpg">
+                                      <a href="#" class="enlarge_cam"><img src="img/custom/panera-cam-condensed.jpg"></a>
                                     </div>
                                     <div class="span4">
                                       

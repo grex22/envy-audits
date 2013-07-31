@@ -95,6 +95,8 @@ a.btn-flat {
 .btn-flat-small {
   padding: 3px 10px;
   font-size: 11px; }
+  .btn-flat-small:hover {
+    background: #4387bf; }
   .btn-flat-small.left {
     border-radius: 4px 0 0 4px; }
   .btn-flat-small.right {
@@ -227,7 +229,7 @@ a.active .navbar_icon,
 #main_header_wrapper {
   margin-left: -20px;
   margin-right: -20px;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
   background-color: #fdfdfd;
   border-bottom: 1px solid #ddd; }
 
@@ -263,6 +265,7 @@ a.active .navbar_icon,
   margin-left: -1px; }
 
 #content_wrapper {
+  margin: 0 auto;
   padding: 0 20px;
   max-width: 1300px; }
 
@@ -478,9 +481,10 @@ h5.widget_sub_title {
     background: white;
     padding: 5px 10px;
     box-sizing: border-box;
-    height: 220px;
+    max-height: 200px;
     overflow-y: auto;
-    font-size: 11px; }
+    font-size: 11px;
+    margin-bottom: 10px; }
     .samples_table tr.detail_row td .sample_receipt table {
       width: 100%; }
       .samples_table tr.detail_row td .sample_receipt table td {
@@ -902,6 +906,220 @@ input[readonly].knob {
     margin-left: 0; }
   .knob-group .widget_sub_title {
     text-align: center; }
+
+/*                                  */
+/* Watch Video Page                 */
+/*                                  */
+.video_placeholder {
+  background: lightgray;
+  border: 4px solid #999;
+  box-sizing: border-box; }
+
+.big_orange_button {
+  display: block;
+  background: orange;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 17px;
+  margin: 0 0 16px;
+  border-radius: 5px;
+  color: white;
+  text-shadow: 0 1px 1px gray;
+  font-weight: bold;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); }
+  .big_orange_button:hover {
+    text-decoration: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #f1f1f1; }
+
+.nav-tabs.big-tabs li a {
+  font-size: 15px;
+  padding: 11px 16px 11px 10px; }
+
+#change_view_panel {
+  margin-bottom: 35px; }
+  #change_view_panel h4 {
+    margin-bottom: 10px; }
+
+#change_view_camera_picker {
+  height: 350px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  background: white; }
+  #change_view_camera_picker .accordion {
+    margin-bottom: 35px; }
+  #change_view_camera_picker .navbar-inner {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; }
+  #change_view_camera_picker .accordion-group {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-width: 0;
+    margin-bottom: 0px;
+    border-color: #ccc; }
+  #change_view_camera_picker .accordion-body {
+    border-bottom: 1px solid #cccccc; }
+  #change_view_camera_picker .accordion-inner {
+    background: #f3f3f3; }
+  #change_view_camera_picker .accordion-heading {
+    background: white; }
+    #change_view_camera_picker .accordion-heading .btn-flat {
+      margin: 6px; }
+    #change_view_camera_picker .accordion-heading .view_cameras_link {
+      display: none;
+      margin-left: 8px; }
+    #change_view_camera_picker .accordion-heading:hover .view_cameras_link {
+      display: inline-block; }
+  #change_view_camera_picker .accordion-toggle {
+    border-left: 4px solid #36abff; }
+
+.number_callout {
+  font-size: 14px;
+  display: inline-block;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: white; }
+
+#change_view_left_col .nav-tabs {
+  margin-bottom: 0px; }
+#change_view_left_col .navbar-inner {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0; }
+
+.camera_thumbnail_list li {
+  position: relative; }
+  .camera_thumbnail_list li input.camera_select {
+    position: absolute;
+    top: 4px;
+    left: 6px; }
+  .camera_thumbnail_list li input:checked + a.thumbnail {
+    background: #36abff; }
+  .camera_thumbnail_list li a.thumbnail {
+    background: white; }
+
+.camera_thumbnail_caption {
+  text-align: center;
+  font-size: 11px; }
+
+#change_view_right_col label {
+  font-size: 12px; }
+
+.rounded_box {
+  padding: 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #ddd; }
+
+#recorded_parameters {
+  margin: 0;
+  display: none;
+  background: white;
+  padding: 10px;
+  border-left: 3px solid orange; }
+
+#video_mode {
+  margin-bottom: 20px; }
+
+#video_mode > label {
+  font-size: 16px;
+  margin: 3px 0 10px;
+  padding: 10px 10px 10px 30px;
+  background: white;
+  border-left: 3px solid #36abff; }
+  #video_mode > label > input[type='radio'] + span {
+    opacity: .6; }
+  #video_mode > label > input[type='radio']:checked + span {
+    font-weight: bold;
+    opacity: 1; }
+
+#video_mode > label + label {
+  border-left: 3px solid orange;
+  margin-bottom: 0px; }
+
+#recorded_daterange + i,
+#recorded_receipt_daterange + i {
+  font-size: 16px; }
+
+.recorded_starttime {
+  vertical-align: middle;
+  line-height: 20px; }
+  .recorded_starttime select {
+    padding: 6px 3px;
+    height: 29px;
+    margin-bottom: 10px;
+    border-radius: 4px; }
+  .recorded_starttime select.hms {
+    width: 51px; }
+
+input.hms {
+  width: 15px;
+  padding: 4px 3px; }
+
+.report_jump_menu.block_jump_menu {
+  display: block;
+  margin: 0 0 7px 0; }
+
+#favorite_name {
+  display: none; }
+
+.change_view_submit {
+  display: block;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 17px;
+  margin: 0 0 16px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  width: 100% !important;
+  text-shadow: 0 1px 1px gray;
+  font-weight: bold;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); }
+  .change_view_submit.recorded {
+    background: orange; }
+  .change_view_submit.live {
+    background: #36abff; }
+
+#video_wrapper .row-fluid {
+  margin-bottom: 20px; }
+
+/* Video Ratio Styles */
+.video_box {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  max-width: 400px; }
+  .video_box:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+    /* initial ratio of 1:1*/ }
+
+/* Other ratios */
+.ratio2_1:before {
+  padding-top: 50%; }
+
+.ratio1_2:before {
+  padding-top: 200%; }
+
+.ratio4_3:before {
+  padding-top: 75%; }
+
+.ratio16_9:before {
+  padding-top: 56.25%; }
 
 /*                                  */
 /* Responsive Overrides             */

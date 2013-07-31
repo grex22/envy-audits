@@ -22,6 +22,10 @@
     
     <!-- Date Parser -->
     <script src="js/moment.min.js"></script>
+    
+    <!-- DatePicker -->
+    <script src="js/bootstrap.datepicker.js"></script>
+    
     <!-- Date Range Picker -->
     <script src="js/daterangepicker.js"></script>
     
@@ -37,6 +41,9 @@
     <?php endif; ?>
     <?php if($_SERVER['PHP_SELF']=="/envysion/client-report-detail-cashier.php"): ?>
       <script src="js/pages/client-report-detail-cashier.js"></script>
+    <?php endif; ?>
+    <?php if($_SERVER['PHP_SELF']=="/envysion/watch-video.php"): ?>
+      <script src="js/pages/watch-video.js"></script>
     <?php endif; ?>
     
 

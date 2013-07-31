@@ -33,15 +33,23 @@ function get_nav_menus(){
     case ("/envysion/client-report-detail-cashier.php"):
       $menu_array = array(
         array("index.php","",'icon-tasks',"Dashboard"),
-        array("#","",'icon-play-circle',"Watch Video"),
+        array("watch-video.php","",'icon-play-circle',"Watch Video"),
         array("client-report-overview.php","active",'icon-bar-chart',"Intelligence")
       );
       $brand_img = "panera";
-      break;      
+      break;
+    case ("/envysion/watch-video.php"):
+      $menu_array = array(
+        array("index.php","",'icon-tasks',"Dashboard"),
+        array("watch-video.php","active",'icon-play-circle',"Watch Video"),
+        array("client-report-overview.php","",'icon-bar-chart',"Intelligence")
+      );
+      $brand_img = "panera";
+      break;       
     default:
       $menu_array = array(
         array("index.php","active",'icon-tasks',"Dashboard"),
-        array("#","",'icon-play-circle',"Watch Video"),
+        array("watch-video.php","",'icon-play-circle',"Watch Video"),
         array("client-report-overview.php","",'icon-bar-chart',"Intelligence")
       );
       $brand_img = "panera";

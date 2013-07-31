@@ -136,7 +136,7 @@ var flotDefaultsLines = {
         };
 // jQuery Flot Chart
   var dashboard1 = [[1, 30], [2, 42], [3, 34], [4, 63],[5, 80],[6, 68],[7, 90]];
-  var dashboard2 = [[1, 20], [2, 40], [3, 50], [4, 43],[5, 68],[6, 80],[7, 82]];
+  var dashboard2 = [[1, 20], [2, 40], [3, 50], [4, 43],[5, 68],[6, 80],[7, 49]];
   var dashboard3 = [[1, 30], [2, 38], [3, 45], [4, 53],[5, 66],[6, 50],[7, 77]];
   var dashboard4 = [[1, 42], [2, 22], [3, 64], [4, 43],[5, 45],[6, 75],[7, 95]];
   var dailyoverallpass = [[1, 50], [2, 40], [3, 45], [4, 23],[5, 55],[6, 65],[7, 61]];
@@ -233,5 +233,34 @@ var flotDefaultsLines = {
 		$('#report_daterange span').html(moment(start).format('MMM D, YYYY') + ' - ' + moment(end).format('MMM D, YYYY'));
 	});
   $('#report_daterange span').html(moment().subtract('days', 6).format('MMM D, YYYY') + ' -- ' + moment().format('MMM D, YYYY'));
+  
+  
+  //Sample tables filter links
+  $('.filter_links a').click(function(e){
+    e.preventDefault();
+    $('.filter_links a').removeClass('active');
+    $(this).addClass('active');
+    var intent = $(this).attr('data-show');
+    if(intent == 'all'){
+      $('.samples_table > tbody > tr').show();
+    }else{
+      $('.samples_table > tbody > tr.'+intent).show();
+      $('.samples_table > tbody > tr').not("."+intent).hide();
+    }
+  });
+  
+  
+  
+  //Enlarge Camera
+  $('.enlarge_cam').click(function(e){
+    e.preventDefault();
+    if($(this).closest('div').hasClass('span4')){
+      $(this).closest('div').removeClass('span4').addClass('span8');
+      $(this).children('img').attr('src','img/custom/panera-cam-large.jpg');
+    }else{
+      $(this).closest('div').removeClass('span8').addClass('span4');
+      $(this).children('img').attr('src','img/custom/panera-cam-condensed.jpg');
+    }
+  });  
   
 });

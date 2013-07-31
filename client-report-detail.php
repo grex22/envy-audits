@@ -23,9 +23,9 @@
                           <div class="accordion" id="accordion2">
                             <div class="accordion-group">
                               <div class="accordion-heading">
-                                <span class="accordion-toggle active" >
+                                <a href="client-report-detail.php" class="accordion-toggle active" >
                                   <i class="icon-th-large"></i> Overview
-                                </span>
+                                </a>
                               </div>
                             </div>
                             <div class="accordion-group">
@@ -34,7 +34,7 @@
                                   <i class="icon-pushpin"></i> My Locations
                                 </span>
                               </div>
-                              <div id="collapseTwo" class="accordion-body collapse">
+                              <div id="collapseTwo" class="accordion-body collapse in">
                                 <div class="accordion-inner">
                                   <ul>
                                     <li>
@@ -46,7 +46,7 @@
                                       <a href="#" data-toggle="collapse" class="collapsed has_submenu" data-target="#demo">
                                       Southwest Stores
                                       </a>
-                                      <div id="demo" class="collapse">
+                                      <div id="demo" class="collapse in">
                                       <ul>
                                         <li class="active"><a href="#">Braintree</a></li>
                                         <li><a href="#">Milford</a></li>
@@ -85,7 +85,7 @@
                                       </a>
                                       <div id="demo3" class="collapse in">
                                       <ul>
-                                        <li class="active"><a href="#">Cashier Metric</a></li>
+                                        <li><a href="client-report-detail-cashier.php">Cashier Metric</a></li>
                                         <li><a href="#">Expeditor</a></li>
                                         <li><a href="#">Quality Control</a></li>
                                       </ul>
@@ -135,11 +135,11 @@
                           <div class="dropdown pull-right"> 
                             <div id="location_jump" class="dropdown-toggle report_jump_menu pull-right" data-toggle="dropdown" href="#">
                               <i class="icon-pushpin"></i> 
-                                <span>All Locations</span>
+                                <span>Braintree</span>
                             </div>
                             <ul id="menu1" class="dropdown-menu header_jump" role="menu" aria-labelledby="location_jump">
-                              <li><a tabindex="-1" href="#" class="selected">All Locations</a></li>
-                              <li><a tabindex="-1" href="#">Braintree</a></li>
+                              <li><a tabindex="-1" href="#">All Locations</a></li>
+                              <li><a tabindex="-1" href="#" class="selected">Braintree</a></li>
                               <li><a tabindex="-1" href="#">Milford</a></li>
                               <li><a tabindex="-1" href="#">Lexington</a></li>
                             </ul>
@@ -150,7 +150,8 @@
                           <div class="report_subnav">
                             <div class="btn-group pull-right">
                               <button class="glow left"><i class="icon-envelope"></i> Email</button>
-                              <button class="glow right"><i class="icon-download"></i> Export</button>
+                              <button class="glow middle"><i class="icon-download-alt"></i> Export</button>
+                              <button class="glow right">Print <i class="icon-print"></i></button>
                             </div>
                             <div class="btn-group">
                               <button class="glow left active">Overview</button>
@@ -169,11 +170,20 @@
                         
                           <?php for($i=0; $i<4; $i++){ ?>
                           <div class="span3">
-                          <a href="#" class="knob-wrapper <?php if($i == 0) echo "active"; ?>">
+                          <a href="client-report-detail-cashier.php" class="knob-wrapper <?php if($i == 0) echo "active"; ?>">
                             <table>
                               <tr>
                                 <td>
-                                  <input type="text" value="<?php echo rand(60,100); ?>" class="knob" data-thickness=".3" data-inputColor="#333" data-bgColor="#dddddd" data-width="80" data-height="50" data-readOnly="true" data-angleOffset="-100" data-angleArc="200">
+                                  <input type="text" value="<?php 
+                                  
+                                    switch($i){
+                                      case 0: echo "75"; break;
+                                      case 1: echo "49"; break;
+                                      case 2: echo "95"; break;
+                                      case 3: echo "81"; break;
+                                    }
+
+                                  ?>" class="knob" data-thickness=".3" data-inputColor="#333" data-bgColor="#dddddd" data-width="80" data-height="50" data-readOnly="true" data-angleOffset="-100" data-angleArc="200">
                                 </td>
                                 <td class="gauge_score">
                                   <?php
@@ -303,7 +313,7 @@
                           </div>
                           </div>
                           <h4 class="data_table_header">Scored Events <div class="filter_links">
-                          Show: &nbsp; <a href="#" class="active">All (62)</a> | <a href="#">Fails (13)</a> | <a href="#">Passes (49)</a>
+                          Show: &nbsp; <a href="#" data-show="all" class="active">All (62)</a> | <a href="#" data-show="fail">Fails (13)</a> | <a href="#" data-show="pass">Passes (49)</a>
                         </div></h4>
                           
                           <table class="table table-hover block_table samples_table">
@@ -320,10 +330,10 @@
                               </tr>
                             </thead>
                             <tbody>
-                            <?php for($i=1; $i<25; $i++){ ?>
-                              <tr>
+                            <?php for($i=1; $i<15; $i++){ $pf = rand(0,2); ?>
+                              <tr class="<?php $pf ? print"pass" : print"fail"; ?>">
                                 <td><img class="sample_thumb" src="img/custom/panera-cam-thumb.jpg"></td>
-                                <td><strong><?php $pf = rand(0,2); $pf ? print "<span style='color:#36abff'>Pass</span>" : print "<span style='color:orange'>Fail</span>" ?></strong></td>
+                                <td><strong><?php $pf ? print "<span style='color:#36abff'>Pass</span>" : print "<span style='color:orange'>Fail</span>" ?></strong></td>
                                 <td>#<?php echo rand(1000,3000); ?></td>
                                 <td>7/13/13</td>
                                 <td>3:32 pm EST</td>
@@ -331,12 +341,12 @@
                                 <td><?php rand(0,1) ? print '<i class="icon-list-alt"></i>' : print ''; ?></td>
                                 <td class="close_holder"><i class="icon-remove"></i></td>
                               </tr>
-                              <tr class="detail_row">
+                              <tr class="detail_row <?php $pf ? print"pass" : print"fail"; ?>">
                                 <td colspan=20>
                                   <div class="sample_wrapper row-fluid">
                                     <div class="span4">
                                       <h5>Video</h5>
-                                      <img src="img/custom/panera-cam-condensed.jpg">
+                                      <a href="#" class="enlarge_cam"><img src="img/custom/panera-cam-condensed.jpg"></a>
                                     </div>
                                     <div class="span4">
                                       

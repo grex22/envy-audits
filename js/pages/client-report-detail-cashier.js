@@ -250,5 +250,17 @@ var flotDefaultsLines = {
     }
   });
   
+  //Enlarge Camera
+  $('.enlarge_cam').click(function(e){
+    e.preventDefault();
+    if($(this).closest('div').hasClass('span4')){
+      $(this).closest('div').removeClass('span4').addClass('span8');
+      $(this).children('img').attr('src','img/custom/panera-cam-large.jpg');
+    }else{
+      $(this).closest('div').removeClass('span8').addClass('span4');
+      $(this).children('img').attr('src','img/custom/panera-cam-condensed.jpg');
+    }
+  });
+  
   
 });
