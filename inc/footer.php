@@ -17,8 +17,10 @@
     <script src="js/jquery.flot.resize.js"></script>
     <script src="js/theme.js"></script>
     <!-- morris charts -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="js/raphael-min.js"></script>
     <script src="js/morris.min.js"></script>
+    <!-- placeholder images -->
+    <script src="js/holder.js"></script>
     
     <!-- Date Parser -->
     <script src="js/moment.min.js"></script>

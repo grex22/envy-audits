@@ -21,7 +21,7 @@
                                 <li class="span2">
                                   <input class="camera_select" type="checkbox">
                                   <a href="#" class="thumbnail">
-                                    <img src="http://placehold.it/100x75" alt="">
+                                    <img src="holder.js/100x75" alt="">
                                   </a>
                                   <div class="camera_thumbnail_caption">Register <?php echo $i; ?></div>
                                 </li>
