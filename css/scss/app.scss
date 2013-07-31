@@ -1261,6 +1261,10 @@ input[readonly].knob{
     &:hover .view_cameras_link{
       display:inline-block;
     }
+    &:hover span.group_name{
+      color:#005580;
+      font-weight:bold;
+    }
   }
   
   .accordion-toggle{

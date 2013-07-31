@@ -976,6 +976,9 @@ input[readonly].knob {
       margin-left: 8px; }
     #change_view_camera_picker .accordion-heading:hover .view_cameras_link {
       display: inline-block; }
+    #change_view_camera_picker .accordion-heading:hover span.group_name {
+      color: #005580;
+      font-weight: bold; }
   #change_view_camera_picker .accordion-toggle {
     border-left: 4px solid #36abff; }
 
