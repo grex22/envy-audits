@@ -64,6 +64,24 @@ select {
     .modal .modal-footer label input[type=checkbox] {
       margin-top: 0; }
 
+.modal.big_modal {
+  width: 96%;
+  margin-left: -48%;
+  background: #f1f1f1;
+  top: 5% !important; }
+  .modal.big_modal .modal-header {
+    background: white; }
+    .modal.big_modal .modal-header .close {
+      margin-top: 2px;
+      font-size: 30px;
+      line-height: 28px; }
+      .modal.big_modal .modal-header .close:before {
+        content: "close";
+        font-size: 15px;
+        font-weight: 300;
+        vertical-align: top;
+        margin-right: 5px; }
+
 body {
   padding-top: 52px;
   -webkit-transition: padding 0.5s linear;
@@ -374,6 +392,9 @@ th.sortable:after {
     border-width: 0 1px 1px 0;
     left: 16px;
     z-index: 1000; }
+  .widget_title .btn-group button.glow {
+    margin-top: -7px;
+    padding: 9px 12px; }
   .widget_title .btn-flat {
     margin-top: -4px;
     margin-left: 5px; }
@@ -477,21 +498,6 @@ h5.widget_sub_title {
     padding: 15px 10px 25px 10px;
     display: none;
     box-sizing: border-box; }
-  .samples_table tr.detail_row td .sample_receipt {
-    background: white;
-    padding: 5px 10px;
-    box-sizing: border-box;
-    max-height: 200px;
-    overflow-y: auto;
-    font-size: 11px;
-    margin-bottom: 10px; }
-    .samples_table tr.detail_row td .sample_receipt table {
-      width: 100%; }
-      .samples_table tr.detail_row td .sample_receipt table td {
-        background: none;
-        text-align: right; }
-      .samples_table tr.detail_row td .sample_receipt table tr td:first-child {
-        text-align: left; }
 .samples_table tr:hover .sample_thumb {
   opacity: 1;
   filter: alpha(opacity=100);
@@ -929,7 +935,7 @@ input[readonly].knob {
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); }
-  .big_orange_button:hover {
+  .big_orange_button:hover, .big_orange_button:focus {
     text-decoration: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -946,7 +952,7 @@ input[readonly].knob {
     margin-bottom: 10px; }
 
 #change_view_camera_picker {
-  height: 350px;
+  height: 320px;
   overflow-y: scroll;
   border: 1px solid #ccc;
   background: white; }
@@ -985,12 +991,8 @@ input[readonly].knob {
 .number_callout {
   font-size: 14px;
   display: inline-block;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  background: white; }
+  line-height: 40px;
+  margin-right: 5px; }
 
 #change_view_left_col .nav-tabs {
   margin-bottom: 0px; }
@@ -1095,6 +1097,9 @@ input.hms {
     background: orange; }
   .change_view_submit.live {
     background: #36abff; }
+  .change_view_submit + a {
+    display: block;
+    text-align: center; }
 
 #video_wrapper .row-fluid {
   margin-bottom: 20px; }
@@ -1123,6 +1128,27 @@ input.hms {
 
 .ratio16_9:before {
   padding-top: 56.25%; }
+
+/*                                  */
+/* Receipt Display                  */
+/*                                  */
+.sample_receipt {
+  background: white;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 11px;
+  margin-bottom: 10px; }
+  .sample_receipt table {
+    width: 100%; }
+    .sample_receipt table td {
+      background: none;
+      text-align: right; }
+    .sample_receipt table tr td:first-child {
+      text-align: left; }
+  .sample_receipt.taller {
+    max-height: 400px; }
 
 /*                                  */
 /* Responsive Overrides             */

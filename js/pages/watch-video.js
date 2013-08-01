@@ -1,6 +1,6 @@
 $(function(){
 
-  $('#change_view_button').click(function(e){
+  $('#test_change_view_button').click(function(e){
     e.preventDefault();
     if($('#change_view_panel').is(':visible')){
       $('#change_view_panel').slideToggle(200);
@@ -26,10 +26,10 @@ $(function(){
   $('input[name="video_mode"]').change(function(e){
     if($(this).val() == 'recorded'){
       $('#recorded_parameters').slideDown();
-      $('.change_view_submit').removeClass('live').addClass('recorded').val('Done! Watch Recorded Video');
+      $('.change_view_submit').removeClass('live').addClass('recorded');
     }else if($(this).val() == 'live'){
       $('#recorded_parameters').slideUp();
-      $('.change_view_submit').removeClass('recorded').addClass('live').val('Done! Watch Live Video');
+      $('.change_view_submit').removeClass('recorded').addClass('live');
     }
   });
   

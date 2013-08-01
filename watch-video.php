@@ -13,14 +13,17 @@
             <div id="content_wrapper">
               
               <div class="row-fluid ui-elements">
-                <a href="#" class="big_orange_button" id="change_view_button"><i class="icon-refresh"></i> Change View</a>
+                <a href="#change_view_panel" class="big_orange_button span3" id="change_view_button" data-toggle="modal"><i class="icon-refresh"></i> Change View</a>
               </div>
-              <div class="row-fluid ui-elements" id="change_view_panel">
               
+              <div class="row-fluid ui-elements modal big_modal hide fade" id="change_view_panel">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <h3><i class="icon-facetime-video"></i> Change Cameras</h3>
+                </div>
+                <div class="row-fluid ui-elements padded">
                 <div class="span9" id="change_view_left_col">
-                  <div class="rounded_box pull-right">
-                    <span class="number_callout">12</span> Cameras Selected
-                  </div>
+                  
                   <h4><strong>Step 1:</strong> Select Camera(s) to View</h4>
                   
                   
@@ -31,6 +34,9 @@
                   </ul>
                   <div class="navbar no_bottom_margin">
                     <div class="navbar-inner">
+                      <div class="pull-right">
+                        <span class="number_callout">12</span> Cameras Selected
+                      </div>
                       <form class="navbar-form">
                         <input type="text" class="span4" placeholder="Filter...">
                         <button type="submit" class="btn">Go</button>
@@ -175,28 +181,37 @@
                       <input type="text" class="input-large" name="favorite_name" placeholder="Enter a Name for this Favorite">
                     </div>
                   </fieldset>
-                  <input type="submit" class="change_view_submit live" href="#" value="Done! Watch Live Video">
-                    
-                    
+                  <input type="submit" class="change_view_submit live" value="Done! Watch Video">
+                  <a href="#" data-dismiss="modal">Cancel, keep current cameras.</a>
 
                   </form>
                 </div>
               </div>
+              </div>
               <div class="row-fluid ui-elements">
                 <div class="span9" id="video_wrapper">
-                  
-                    <h4 class="widget_title"><i class="icon-th-large"></i> Braintree, All Cameras</h4>
+                  <div class="row-fluid widget">
+                    <h4 class="widget_title">
+                      <div class="btn-group pull-right">
+                        <button class="glow left"><i class="icon-desktop"></i> Focus Mode</button>
+                        <button class="glow right active"><i class="icon-th"></i> Grid Mode</button>
+                      </div>
+                      <i class="icon-th-large"></i> Braintree, All Cameras
+                    </h4>
                     
-                    <div class="row-fluid">
-                      <div class="span12 video_placeholder video_box ratio4_3"></div>
+                    <div class="row-fluid padded">
+                      <div class="span3 video_placeholder video_box ratio4_3"></div>
+                      <div class="span3 video_placeholder video_box ratio4_3"></div>
+                      <div class="span3 video_placeholder video_box ratio4_3"></div>
+                      <div class="span3 video_placeholder video_box ratio4_3"></div>
                     </div>
-                    <div class="row-fluid">
-                    <div class="span3 video_placeholder video_box ratio4_3"></div>
-                    <div class="span3 video_placeholder video_box ratio4_3"></div>
-                    <div class="span3 video_placeholder video_box ratio4_3"></div>
-                    <div class="span3 video_placeholder video_box ratio4_3"></div>
+                    <div class="row-fluid padded">
+                      <div class="span3 video_placeholder video_box ratio4_3"></div>
+                      <div class="span3 video_placeholder video_box ratio4_3"></div>
+                      <div class="span3 video_placeholder video_box ratio4_3"></div>
+                      <div class="span3 video_placeholder video_box ratio4_3"></div>
                     </div>
-
+                  </div>
                     
                 </div>
                 <div class="span3">
@@ -204,13 +219,35 @@
                   <div class="row-fluid widget">
                   
                     <h4 class="widget_title">Transactions</h4>
+                    
+                    <div class="sample_receipt taller">
+                      <table class="block_table">
+                      <tr><td>Receipt #:</td><td>10145</td></tr>
+                      <tr><td>Register #:</td><td>1</td></tr>
+                      <tr><td>EnVR:</td><td>1521 - Braintree</td></tr>
+                      <tr><td>Cashier:</td><td>Elizabeth Jones</td></tr>
+                      <tr><td colspan=2 class="align-center">
+                      
+                      Thursday 07/24 6:45:04 PM EDT<br>
+                      HERE
+                      </td></tr>
+                      <tr><td>1 You Pick 2</td><td>6.99</td></tr>
+                      <tr><td>1 Meal Upgrade</td><td>0.00</td></tr>
+                      <tr><td>1 Baguette</td><td>0.00</td></tr>
+                      <tr><td>1 Baguette</td><td>0.00</td></tr>
+                      <tr><td>1 Baguette</td><td>0.00</td></tr>
+                      <tr><td>1 Baguette</td><td>0.00</td></tr>
+                      <tr><td>1 Baguette</td><td>0.00</td></tr>
+                      
+                      </table>
+                      </div>
                         
                   </div>
                 </div>
               </div>
                     
             </div>                
-                
+               
             </div>
           </div>
             
