@@ -841,6 +841,8 @@ h5.widget_sub_title{font-weight:500}
       a.has_submenu.collapsed:before{
         content: "\f0da";
       }
+      
+      &.active{font-weight:700}
     }
     
     ul{
@@ -1221,13 +1223,22 @@ input[readonly].knob{
   
 }
 
+.span9.noleftmargin_s9{
+  width: 76.758974%;
+  margin-left: 0;
+}
+
 #change_view_camera_picker{
-  height: 320px;
-  overflow-y: scroll;
+  
   border:1px solid #ccc;
   background:white;
   
-  .accordion{margin-bottom:35px;}
+  .scrollbar{
+    height: 320px;
+    overflow-y: auto;
+  }
+  
+  .accordion{margin-bottom:0px;}
   
   .navbar-inner{
     @include border-radius(0);
@@ -1245,7 +1256,8 @@ input[readonly].knob{
   }
   
   .accordion-inner{
-    background: #f3f3f3;
+    background: #f8f8f8;
+    border-left: 1px solid #ddd;
   }
   
   .accordion-heading{

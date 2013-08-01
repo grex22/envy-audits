@@ -44,47 +44,52 @@
                     </div>
                   </div>
                   <div class="tab-content" id="change_view_camera_picker">
-                  <div class="tab-pane" id="tab1">
+                  <div class="tab-pane scrollbar" id="tab1">
                     <?php $camid=1; ?>
                     <?php include('camera_selection_snippet.php'); ?>
                   </div>
-                  <div class="tab-pane" id="tab2">
+                  <div class="tab-pane scrollbar" id="tab2">
                     <?php include('camera_selection_snippet.php'); ?>
                   </div>
                   <div class="tab-pane active" id="tab3">
-                    <div class="span3">
-                      <ul>
-                        <li>
-                          <a href="#">
-                          All Locations
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" data-toggle="collapse" class="collapsed has_submenu" data-target="#demo">
-                          Southwest Stores
-                          </a>
-                          <div id="demo" class="in collapse">
-                          <ul>
-                            <li class="active"><a href="#">Braintree</a></li>
-                            <li><a href="#">Milford</a></li>
-                            <li><a href="#">Lexington</a></li>
-                          </ul>
-                          </div>
-                        </li>
-                        <li>
-                          <a href="#" data-toggle="collapse" class="collapsed has_submenu" data-target="#demo2">
-                          Northwest Stores
-                          </a>
-                          <div id="demo2" class="collapse">
-                          <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Library</a></li>
-                          </ul>
-                          </div>
-                        </li>
-                      </ul>
+                    <div class="span3 scrollbar padded" id="report_nav">
+                      
+
+                                  <ul>
+                                    <li class="active">
+                                      <a href="#">
+                                      All Locations
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#" data-toggle="collapse" class="collapsed has_submenu" data-target="#demo">
+                                      Southwest Stores
+                                      </a>
+                                      <div id="demo" class="collapse">
+                                      <ul>
+                                        <li><a href="#">Braintree</a></li>
+                                        <li><a href="#">Milford</a></li>
+                                        <li><a href="#">Lexington</a></li>
+                                      </ul>
+                                      </div>
+                                    </li>
+                                    <li>
+                                      <a href="#" data-toggle="collapse" class="collapsed has_submenu" data-target="#demo2">
+                                      Northwest Stores
+                                      </a>
+                                      <div id="demo2" class="collapse">
+                                      <ul>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">Library</a></li>
+                                      </ul>
+                                      </div>
+                                    </li>
+                                  </ul>
+                                  
+                                
+                      
                     </div>
-                    <div class="span9">
+                    <div class="span9 scrollbar noleftmargin_s9">
                     <?php include('camera_selection_snippet.php'); ?>
                     </div>
                   </div>
@@ -182,7 +187,7 @@
                     </div>
                   </fieldset>
                   <input type="submit" class="change_view_submit live" value="Done! Watch Video">
-                  <a href="#" data-dismiss="modal">Cancel, keep current cameras.</a>
+                  <a href="#" data-dismiss="modal">Cancel, back to current view</a>
 
                   </form>
                 </div>
