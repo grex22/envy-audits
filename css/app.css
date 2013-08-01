@@ -961,7 +961,7 @@ input[readonly].knob {
   border: 1px solid #ccc;
   background: white; }
   #change_view_camera_picker .scrollbar {
-    height: 320px;
+    max-height: 400px;
     overflow-y: auto; }
   #change_view_camera_picker .accordion {
     margin-bottom: 0px; }
@@ -1009,15 +1009,18 @@ input[readonly].knob {
   -moz-border-radius: 0;
   border-radius: 0; }
 
-.camera_thumbnail_list li {
+.navbar.visual_footer .navbar-inner {
+  min-height: 10px; }
+
+.camera_thumbnail_list .thumbs {
   position: relative; }
-  .camera_thumbnail_list li input.camera_select {
+  .camera_thumbnail_list .thumbs input.camera_select {
     position: absolute;
     top: 4px;
     left: 6px; }
-  .camera_thumbnail_list li input:checked + a.thumbnail {
+  .camera_thumbnail_list .thumbs input:checked + a.thumbnail {
     background: #36abff; }
-  .camera_thumbnail_list li a.thumbnail {
+  .camera_thumbnail_list .thumbs a.thumbnail {
     background: white; }
 
 .camera_thumbnail_caption {
@@ -1040,9 +1043,23 @@ input[readonly].knob {
   background: white;
   padding: 10px;
   border-left: 3px solid orange; }
+  #recorded_parameters select {
+    padding: 5px 2px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 4px; }
+  #recorded_parameters .bootstrap-timepicker .input-mini {
+    width: 70px !important; }
+  #recorded_parameters .nav-tabs {
+    margin-bottom: 5px; }
+    #recorded_parameters .nav-tabs li a {
+      padding: 4px 7px; }
+  #recorded_parameters .tab-content {
+    overflow: visible; }
 
 #video_mode {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  min-height: 230px; }
 
 #video_mode > label {
   font-size: 16px;
@@ -1059,25 +1076,6 @@ input[readonly].knob {
 #video_mode > label + label {
   border-left: 3px solid orange;
   margin-bottom: 0px; }
-
-#recorded_daterange + i,
-#recorded_receipt_daterange + i {
-  font-size: 16px; }
-
-.recorded_starttime {
-  vertical-align: middle;
-  line-height: 20px; }
-  .recorded_starttime select {
-    padding: 6px 3px;
-    height: 29px;
-    margin-bottom: 10px;
-    border-radius: 4px; }
-  .recorded_starttime select.hms {
-    width: 51px; }
-
-input.hms {
-  width: 15px;
-  padding: 4px 3px; }
 
 .report_jump_menu.block_jump_menu {
   display: block;

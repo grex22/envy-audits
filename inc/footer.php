@@ -27,6 +27,9 @@
     
     <!-- DatePicker -->
     <script src="js/bootstrap.datepicker.js"></script>
+    <!-- TimePicker -->
+    <!-- Used on the Watch Video Page -->
+    <script src="js/bootstrap-timepicker.min.js"></script>
     
     <!-- Date Range Picker -->
     <script src="js/daterangepicker.js"></script>

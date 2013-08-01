@@ -13,7 +13,7 @@
             <div id="content_wrapper">
               
               <div class="row-fluid ui-elements">
-                <a href="#change_view_panel" class="big_orange_button span3" id="change_view_button" data-toggle="modal"><i class="icon-refresh"></i> Change View</a>
+                <a href="#change_view_panel" class="big_orange_button span3" id="change_view_button" data-toggle="modal"><i class="icon-refresh"></i> Change Cameras</a>
               </div>
               
               <div class="row-fluid ui-elements modal big_modal hide fade" id="change_view_panel">
@@ -22,7 +22,7 @@
                   <h3><i class="icon-facetime-video"></i> Change Cameras</h3>
                 </div>
                 <div class="row-fluid ui-elements padded">
-                <div class="span9" id="change_view_left_col">
+                <div class="span8" id="change_view_left_col">
                   
                   <h4><strong>Step 1:</strong> Select Camera(s) to View</h4>
                   
@@ -94,13 +94,12 @@
                     </div>
                   </div>
                   </div>
-                  <div class="navbar no_bottom_margin">
+                  <div class="navbar no_bottom_margin visual_footer">
                     <div class="navbar-inner">
-                      
                     </div>
                   </div>
                 </div>
-                <div class="span3" id="change_view_right_col">
+                <div class="span4" id="change_view_right_col">
                   <h4><strong>Step 2:</strong> Live or Recorded?</h4>
                   <form action="#" method="post">
                     <fieldset id="video_mode">
@@ -120,29 +119,31 @@
                       <div class="tab-content">
                       <div class="tab-pane active" id="date_search">
                         <div class="row-fluid">
-                          <div class="span6">
+                          <div class="span4">
                             <label class="select">
                             Date<br>
-                              <input type="text" id="recorded_daterange" value="" class="input-small"> <i class="icon-calendar"></i>
+                            <div class="input-prepend">
+                              <span class="add-on"><i class="icon-calendar"></i></span>
+                              <input type="text" id="recorded_daterange" value="" class="input-mini">
+                            </div>
                             </label>
                           </div>
-                          <div class="span6">
+                          <div class="span4">
                             <label class="select no_bottom_margin">
                             Start Time
                             </label>
                             <div class="recorded_starttime">
-                              <input type="text" value="12" class="hms" maxlength="2">:<input type="text" value="00" class="hms" maxlength="2">:<input type="text" value="00" class="hms" maxlength="2">
-                              <select class="hms">
-                                <option value="am" selected>am</option>
-                                <option value="pm">pm</option>
-                              </select>
+                              <div class="input-prepend bootstrap-timepicker">
+                                  <span class="add-on"><i class="icon-time"></i></span>
+                                  <input id="timepicker1" type="text" class="input-mini">
+                              </div>
                             </div>
                           </div>
-                          </div>
-                          <div class="recorded_starttime">
-                            <label class="select">
+                          <div class="span4">
+                            <label class="select no_bottom_margin">
                             Duration
-                            <select class="input-medium">
+                            </label>
+                            <select class="input-small">
                               <option value="">2 min</option>
                               <option value="" selected>5 min</option>
                               <option value="">10 min</option>
@@ -154,17 +155,22 @@
                               <option value="">24 hours</option>
                               <option value="">48 hours</option>
                             </select>
-                            </label>
+                            
                           </div>
+                          </div>
+                        
                         </div>
                         <div class="tab-pane" id="receipt_search">
                           <div class="row-fluid">
-                            <div class="span6">
-                            <label class="select">
+                            <div class="span4">
+                              <label class="select">
                               Date<br>
-                                <input type="text" id="recorded_receipt_daterange" value="" class="input-small"> <i class="icon-calendar"></i>
+                              <div class="input-prepend">
+                                <span class="add-on"><i class="icon-calendar"></i></span>
+                                <input type="text" id="recorded_receipt_daterange" value="" class="input-mini">
+                              </div>
                               </label>
-                            </div>
+                            </div>                            
                             <div class="span6">
                             <label class="input">
                               Receipt Number<br>
@@ -179,7 +185,7 @@
                   <h4><strong>Step 3:</strong> Confirm</h4>  
                   <fieldset class="padded">
                     <label class="checkbox">
-                      <input type="checkbox" id="save_as_favorite"> Save selected cameras as a Favorite
+                      <input type="checkbox" id="save_as_favorite"> <i class="icon-star"></i> Save selected cameras as Favorite
                       
                     </label>
                     <div id="favorite_name">

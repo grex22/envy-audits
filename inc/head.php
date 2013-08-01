@@ -17,6 +17,7 @@ include('inc/functions.php');
     <link href="css/lib/font-awesome.css" type="text/css" rel="stylesheet" />
     <link href="css/lib/daterangepicker.css" type="text/css" rel="stylesheet" />
     <link href="css/lib/bootstrap.datepicker.css" type="text/css" rel="stylesheet" />
+    <link href="css/lib/bootstrap-timepicker.min.css" type="text/css" rel="stylesheet" />
 
     <!-- global styles -->
     <link rel="stylesheet" type="text/css" href="css/compiled/layout.css">

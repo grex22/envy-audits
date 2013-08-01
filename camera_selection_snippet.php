@@ -16,17 +16,20 @@
                           </div>
                           <div id="collapse<?php echo $camid; ?>" class="accordion-body collapse <?php //if($j == 1) echo "in"; ?>">
                             <div class="accordion-inner">
-                              <ul class="thumbnails camera_thumbnail_list no_bottom_margin">
-                              <?php for($i=1; $i<=$randcam; $i++){ ?>
-                                <li class="span2">
+                              <div class="thumbnails camera_thumbnail_list no_bottom_margin">
+                              <div class="row-fluid">
+                              <?php for($i=0; $i<=$randcam; $i++){ ?>
+                                <?php if($i%4 == 0) echo "</div><div class='row-fluid'>"; ?>
+                                <div class="span3 thumbs">
                                   <input class="camera_select" type="checkbox">
                                   <a href="#" class="thumbnail">
                                     <img src="holder.js/100x75" alt="">
                                   </a>
-                                  <div class="camera_thumbnail_caption">Register <?php echo $i; ?></div>
-                                </li>
+                                  <div class="camera_thumbnail_caption">Register <?php echo $i+1; ?></div>
+                                </div>
                               <?php $camid++; } ?>
-                              </ul>
+                              </div>
+                              </div>
                             </div>
                           </div>
                         </div>

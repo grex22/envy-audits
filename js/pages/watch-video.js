@@ -60,6 +60,15 @@ $(function(){
   $("#recorded_daterange").val(dstring);
   $("#recorded_receipt_daterange").val(dstring);
   
+  //Instantiate TimePicker
+  $('#timepicker1').timepicker({
+    showSeconds: true,
+    minuteStep: 1,
+    secondStep: 1,
+    defaultTime: '11:00 AM',
+    disableFocus: true
+  });
+  
   //Instantiate Date Picker
   var startDateObj = new Date();
   startDateObj.setDate(startDateObj.getDate()-30);

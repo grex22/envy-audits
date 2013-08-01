@@ -1234,7 +1234,7 @@ input[readonly].knob{
   background:white;
   
   .scrollbar{
-    height: 320px;
+    max-height:400px;
     overflow-y: auto;
   }
   
@@ -1297,8 +1297,10 @@ input[readonly].knob{
   .nav-tabs{margin-bottom:0px;}
   .navbar-inner{@include border-radius(0);}
 }
+
+.navbar.visual_footer .navbar-inner{min-height:10px;}
 .camera_thumbnail_list{
-  li{
+  .thumbs{
     position:relative;
     
     input.camera_select{
@@ -1336,9 +1338,29 @@ input[readonly].knob{
   background: white;
   padding: 10px;
   border-left: 3px solid orange;
+  
+  select{
+    padding: 5px 2px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .bootstrap-timepicker .input-mini{width:70px!important}
+  
+  .nav-tabs{
+    margin-bottom:5px;
+    
+    li a{padding: 4px 7px;}
+  }
+  
+  .tab-content{overflow:visible;}
 }
 
-#video_mode{margin-bottom:20px;}
+#video_mode{
+  margin-bottom:20px;
+  min-height:230px;
+}
 #video_mode > label{
   font-size: 16px;
   margin: 3px 0 10px;
@@ -1356,29 +1378,6 @@ input[readonly].knob{
   border-left: 3px solid orange;
   margin-bottom:0px;
 }
-
-#recorded_daterange + i,
-#recorded_receipt_daterange + i{font-size:16px;}
-
-.recorded_starttime{
-  vertical-align:middle;
-  line-height:20px;
-  
-  select{
-    padding: 6px 3px;
-    height: 29px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-  }
-  select.hms{
-    width:51px;
-  }
-}
-input.hms{
-  width:15px;
-  padding:4px 3px;
-}
-
 
 .report_jump_menu.block_jump_menu{
   display:block;
