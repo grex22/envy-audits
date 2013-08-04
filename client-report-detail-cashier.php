@@ -98,7 +98,7 @@
                             <div class="accordion-group">
                               <div class="accordion-heading">
                                 <a class="accordion-toggle collapsed" href="#">
-                                  <i class="icon-group"></i> Employee Report
+                                  <i class="icon-group"></i> Employees
                                 </a>
                               </div>
                             </div>
