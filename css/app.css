@@ -539,7 +539,8 @@ h5.widget_sub_title {
   padding: 15px 0 25px; }
 
 .block_table {
-  display: table !important; }
+  display: table !important;
+  width: 100%; }
 
 .row-fluid.left_column_nav {
   position: relative; }
@@ -1109,6 +1110,37 @@ input[readonly].knob {
 
 #video_wrapper .row-fluid {
   margin-bottom: 20px; }
+
+/* Video Page - Transactions Panel */
+#receiptaccordion {
+  max-height: 500px;
+  overflow-y: scroll; }
+  #receiptaccordion .accordion-group {
+    margin-bottom: 0;
+    margin-bottom: 0;
+    border-top: 1px dashed #999;
+    border-radius: 0;
+    border-left: 4px solid #ccc; }
+    #receiptaccordion .accordion-group table tr td.play {
+      opacity: .2; }
+    #receiptaccordion .accordion-group table tr td.info {
+      text-align: right; }
+    #receiptaccordion .accordion-group table tr.current_item {
+      background: yellow; }
+    #receiptaccordion .accordion-group tr.add_play_button {
+      position: relative; }
+    #receiptaccordion .accordion-group tr.add_play_button td:first-child:before {
+      content: "\f01d";
+      font-family: "FontAwesome";
+      position: absolute;
+      left: 11px; }
+    #receiptaccordion .accordion-group:hover, #receiptaccordion .accordion-group.in {
+      border-left-color: #36abff; }
+      #receiptaccordion .accordion-group:hover .accordion-toggle > table, #receiptaccordion .accordion-group.in .accordion-toggle > table {
+        font-weight: 700; }
+      #receiptaccordion .accordion-group:hover td.play, #receiptaccordion .accordion-group.in td.play {
+        opacity: 1;
+        color: #36abff; }
 
 /* Video Ratio Styles */
 .video_box {

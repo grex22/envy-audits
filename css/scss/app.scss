@@ -747,7 +747,7 @@ h5.widget_sub_title{font-weight:500}
 .project_glance{
   padding:15px 0 25px;
 }
-.block_table{display:table!important;}
+.block_table{display:table!important;width:100%}
 
 .row-fluid.left_column_nav{
   position:relative;
@@ -1413,6 +1413,54 @@ input[readonly].knob{
   .row-fluid{
     margin-bottom:20px;
   }
+}
+
+/* Video Page - Transactions Panel */
+
+#receiptaccordion{
+  
+  max-height:500px;
+  overflow-y:scroll;
+
+  .accordion-group{
+    margin-bottom:0;
+    margin-bottom: 0;
+    border-top: 1px dashed #999;
+    border-radius: 0;
+    border-left:4px solid #ccc;
+    
+      
+    
+    table{
+      tr{
+        td.play{opacity:.2}
+        td.receipt{}
+        td.info{text-align:right;}
+        
+        &.current_item{background:yellow}
+       
+      }
+    
+    }
+    tr.add_play_button{
+      position:relative;
+    }
+    tr.add_play_button td:first-child:before{
+      content:"\f01d";
+      font-family:"FontAwesome";
+      position:absolute;
+      left:11px;
+      
+    }
+    
+    &:hover,&.in{
+      & .accordion-toggle>table{font-weight:700}
+      td.play{opacity:1;color:$brightblue};
+      border-left-color:$brightblue;
+    }
+  
+  }
+  
 }
 
 /* Video Ratio Styles */

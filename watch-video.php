@@ -13,7 +13,7 @@
             <div id="content_wrapper">
               
               <div class="row-fluid ui-elements">
-                <a href="#change_view_panel" class="big_orange_button span3" id="change_view_button" data-toggle="modal"><i class="icon-refresh"></i> Change Cameras</a>
+                
               </div>
               
               <div class="row-fluid ui-elements modal big_modal hide fade" id="change_view_panel">
@@ -203,9 +203,11 @@
                 <div class="span9" id="video_wrapper">
                   <div class="row-fluid widget">
                     <h4 class="widget_title">
-                      <div class="btn-group pull-right">
-                        <button class="glow left"><i class="icon-desktop"></i> Focus Mode</button>
-                        <button class="glow right active"><i class="icon-th"></i> Grid Mode</button>
+                      <div class="btn-group pull-right align-right span4">
+                        <div class="btn-group">
+                          <button class="glow left"><i class="icon-desktop"></i> Focus Mode</button>
+                          <button class="glow right active"><i class="icon-th"></i> Grid Mode</button>
+                        </div>
                       </div>
                       <i class="icon-th-large"></i> Braintree, All Cameras
                     </h4>
@@ -226,34 +228,74 @@
                     
                 </div>
                 <div class="span3">
-                  
+                  <div class="row-fluid">
+                    <a href="#change_view_panel" class="big_orange_button" id="change_view_button" data-toggle="modal"><i class="icon-refresh"></i> Change Cameras</a>
+                  </div>
                   <div class="row-fluid widget">
                   
                     <h4 class="widget_title">Transactions</h4>
                     
-                    <div class="sample_receipt taller">
-                      <table class="block_table">
-                      <tr><td>Receipt #:</td><td>10145</td></tr>
-                      <tr><td>Register #:</td><td>1</td></tr>
-                      <tr><td>EnVR:</td><td>1521 - Braintree</td></tr>
-                      <tr><td>Cashier:</td><td>Elizabeth Jones</td></tr>
-                      <tr><td colspan=2 class="align-center">
+                    <?php
+                      function output_sample_receipt(){
                       
-                      Thursday 07/24 6:45:04 PM EDT<br>
-                      HERE
-                      </td></tr>
-                      <tr><td>1 You Pick 2</td><td>6.99</td></tr>
-                      <tr><td>1 Meal Upgrade</td><td>0.00</td></tr>
-                      <tr><td>1 Baguette</td><td>0.00</td></tr>
-                      <tr><td>1 Baguette</td><td>0.00</td></tr>
-                      <tr><td>1 Baguette</td><td>0.00</td></tr>
-                      <tr><td>1 Baguette</td><td>0.00</td></tr>
-                      <tr><td>1 Baguette</td><td>0.00</td></tr>
+                        ?>
+                        <div class="sample_receipt taller">
+                          <table class="block_table">
+                          <tr><td>Receipt #:</td><td>10145</td></tr>
+                          <tr><td>Register #:</td><td>1</td></tr>
+                          <tr><td>EnVR:</td><td>1521 - Braintree</td></tr>
+                          <tr><td>Cashier:</td><td>Elizabeth Jones</td></tr>
+                          <tr><td colspan=2 class="align-center">
+                          
+                          Thursday 07/24 6:45:04 PM EDT<br>
+                          HERE
+                          </td></tr>
+                          <tr class="current_item add_play_button"><td>1 You Pick 2</td><td>6.99</td></tr>
+                          <tr class="add_play_button"><td>1 Meal Upgrade</td><td>0.00</td></tr>
+                          <tr class="add_play_button"><td>1 Baguette</td><td>0.00</td></tr>
+                          <tr class="add_play_button"><td>1 Baguette</td><td>0.00</td></tr>
+                          <tr class="add_play_button"><td>1 Baguette</td><td>0.00</td></tr>
+                          
+                          </table>
+                          </div>
+                            
+                        <?php
                       
-                      </table>
+                      }
+                      
+                    $receipt = 11002;
+                    ?>
+                    <div class="accordion" id="receiptaccordion">
+                    <?php
+                    for($i=1;$i<=10;$i++):?>
+                      <div class="accordion-group">
+                        <div class="accordion-heading">
+                          <span class="accordion-toggle" data-toggle="collapse" data-parent="#receiptaccordion" href="#collapse<?php echo $receipt; ?>">
+                            <table class="block_table">
+                              <tbody>
+                                <tr>
+                                  <td class="play"><i class="icon-play"></i></td>
+                                  <td class="receipt">#<?php echo $receipt; ?></td>
+                                  <td class="info">3:13:11 PM EDT</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            
+                          </span>
+                        </div>
+                        <div id="collapse<?php echo $receipt; ?>" class="accordion-body collapse">
+                          <div class="accordion-inner">
+                            <?php output_sample_receipt(); ?>
+                          </div>
+                        </div>
                       </div>
-                        
-                  </div>
+                      
+                    <?php 
+                    $receipt++;
+                    endfor; ?>
+                    </div>
+                    
+                    
                 </div>
               </div>
                     
