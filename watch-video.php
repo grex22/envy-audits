@@ -19,7 +19,7 @@
               <div class="row-fluid ui-elements modal big_modal hide fade" id="change_view_panel">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                  <h3><i class="icon-facetime-video"></i> Change Cameras</h3>
+                  <h3>Change Cameras</h3>
                 </div>
                 <div class="row-fluid ui-elements padded">
                 <div class="span8" id="change_view_left_col">
@@ -182,27 +182,28 @@
                       </div>
                     
                     </fieldset>
-                  <h4><strong>Step 3:</strong> Confirm</h4>  
-                  <fieldset class="padded">
-                    <label class="checkbox">
-                      <input type="checkbox" id="save_as_favorite"> <i class="icon-star"></i> Save selected cameras as Favorite
-                      
-                    </label>
-                    <div id="favorite_name">
-                      <input type="text" class="input-large" name="favorite_name" placeholder="Enter a Name for this Favorite">
-                    </div>
-                  </fieldset>
-                  <input type="submit" class="change_view_submit live" value="Done! Watch Video">
-                  <a href="#" data-dismiss="modal">Cancel, back to current view</a>
+                    <h4><strong>Step 3:</strong> Confirm</h4>  
+                      <fieldset class="padded">
+                      <div class="control-group">
+                        <label class="control-label checkbox inline"><input type="checkbox" id="save_as_favorite"> <i class="icon-star"></i> Save as Favorite</label>
+                          <div id="favorite_name">
+                            <input type="text" class="input-large no_bottom_margin" name="favorite_name" placeholder="Favorite Name...">
+                          </div>
+                      </fieldset>
+                    <input type="submit" class="change_view_submit live" value="Done! Watch Video">
+                    <a href="#" data-dismiss="modal">Cancel, back to current view</a>
+                  </div>
+                  
 
                   </form>
                 </div>
               </div>
               </div>
               <div class="row-fluid ui-elements">
-                <div class="span9" id="video_wrapper">
-                  <div class="row-fluid widget">
-                    <h4 class="widget_title">
+
+                <div class="row-fluid widget" id="">
+                  <div class="row-fluid">
+                    <h4 class="widget_title no_bottom_margin">
                       <div class="btn-group pull-right align-right span4">
                         <div class="btn-group">
                           <button class="glow left"><i class="icon-desktop"></i> Focus Mode</button>
@@ -212,28 +213,32 @@
                       <i class="icon-th-large"></i> Braintree, All Cameras
                     </h4>
                     
-                    <div class="row-fluid padded">
-                      <div class="span3 video_placeholder video_box ratio4_3"></div>
-                      <div class="span3 video_placeholder video_box ratio4_3"></div>
-                      <div class="span3 video_placeholder video_box ratio4_3"></div>
-                      <div class="span3 video_placeholder video_box ratio4_3"></div>
-                    </div>
-                    <div class="row-fluid padded">
-                      <div class="span3 video_placeholder video_box ratio4_3"></div>
-                      <div class="span3 video_placeholder video_box ratio4_3"></div>
-                      <div class="span3 video_placeholder video_box ratio4_3"></div>
-                      <div class="span3 video_placeholder video_box ratio4_3"></div>
-                    </div>
                   </div>
-                    
-                </div>
+                <div class="row-fluid padded">
                 <div class="span3">
                   <div class="row-fluid">
-                    <a href="#change_view_panel" class="big_orange_button" id="change_view_button" data-toggle="modal"><i class="icon-refresh"></i> Change Cameras</a>
+                    <div class="btn-group big_orange_button_group">
+                      <a href="#change_view_panel" class="btn" id="change_view_button" data-toggle="modal" tabindex="-1"><i class="icon-refresh"></i> Change Cameras</a>
+                      <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li class="nav-header">Recent:<a href="#" class="pull-right">More...</a></li>
+                        <li><a href="#">Recent Group 1</a></li>
+                        <li><a href="#">Recent Group 2</a></li>
+                        <li><a href="#">Recent Group 3</a></li>
+                        <li class="divider"></li>
+                        <li class="nav-header">Favorites:<a href="#" class="pull-right">More...</a></li>
+                        <li><a href="#">Favorite Group 1</a></li>
+                        <li><a href="#">Favorite Group 2</a></li>
+                        <li><a href="#">Favorite Group 3</a></li>
+                      </ul>
+                    </div>
+                    
                   </div>
                   <div class="row-fluid widget">
                   
-                    <h4 class="widget_title">Transactions</h4>
+                    <h4 class="widget_sub_title no_bottom_margin">Transactions</h4>
                     
                     <?php
                       function output_sample_receipt(){
@@ -242,9 +247,9 @@
                         <div class="sample_receipt taller">
                           <table class="block_table">
                           <tr><td>Receipt #:</td><td>10145</td></tr>
-                          <tr><td>Register #:</td><td>1</td></tr>
-                          <tr><td>EnVR:</td><td>1521 - Braintree</td></tr>
-                          <tr><td>Cashier:</td><td>Elizabeth Jones</td></tr>
+                          <tr><td>Register #:</td><td>1 <a href="#" class="filter_link" title="Filter receipts" data-toggle="tooltip"><i class="icon-filter"></i></a></td></tr>
+                          <tr><td>EnVR:</td><td>1521 - Braintree <a href="#" class="filter_link" title="Filter receipts" data-toggle="tooltip"><i class="icon-filter"></i></a></td></tr>
+                          <tr><td>Cashier:</td><td>Elizabeth Jones <a href="#" class="filter_link" title="Filter receipts" data-toggle="tooltip"><i class="icon-filter"></i></a></td></tr>
                           <tr><td colspan=2 class="align-center">
                           
                           Thursday 07/24 6:45:04 PM EDT<br>
@@ -298,6 +303,31 @@
                     
                 </div>
               </div>
+              <div class="span9" id="video_wrapper">
+                    
+                <div class="row-fluid">
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+                </div>
+                <div class="row-fluid">
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+                </div>
+                <div class="row-fluid">
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+                </div>
+              </div>
+                  </div>
+                    
+                </div>
+                
                     
             </div>                
                

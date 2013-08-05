@@ -16,7 +16,7 @@ $(function(){
   
   $('#save_as_favorite').change(function () {
     if ($(this).is(':checked')){
-        $('#favorite_name').fadeIn();
+        $('#favorite_name').fadeIn().css("display","inline-block");;
         return;
     }else{
       $('#favorite_name').fadeOut();

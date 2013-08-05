@@ -217,6 +217,13 @@ select{font-size:11px;}
   .modal-header{
     background:white;
     
+    h3{
+      font-weight: 300;
+      font-size:20.5px;
+      line-height:30px;
+      color:darkorange;
+    }
+    
     .close{
       margin-top: 2px;
       font-size: 30px;
@@ -1190,23 +1197,48 @@ input[readonly].knob{
   box-sizing: border-box;
 }
 
-.big_orange_button{
-  display: block;
+#change_view_button{
+  text-align:left;
+}
+
+.big_orange_button_group{
+  margin: 0 0 16px;
+  width:100%;
+  
+  .caret {border-top: 4px solid #ffffff;}
+  
+  .dropdown-menu{width:100%!important;}  
+
+  &>a,&>button{
+
   background: orange;
   padding: 15px 20px;
   text-align: center;
   font-size: 17px;
-  margin: 0 0 16px;
   border-radius: 5px;
   color: white;
   text-shadow: 0 1px 1px gray;
   font-weight: bold;
-  @include box-shadow(0 2px 2px rgba(0,0,0,.2));
+  width:15%;
+  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
   
-  &:hover,&:focus{
-    text-decoration:none;
-    @include box-shadow(none);
-    color:#f1f1f1;
+  &:first-child{
+    width:85%;
+  }
+  
+  
+    &:hover,&:focus,&.active{
+      background:darkorange;
+      text-decoration:none;
+      @include box-shadow(none);
+      color:#f1f1f1;
+    }
+    
+    .btn-group.open .btn.dropdown-toggle {
+      background-color: darkorange;
+      }
+  
   }
 }
 .nav-tabs.big-tabs li a{
@@ -1384,7 +1416,7 @@ input[readonly].knob{
   margin:0 0 7px 0;
 }
 
-#favorite_name{display:none}
+#favorite_name{display:none;margin-top:-3px;}
 
 .change_view_submit{
   display: block;
@@ -1417,14 +1449,20 @@ input[readonly].knob{
 
 /* Video Page - Transactions Panel */
 
+#receiptheader{
+  
+}
+
 #receiptaccordion{
   
-  max-height:500px;
+  max-height:450px;
   overflow-y:scroll;
+  margin-bottom:0px;
 
   .accordion-group{
     margin-bottom:0;
     margin-bottom: 0;
+    border-bottom:none;
     border-top: 1px dashed #999;
     border-radius: 0;
     border-left:4px solid #ccc;
@@ -1450,7 +1488,7 @@ input[readonly].knob{
       font-family:"FontAwesome";
       position:absolute;
       left:11px;
-      
+
     }
     
     &:hover,&.in{
@@ -1459,6 +1497,10 @@ input[readonly].knob{
       border-left-color:$brightblue;
     }
   
+  }
+  
+  .filter_link:hover{
+    text-decoration:none;
   }
   
 }
