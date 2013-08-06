@@ -938,7 +938,15 @@ input[readonly].knob {
   .big_orange_button_group .caret {
     border-top: 4px solid #ffffff; }
   .big_orange_button_group .dropdown-menu {
-    width: 100% !important; }
+    width: 100%; }
+    .big_orange_button_group .dropdown-menu .nav-header .more_link {
+      padding: 0;
+      text-transform: none;
+      text-shadow: none;
+      color: #36abff; }
+      .big_orange_button_group .dropdown-menu .nav-header .more_link:hover {
+        background: transparent !important;
+        color: blue; }
   .big_orange_button_group > a, .big_orange_button_group > button {
     background: orange;
     padding: 15px 20px;

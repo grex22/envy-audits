@@ -1207,25 +1207,39 @@ input[readonly].knob{
   
   .caret {border-top: 4px solid #ffffff;}
   
-  .dropdown-menu{width:100%!important;}  
+  .dropdown-menu{
+    width:100%;
+    
+    .nav-header .more_link{
+      padding:0;
+      text-transform:none;
+      text-shadow:none;
+      color:$brightblue;
+      
+      &:hover{
+        background:transparent!important;
+        color:blue;
+      }
+    }
+  }  
 
   &>a,&>button{
 
-  background: orange;
-  padding: 15px 20px;
-  text-align: center;
-  font-size: 17px;
-  border-radius: 5px;
-  color: white;
-  text-shadow: 0 1px 1px gray;
-  font-weight: bold;
-  width:15%;
-  box-sizing:border-box;
-  -webkit-box-sizing:border-box;
+    background: orange;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 17px;
+    border-radius: 5px;
+    color: white;
+    text-shadow: 0 1px 1px gray;
+    font-weight: bold;
+    width:15%;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
   
-  &:first-child{
-    width:85%;
-  }
+    &:first-child{
+      width:85%;
+    }
   
   
     &:hover,&:focus,&.active{

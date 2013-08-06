@@ -223,15 +223,17 @@
                         <span class="caret"></span>
                       </button>
                       <ul class="dropdown-menu">
-                        <li class="nav-header">Recent:<a href="#" class="pull-right">More...</a></li>
+                        <li class="nav-header"><i class="icon-time"></i> Recent:<a href="#change_view_panel" data-toggle="modal" class="pull-right more_link">More...</a></li>
                         <li><a href="#">Recent Group 1</a></li>
                         <li><a href="#">Recent Group 2</a></li>
                         <li><a href="#">Recent Group 3</a></li>
                         <li class="divider"></li>
-                        <li class="nav-header">Favorites:<a href="#" class="pull-right">More...</a></li>
+                        <li class="nav-header"><i class="icon-star"></i> Favorites:<a href="#change_view_panel" data-toggle="modal" class="pull-right more_link">More...</a></li>
                         <li><a href="#">Favorite Group 1</a></li>
                         <li><a href="#">Favorite Group 2</a></li>
                         <li><a href="#">Favorite Group 3</a></li>
+                        <li><a href="#">Favorite Group 4</a></li>
+                        <li><a href="#">Favorite Group 5</a></li>
                       </ul>
                     </div>
                     
@@ -239,6 +241,9 @@
                   <div class="row-fluid widget">
                   
                     <h4 class="widget_sub_title no_bottom_margin">Transactions</h4>
+                    <!--<div>
+                    Current Time: 3:14:11
+                    </div>-->
                     
                     <?php
                       function output_sample_receipt(){
@@ -247,9 +252,9 @@
                         <div class="sample_receipt taller">
                           <table class="block_table">
                           <tr><td>Receipt #:</td><td>10145</td></tr>
-                          <tr><td>Register #:</td><td>1 <a href="#" class="filter_link" title="Filter receipts" data-toggle="tooltip"><i class="icon-filter"></i></a></td></tr>
-                          <tr><td>EnVR:</td><td>1521 - Braintree <a href="#" class="filter_link" title="Filter receipts" data-toggle="tooltip"><i class="icon-filter"></i></a></td></tr>
-                          <tr><td>Cashier:</td><td>Elizabeth Jones <a href="#" class="filter_link" title="Filter receipts" data-toggle="tooltip"><i class="icon-filter"></i></a></td></tr>
+                          <tr><td>Register #:</td><td>1 <a href="#" class="filter_link" title="Filter receipts" data-toggle="tooltip" data-placement="bottom"><i class="icon-filter"></i></a></td></tr>
+                          <tr><td>EnVR:</td><td>1521 - Braintree <a href="#" class="filter_link" title="Filter receipts" data-toggle="tooltip"  data-placement="bottom"><i class="icon-filter"></i></a></td></tr>
+                          <tr><td>Cashier:</td><td>Elizabeth Jones <a href="#" class="filter_link" title="Filter receipts" data-toggle="tooltip"  data-placement="bottom"><i class="icon-filter"></i></a></td></tr>
                           <tr><td colspan=2 class="align-center">
                           
                           Thursday 07/24 6:45:04 PM EDT<br>
@@ -304,7 +309,34 @@
                 </div>
               </div>
               <div class="span9" id="video_wrapper">
-                    
+                <div class="row-fluid">
+                  <div class="span6">
+                    <div class="pagination">
+                      <ul>
+                        <li><a href="#">&laquo;</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="row-fluid">
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+
+                </div>
+                <div class="row-fluid">
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+                  <div class="span3 video_placeholder video_box ratio4_3"></div>
+                </div>
                 <div class="row-fluid">
                   <div class="span3 video_placeholder video_box ratio4_3"></div>
                   <div class="span3 video_placeholder video_box ratio4_3"></div>
