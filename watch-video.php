@@ -238,7 +238,7 @@
                     </div>
                     
                   </div>
-                  <div class="row-fluid widget">
+                  <div class="row-fluid widget no_bottom_padding">
                   
                     <h4 class="widget_sub_title no_bottom_margin">Transactions</h4>
                     <!--<div>
@@ -275,11 +275,13 @@
                       
                     $receipt = 11002;
                     ?>
+                    <div id="receiptheader">TEst</div>
                     <div class="accordion" id="receiptaccordion">
+                    
                     <?php
-                    for($i=1;$i<=10;$i++):?>
+                    for($i=1;$i<=15;$i++):?>
                       <div class="accordion-group">
-                        <div class="accordion-heading">
+                        <div class="accordion-heading <?php if($i==2) echo "active"; ?>">
                           <span class="accordion-toggle" data-toggle="collapse" data-parent="#receiptaccordion" href="#collapse<?php echo $receipt; ?>">
                             <table class="block_table">
                               <tbody>
@@ -309,21 +311,22 @@
                 </div>
               </div>
               <div class="span9" id="video_wrapper">
+                <?php function output_pagination(){ ?>
                 <div class="row-fluid">
-                  <div class="span6">
-                    <div class="pagination">
+                  <div class="span12 ">
+                    <div class="pagination pull-right">
+                      <span class="pag_status">Cameras 1-16 of 28</span>
                       <ul>
                         <li><a href="#">&laquo;</a></li>
-                        <li><a href="#">1</a></li>
+                        <li class="active"><a href="#">1</a></li>
                         <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
                         <li><a href="#">&raquo;</a></li>
                       </ul>
                     </div>
                   </div>
                 </div>
+                <?php } ?>
+                <?php output_pagination(); ?>
                 <div class="row-fluid">
                   <div class="span3 video_placeholder video_box ratio4_3"></div>
                   <div class="span3 video_placeholder video_box ratio4_3"></div>
@@ -349,12 +352,7 @@
                   <div class="span3 video_placeholder video_box ratio4_3"></div>
                   <div class="span3 video_placeholder video_box ratio4_3"></div>
                 </div>
-                <div class="row-fluid">
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-                </div>
+                <?php output_pagination(); ?>
               </div>
                   </div>
                     

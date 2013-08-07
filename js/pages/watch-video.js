@@ -85,7 +85,35 @@ $(function(){
     endDate: new Date(),
     startDate: startDateObj,
     startView: new Date(),
-  });  
+  });
+  
+  
+  
+  //Fixed positioning for active Receipt
+  /*
+  var $wrapper = $('#receiptaccordion')
+    , $sticky = $('.accordion-heading.active .accordion-toggle')
+    , $stickyWrapper = $('.accordion-heading.active')
+    , stickyTop = parseInt($('.accordion-heading.active').offset().top)
+    , wrapperTop = parseInt($wrapper.offset().top);
+    
+    $sticky.width($('#receiptaccordion .accordion-group:first').width()).css('box-sizing','border-box');
+    $stickyWrapper.height($sticky.height()+16);
+
+    processScroll();
+
+    $wrapper.on('scroll', processScroll);
+    $(document).on('scroll', processScroll);
+
+    function processScroll() {
+      var i, scrollTop = $wrapper.scrollTop();
+      if (scrollTop >= stickyTop - wrapperTop) {
+        $sticky.css({'position': 'absolute', 'top': scrollTop});
+      } else if (scrollTop <= stickyTop - wrapperTop ) {
+        $sticky.css({'position': 'static', 'top': 0});
+      }
+    }
+    */
 
   
 });

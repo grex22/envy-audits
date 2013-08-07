@@ -259,6 +259,9 @@ a.active .navbar_icon,
 .no_bottom_margin {
   margin-bottom: 0px !important; }
 
+.no_bottom_padding {
+  padding-bottom: 0px !important; }
+
 .flush_top_margin {
   margin-top: -10px; }
 
@@ -1137,12 +1140,31 @@ input[readonly].knob {
 
 #video_wrapper .row-fluid {
   margin-bottom: 20px; }
+#video_wrapper .pag_status {
+  margin-right: 4px;
+  font-size: 11px;
+  color: #999999;
+  vertical-align: text-bottom; }
+#video_wrapper .pagination ul {
+  vertical-align: text-bottom; }
 
 /* Video Page - Transactions Panel */
+#receiptheader {
+  background: #887777;
+  padding: 10px;
+  color: white; }
+
 #receiptaccordion {
   max-height: 450px;
   overflow-y: scroll;
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+  position: relative; }
+  #receiptaccordion .accordion-heading.active {
+    background: #36abff;
+    color: white; }
+    #receiptaccordion .accordion-heading.active .accordion-toggle {
+      background: #36abff;
+      z-index: 4000; }
   #receiptaccordion .accordion-group {
     margin-bottom: 0;
     margin-bottom: 0;

@@ -421,6 +421,9 @@ a.active .navbar_icon,
 .no_bottom_margin{
   margin-bottom:0px!important;
 }
+.no_bottom_padding{
+  padding-bottom:0px!important;
+}
 
 .flush_top_margin{margin-top:-10px;}
 
@@ -1459,12 +1462,23 @@ input[readonly].knob{
   .row-fluid{
     margin-bottom:20px;
   }
+  .pag_status{
+    margin-right:4px;
+    font-size:11px;
+    color:#999999;
+    vertical-align:text-bottom;
+  }
+  .pagination ul{
+    vertical-align:text-bottom;
+  }
 }
 
 /* Video Page - Transactions Panel */
 
 #receiptheader{
-  
+  background:$warmgray;
+  padding:10px;
+  color:white;
 }
 
 #receiptaccordion{
@@ -1472,6 +1486,20 @@ input[readonly].knob{
   max-height:450px;
   overflow-y:scroll;
   margin-bottom:0px;
+  position:relative;
+  
+  
+  
+  .accordion-heading.active{
+    background:$brightblue;
+    color:white;
+    
+    
+    .accordion-toggle{
+      background:$brightblue;
+      z-index:4000;
+    }
+  }
 
   .accordion-group{
     margin-bottom:0;
@@ -1481,8 +1509,6 @@ input[readonly].knob{
     border-radius: 0;
     border-left:4px solid #ccc;
     
-      
-    
     table{
       tr{
         td.play{opacity:.2}
@@ -1490,7 +1516,6 @@ input[readonly].knob{
         td.info{text-align:right;}
         
         &.current_item{background:yellow}
-       
       }
     
     }
@@ -1502,7 +1527,6 @@ input[readonly].knob{
       font-family:"FontAwesome";
       position:absolute;
       left:11px;
-
     }
     
     &:hover,&.in{
