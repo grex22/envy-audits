@@ -87,6 +87,9 @@ $(function(){
     startView: new Date(),
   });
   
+  //Load Modal on default
+  $('#change_view_panel').modal('show');
+  
   
   
   //Fixed positioning for active Receipt

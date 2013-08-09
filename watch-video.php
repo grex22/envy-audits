@@ -1,13 +1,7 @@
 <?php include ('inc/head.php'); ?>
 
             <div id="main_header_wrapper">
-                <div class="row-fluid main_header">
-                    <div class="span12">
-                      <h3>
-                        Watch Video
-                      </h3>
-                    </div>
-                </div>
+
             </div>
             
             <div id="content_wrapper">
@@ -204,41 +198,78 @@
                 <div class="row-fluid widget" id="">
                   <div class="row-fluid">
                     <h4 class="widget_title no_bottom_margin">
-                      <div class="btn-group pull-right align-right span4">
+                      
+                      <div class="btn-toolbar span6 pull-right align-right">
+                        <div class="btn-group big_orange_button_group">
+                          <a href="#change_view_panel" class="btn" id="change_view_button" data-toggle="modal" tabindex="-1"><i class="icon-refresh"></i> Change Cameras</a>
+                          <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li class="nav-header"><i class="icon-time"></i> Recent:<a href="#change_view_panel" data-toggle="modal" class="pull-right more_link">More...</a></li>
+                            <li><a href="#">Recent Group 1</a></li>
+                            <li><a href="#">Recent Group 2</a></li>
+                            <li><a href="#">Recent Group 3</a></li>
+                            <li class="divider"></li>
+                            <li class="nav-header"><i class="icon-star"></i> Favorites:<a href="#change_view_panel" data-toggle="modal" class="pull-right more_link">More...</a></li>
+                            <li><a href="#">Favorite Group 1</a></li>
+                            <li><a href="#">Favorite Group 2</a></li>
+                            <li><a href="#">Favorite Group 3</a></li>
+                            <li><a href="#">Favorite Group 4</a></li>
+                            <li><a href="#">Favorite Group 5</a></li>
+                          </ul>
+                        </div>
                         <div class="btn-group">
                           <button class="glow left"><i class="icon-desktop"></i> Focus Mode</button>
                           <button class="glow right active"><i class="icon-th"></i> Grid Mode</button>
                         </div>
+                        <div class="btn-group">
+                          <button class="glow solo"><i class="icon-reorder"></i> Reorder Cams</button>
+                        </div>
                       </div>
+                      
                       <i class="icon-th-large"></i> Braintree, All Cameras
                     </h4>
                     
                   </div>
                 <div class="row-fluid padded">
-                <div class="span3">
-                  <div class="row-fluid">
-                    <div class="btn-group big_orange_button_group">
-                      <a href="#change_view_panel" class="btn" id="change_view_button" data-toggle="modal" tabindex="-1"><i class="icon-refresh"></i> Change Cameras</a>
-                      <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">
-                        <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li class="nav-header"><i class="icon-time"></i> Recent:<a href="#change_view_panel" data-toggle="modal" class="pull-right more_link">More...</a></li>
-                        <li><a href="#">Recent Group 1</a></li>
-                        <li><a href="#">Recent Group 2</a></li>
-                        <li><a href="#">Recent Group 3</a></li>
-                        <li class="divider"></li>
-                        <li class="nav-header"><i class="icon-star"></i> Favorites:<a href="#change_view_panel" data-toggle="modal" class="pull-right more_link">More...</a></li>
-                        <li><a href="#">Favorite Group 1</a></li>
-                        <li><a href="#">Favorite Group 2</a></li>
-                        <li><a href="#">Favorite Group 3</a></li>
-                        <li><a href="#">Favorite Group 4</a></li>
-                        <li><a href="#">Favorite Group 5</a></li>
-                      </ul>
-                    </div>
-                    
+                
+                
+              <?php function output_pagination(){ ?>
+                  <div class="pagination">
+                    <span class="pag_status">Cameras 1-16 of 28</span>
+                    <ul>
+                      <li><a href="#">&laquo;</a></li>
+                      <li class="active"><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">&raquo;</a></li>
+                    </ul>
                   </div>
-                  <div class="row-fluid widget no_bottom_padding">
+              <?php } ?>
+              <div class="span9" id="video_wrapper">
+                
+                <h4 class="widget_sub_title no_bottom_margin">Video</h4>
+                <div class="row-fluid">
+                  <!--<div class="span6 pull-right align-right">
+                    <?php output_pagination(); ?>
+                  </div>-->
+                </div>
+                <div class="row-fluid">
+                  <div class="span6 video_placeholder video_box ratio4_3"></div>
+                  <div class="span6 video_placeholder video_box ratio4_3"></div>
+
+                </div>
+                <div class="row-fluid align-center">
+                  <div class="span6 video_placeholder video_box ratio4_3"></div>
+                  <div class="span6 video_placeholder video_box ratio4_3"></div>
+                </div>
+
+                <?php output_pagination(); ?>
+              </div>
+              
+              <div class="span3">
+                  
+                  <div class="row-fluid no_bottom_padding">
                   
                     <h4 class="widget_sub_title no_bottom_margin">Transactions</h4>
                     <!--<div>
@@ -275,13 +306,13 @@
                       
                     $receipt = 11002;
                     ?>
-                    <div id="receiptheader">TEst</div>
+                    <div class="level_2_header">Receipt Search</div>
                     <div class="accordion" id="receiptaccordion">
                     
                     <?php
                     for($i=1;$i<=15;$i++):?>
-                      <div class="accordion-group">
-                        <div class="accordion-heading <?php if($i==2) echo "active"; ?>">
+                      <div class="accordion-group ">
+                        <div class="accordion-heading">
                           <span class="accordion-toggle" data-toggle="collapse" data-parent="#receiptaccordion" href="#collapse<?php echo $receipt; ?>">
                             <table class="block_table">
                               <tbody>
@@ -309,50 +340,6 @@
                     
                     
                 </div>
-              </div>
-              <div class="span9" id="video_wrapper">
-                <?php function output_pagination(){ ?>
-                <div class="row-fluid">
-                  <div class="span12 ">
-                    <div class="pagination pull-right">
-                      <span class="pag_status">Cameras 1-16 of 28</span>
-                      <ul>
-                        <li><a href="#">&laquo;</a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">&raquo;</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <?php } ?>
-                <?php output_pagination(); ?>
-                <div class="row-fluid">
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-
-                </div>
-                <div class="row-fluid">
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-                </div>
-                <div class="row-fluid">
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-                </div>
-                <div class="row-fluid">
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-                  <div class="span3 video_placeholder video_box ratio4_3"></div>
-                </div>
-                <?php output_pagination(); ?>
               </div>
                   </div>
                     

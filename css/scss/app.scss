@@ -180,6 +180,9 @@ table th span.line{left:0;}
 
 select{font-size:11px;}
 .glow.active{color:$brightblue!important;}
+.glow.solo{
+  border-radius: 4px;
+}
 
 /*                                  */
 /* Main Elements                    */
@@ -556,6 +559,10 @@ th.sortable:after{
   position:relative;
   border-top:none!important;
   
+  .btn-toolbar{
+    margin:0;
+  }
+  
   &>i{
     font-size:14px;
     color: #bbbbbb;
@@ -588,8 +595,9 @@ th.sortable:after{
     left: 16px;
     z-index:1000;
   }
-  
+  .btn-group{margin-left:15px;}
   .btn-group button.glow{margin-top:-7px;padding:9px 12px;}
+  
   
   .btn-flat{
     margin-top:-4px;
@@ -1196,7 +1204,7 @@ input[readonly].knob{
 
 .video_placeholder{
   background: lightgray;
-  border: 4px solid #999;
+  border: 1px solid #999;
   box-sizing: border-box;
 }
 
@@ -1205,8 +1213,9 @@ input[readonly].knob{
 }
 
 .big_orange_button_group{
-  margin: 0 0 16px;
-  width:100%;
+  margin: -7px 0px 0px;
+  text-align:left;
+  /*width:100%;*/
   
   .caret {border-top: 4px solid #ffffff;}
   
@@ -1229,7 +1238,7 @@ input[readonly].knob{
   &>a,&>button{
 
     background: orange;
-    padding: 15px 20px;
+    padding: 6px 20px; /* used to be 15px 20px */
     text-align: center;
     font-size: 17px;
     border-radius: 5px;
@@ -1475,7 +1484,7 @@ input[readonly].knob{
 
 /* Video Page - Transactions Panel */
 
-#receiptheader{
+.level_2_header{
   background:$warmgray;
   padding:10px;
   color:white;
@@ -1487,27 +1496,32 @@ input[readonly].knob{
   overflow-y:scroll;
   margin-bottom:0px;
   position:relative;
+  border: solid #ddd;
+  border-width: 0 1px 1px 1px;  
   
-  
-  
-  .accordion-heading.active{
-    background:$brightblue;
-    color:white;
-    
-    
-    .accordion-toggle{
+  .accordion-group.active{
+   
+    .accordion-heading{
+      color:white;
       background:$brightblue;
       z-index:4000;
     }
+    
   }
 
   .accordion-group{
     margin-bottom:0;
     margin-bottom: 0;
     border-bottom:none;
-    border-top: 1px dashed #999;
     border-radius: 0;
-    border-left:4px solid #ccc;
+    border-width:1px 0 0 0;
+    
+    &:hover,&.in{
+      border-left-color:$brightblue;
+      
+      & .accordion-toggle>table{font-weight:700}
+      td.play{opacity:1;color:$brightblue};
+    }
     
     table{
       tr{
@@ -1528,12 +1542,6 @@ input[readonly].knob{
       position:absolute;
       left:11px;
     }
-    
-    &:hover,&.in{
-      & .accordion-toggle>table{font-weight:700}
-      td.play{opacity:1;color:$brightblue};
-      border-left-color:$brightblue;
-    }
   
   }
   
@@ -1548,7 +1556,7 @@ input[readonly].knob{
   display: inline-block;
   position:  relative;
   width: 100%;
-  max-width:400px;
+  /*max-width:400px;*/
 
   &:before{
     content: "";
