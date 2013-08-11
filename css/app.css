@@ -407,6 +407,8 @@ th.sortable:after {
     z-index: 1000; }
   .widget_title .btn-group {
     margin-left: 15px; }
+    .widget_title .btn-group.pull-left {
+      margin-left: 0px; }
   .widget_title .btn-group button.glow {
     margin-top: -7px;
     padding: 9px 12px; }

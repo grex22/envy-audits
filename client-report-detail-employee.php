@@ -122,6 +122,7 @@
                       </div>
                       <div class="span9">
                         <div class="row-fluid widget">
+                        <?php $title = "Employee &raquo; Elizabeth Jones"; ?>
                         <?php include('report_header.php'); ?>
                         <div class="padded">
                         <h4 class="widget_sub_title">Report Overview:</h4>

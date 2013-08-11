@@ -47,6 +47,9 @@
     <?php if($_SERVER['PHP_SELF']=="/envysion/client-report-detail-cashier.php"): ?>
       <script src="js/pages/client-report-detail-cashier.js"></script>
     <?php endif; ?>
+    <?php if($_SERVER['PHP_SELF']=="/envysion/client-report-detail-employee.php"): ?>
+      <script src="js/pages/client-report-detail-employee.js"></script>
+    <?php endif; ?>
     <?php if($_SERVER['PHP_SELF']=="/envysion/watch-video.php"): ?>
       <script src="js/pages/watch-video.js"></script>
     <?php endif; ?>

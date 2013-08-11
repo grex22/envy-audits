@@ -595,7 +595,10 @@ th.sortable:after{
     left: 16px;
     z-index:1000;
   }
-  .btn-group{margin-left:15px;}
+  .btn-group{
+    margin-left:15px;
+    &.pull-left{margin-left:0px;}
+  }
   .btn-group button.glow{margin-top:-7px;padding:9px 12px;}
   
   

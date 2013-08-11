@@ -153,7 +153,7 @@
                               <button class="glow middle"><i class="icon-download-alt"></i> Export</button>
                               <button class="glow right">Print <i class="icon-print"></i></button>
                             </div>
-                            <div class="btn-group">
+                            <div class="btn-group pull-left">
                               <button class="glow left active">Overview</button>
                               <button class="glow middle">Weekend vs. Weekday</button>
                               <button class="glow middle">Lunch vs. Dinner</button>

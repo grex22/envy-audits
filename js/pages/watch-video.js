@@ -88,7 +88,7 @@ $(function(){
   });
   
   //Load Modal on default
-  $('#change_view_panel').modal('show');
+  //$('#change_view_panel').modal('show');
   
   
   
