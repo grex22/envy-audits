@@ -1,13 +1,7 @@
 <?php include ('inc/head.php'); ?>
 
             <div id="main_header_wrapper">
-                <div class="row-fluid main_header">
-                    <div class="span12">
-                      <h3>
-                        <a href="client-report-overview.php">Intelligence</a> &raquo; Audit Detail
-                      </h3>
-                    </div>
-                </div>
+                
             </div>
             
             <div id="content_wrapper">
@@ -16,160 +10,86 @@
                 <div class="span12">
                     
 
-                    <div class="row-fluid left_column_nav">
-                      
-                      <div class="span3" id="report_nav">
-                        <div class="row-fluid widget">
-                          <div class="accordion" id="accordion2">
-                            <div class="accordion-group">
-                              <div class="accordion-heading">
-                                <a href="client-report-detail.php" class="accordion-toggle active" >
-                                  <i class="icon-th-large"></i> Overview
-                                </a>
+                    <div class="row-fluid">
+                      <div class="row-fluid widget">
+                      <div class="span12">
+                        <h4 class="widget_title no_bottom_margin no_arrow">
+                        <i class="icon-bar-chart"></i> Intelligence &raquo; 
+                        Panera 2.0 Audit</h4>
+                        <div class="navbar" id="report_navbar">
+                          <div class="navbar-inner">
+                            <div class="row-fluid">
+                            <div class="span9 report_links_wrap">
+                              <ul class="nav">
+                                  <li>
+                                    <a href="client-report-detail.php" class="active" >
+                                      <i class="icon-home"></i> Overview
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="client-report-detail.php">
+                                      <i class="icon-pushpin"></i> Locations
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="client-report-detail.php">
+                                      <i class="icon-group"></i> Employees
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="client-report-detail.php">
+                                      <i class="icon-lightbulb"></i> Metrics
+                                    </a>
+                                  </li>
+                              </ul>
+                            <div class="pull-left">
+                              <label>Report Date Range:</label>
+                              <div id="report_daterange" class="report_jump_menu">
+                                <i class="icon-calendar"></i> 
+                                  <span></span>
                               </div>
                             </div>
-                            <div class="accordion-group">
-                              <div class="accordion-heading">
-                                <span class="accordion-toggle" data-toggle="collapse" data-target="#collapseTwo" href="#collapseTwo">
-                                  <i class="icon-pushpin"></i> My Locations
-                                </span>
-                              </div>
-                              <div id="collapseTwo" class="accordion-body collapse in">
-                                <div class="accordion-inner">
-                                  <ul>
-                                    <li>
-                                      <a href="#">
-                                      All Locations
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="#" data-toggle="collapse" class="collapsed has_submenu" data-target="#demo">
-                                      Southwest Stores
-                                      </a>
-                                      <div id="demo" class="collapse in">
-                                      <ul>
-                                        <li class="active"><a href="#">Braintree</a></li>
-                                        <li><a href="#">Milford</a></li>
-                                        <li><a href="#">Lexington</a></li>
-                                      </ul>
-                                      </div>
-                                    </li>
-                                    <li>
-                                      <a href="#" data-toggle="collapse" class="collapsed has_submenu" data-target="#demo2">
-                                      Northwest Stores
-                                      </a>
-                                      <div id="demo2" class="collapse">
-                                      <ul>
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Library</a></li>
-                                      </ul>
-                                      </div>
-                                    </li>
-                                  </ul>
-                                  
-                                </div>
-                              </div>
                             </div>
-                            <div class="accordion-group">
-                              <div class="accordion-heading">
-                                <span class="accordion-toggle" data-toggle="collapse" data-target="#collapseThree" href="#collapseThree">
-                                  <i class="icon-lightbulb"></i> Metrics
-                                </span>
-                              </div>
-                              <div id="collapseThree" class="accordion-body collapse">
-                                <div class="accordion-inner">
-                                  <ul>
-                                    <li>
-                                      <a href="#" data-toggle="collapse" class="collapsed has_submenu" data-target="#demo3">
-                                      Panera 2.0 Audit
-                                      </a>
-                                      <div id="demo3" class="collapse in">
-                                      <ul>
-                                        <li><a href="client-report-detail-cashier.php">Cashier Metric</a></li>
-                                        <li><a href="#">Expeditor</a></li>
-                                        <li><a href="#">Quality Control</a></li>
-                                      </ul>
-                                      </div>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
+                            
+                            <div class="span3">
+                              <form class="navbar-search">
+                                <label>Search:</label>
+                                <input type="text" class="search-query" placeholder="Find locations and people...">
+                                <button type="submit" class="btn"><i class="icon-search"></i></button>
+                              </form>
                             </div>
-                            <div class="accordion-group">
-                              <div class="accordion-heading">
-                                <a class="accordion-toggle collapsed" href="#">
-                                  <i class="icon-group"></i> Employees
-                                </a>
-                              </div>
                             </div>
-                            <div class="accordion-group">
-                              <div class="accordion-heading">
-                                <span class="accordion-toggle collapsed" data-toggle="collapse" data-target="#collapseFive" href="#collapseive">
-                                  <i class="icon-paste"></i> Custom Reports
-                                </span>
-                              </div>
-                              <div id="collapseFive" class="accordion-body collapse">
-                                <div class="accordion-inner">
-                                  <ul>
-                                    <li><a href="#">Lunch vs. Dinner</a></li>
-                                    <li><a href="#">Weekday vs. Weekend</a></li>
-                                  </ul>
-                                </div>
-                              </div>
+                            
+                        </div>
+                        </div>
+                        
+                                                
+                        <div class="padded">
+                        
+                        <h3>Overview, All Locations, Aug 10 - Aug 16, 2013</h3>
+                        <div class="row-fluid">
+                          <div class="span12 report_subnav">
+                            <div class="btn-group pull-right">
+                              <button class="glow left">Email <i class="icon-envelope"></i></button>
+                              <button class="glow middle">Export <i class="icon-download-alt"></i></button>
+                              <button class="glow right">Print <i class="icon-print"></i></button>
+                            </div>
+                            
+                            <div class="btn-group pull-left">
+                              <label class="inline">View: </label>
+                              <button class="glow left active">Standard</button>
+                              <button class="glow middle">Day of the Week</button>
+                              <button class="glow right">Day Part</button>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="span9">
-                        <div class="row-fluid widget">
-                        <h4 class="widget_title">
+                        <div class="row-fluid">
                         
-                          <div class="pull-right"> 
-                            <div id="report_daterange" class="report_jump_menu pull-right">
-                              <i class="icon-calendar"></i> 
-                                <span></span>
-                            </div>
-                          </div>
-                          
-                          
-                          <div class="dropdown pull-right"> 
-                            <div id="location_jump" class="dropdown-toggle report_jump_menu pull-right" data-toggle="dropdown" href="#">
-                              <i class="icon-pushpin"></i> 
-                                <span>Braintree</span>
-                            </div>
-                            <ul id="menu1" class="dropdown-menu header_jump" role="menu" aria-labelledby="location_jump">
-                              <li><a tabindex="-1" href="#">All Locations</a></li>
-                              <li><a tabindex="-1" href="#" class="selected">Braintree</a></li>
-                              <li><a tabindex="-1" href="#">Milford</a></li>
-                              <li><a tabindex="-1" href="#">Lexington</a></li>
-                            </ul>
-                          </div>
-                          
-                          
-                          <strong>Panera 2.0 Audit</strong> &raquo; Overview<br>
-                          <div class="report_subnav">
-                            <div class="btn-group pull-right">
-                              <button class="glow left"><i class="icon-envelope"></i> Email</button>
-                              <button class="glow middle"><i class="icon-download-alt"></i> Export</button>
-                              <button class="glow right">Print <i class="icon-print"></i></button>
-                            </div>
-                            <div class="btn-group pull-left">
-                              <button class="glow left active">Overview</button>
-                              <button class="glow middle">Weekend vs. Weekday</button>
-                              <button class="glow middle">Lunch vs. Dinner</button>
-                              <button class="glow right">Employees</button>
-                            </div>
-                            
-                          </div>
-                          <div class="clearfix"></div>
-                        </h4>
-                        <div class="padded">
-                        <h4 class="data_table_header">Report Overview:</h4>
+                        <div class="span9">
+                        <div class="row-fluid knobs-inline">
                         
-                        <div class="knobs row-fluid knob_box">
-                        
+                          <h4 class="inline">Averages:</h4>
                           <?php for($i=0; $i<4; $i++){ ?>
-                          <div class="span3">
                           <a href="client-report-detail-cashier.php" class="knob-wrapper <?php if($i == 0) echo "active"; ?>">
                             <table>
                               <tr>
@@ -183,7 +103,7 @@
                                       case 3: echo "81"; break;
                                     }
 
-                                  ?>" class="knob" data-thickness=".3" data-inputColor="#333" data-bgColor="#dddddd" data-width="80" data-height="50" data-readOnly="true" data-angleOffset="-100" data-angleArc="200">
+                                  ?>" class="knob" data-thickness=".3" data-inputColor="#333" data-bgColor="#dddddd" data-width="60" data-height="35" data-readOnly="true" data-angleOffset="-100" data-angleArc="200">
                                 </td>
                                 <td class="gauge_score">
                                   <?php
@@ -198,106 +118,75 @@
                               </tr>
                             </table>
                           </a>
-                          </div>
                           <?php } ?>
-                        </div>
-
-
-                        <div class="row-fluid">
-                          <div class="span12">
-                                                      
+                          </div>
+                          <div class="row-fluid">
+                            
                             <div class="chart">
-                              <ul class="nav nav-tabs">
-                              
-                                <li class="active"><a href="#overall" data-toggle="tab">Overall Score</a></li>
-                                <li><a href="#lvd" data-toggle="tab">Lunch vs. Dinner</a></li>
-                                <li><a href="#wdwe" data-toggle="tab">Weekday vs. Weekend</a></li>
-                                <li class="dropdown">
-                                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                      Metrics
-                                      <b class="caret"></b>
-                                    </a>
-                                  <ul class="dropdown-menu">
-                                    <li><a href="#met-all" data-toggle="tab">All Metrics</a></li>
-                                    <li><a href="#met-1" data-toggle="tab">Cashier Verbal Confirmation</a></li>
-                                    <li><a href="#met-2" data-toggle="tab">Expeditor Dine-In vs To-Go</a></li>
-                                  </ul>
-                                </li>
-                              </ul>
                               <div class="tab-content flotchartcontainer">
                                 <div class="tab-pane active" id="overall">
                                   <div class="row-fluid">
-                                    <div class="span12 align-right">
-                                      <div class="btn-group">
-                                          <button class="glow left active">TREND</button>
-                                          <button class="glow right">DAILY</button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="row-fluid">
                                     <div id="statsChartoverview1" class="span12 flot_fix"></div>
-                                  </div>
-                                </div>
-                                <div class="tab-pane" id="lvd">
-                                  <div class="row-fluid">
-                                    <div class="span12 align-right">
-                                      <div class="btn-group">
-                                          <button class="glow left active">TREND</button>
-                                          <button class="glow right">DAILY</button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="row-fluid">
-                                    <div id="statsChartdetail2" class="span12 flot_fix"></div>
-                                  </div>
-                                </div>
-                                <div class="tab-pane" id="met-all">
-                                  <div class="row-fluid">
-                                    <div class="span12 align-right">
-                                      <div class="btn-group">
-                                          <button class="glow left active">TREND</button>
-                                          <button class="glow right">DAILY</button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="row-fluid">
-                                    <div id="statsChartdetail3" class="span12 flot_fix"></div>
-                                  </div>
-                                </div>
-                                <div class="tab-pane" id="met-1">
-                                  <div class="row-fluid">
-                                    <div class="span12 align-right">
-                                      <div class="btn-group">
-                                          <button class="glow left active">TREND</button>
-                                          <button class="glow right">DAILY</button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="row-fluid">
-                                    <div id="statsChartdetail4" class="span12 flot_fix"></div>
-                                  </div>
-                                </div>
-                                <div class="tab-pane" id="met-2">
-                                  <div class="row-fluid">
-                                    <div class="span12 align-right">
-                                      <div class="btn-group">
-                                          <button class="glow left active">TREND</button>
-                                          <button class="glow right">DAILY</button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="row-fluid">
-                                    <div id="statsChartdetail5" class="span12 flot_fix"></div>
                                   </div>
                                 </div>
                               </div>
                               
                             </div>
-                              
-                              
                           </div>
+                        
                         </div>
+                        <div class="span3">
+                          <h4 class="data_table_header"><a href="#" class="pull-right header_link">View All &raquo;</a>Top Locations</h4>
+                          <table class="table table-condensed">
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td><a href="#">Braintree</a></td>
+                  <td>98</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><a href="#">Milford</a></td>
+                  <td>95</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><a href="#">Lexington</a></td>
+                  <td>95</td>
+                </tr>
+                
+              </tbody>
+            </table>
+                          <h4 class="data_table_header">
+                          <a href="#" class="pull-right header_link">View All &raquo;</a>
+                          Top Employees
+                          </h4>
+                          <table class="table table-condensed">
 
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td><a href="#">Mark Otto</a></td>
+                  <td>Braintree</td>
+                  <td>98</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><a href="#">Mark Otto</a></td>
+                  <td>Braintree</td>
+                  <td>98</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><a href="#">Mark Otto</a></td>
+                  <td>Braintree</td>
+                  <td>98</td>
+                </tr>
+              </tbody>
+            </table>
+                          
+                        </div>
+                        </div>
                         <div class="row-fluid">
                           <div class="pull-right pagination_well">
                           Show: <select>
@@ -321,11 +210,11 @@
                               <tr>
                                 <th>Preview</th>
                                 <th class="sortable">Score </th>
-                                <th class="sortable">Transaction </th>
+                                <th class="sortable">Metric </th>
                                 <th class="sortable">Date </th>
                                 <th class="sortable">Time </th>
                                 <th class="sortable">Location </th>
-                                <th class="sortable">Receipt </th>
+                                <th class="sortable">Transaction </th>
                                 <th class="close_holder"> </th>
                               </tr>
                             </thead>
@@ -333,8 +222,8 @@
                             <?php for($i=1; $i<15; $i++){ $pf = rand(0,2); ?>
                               <tr class="<?php $pf ? print"pass" : print"fail"; ?>">
                                 <td><img class="sample_thumb" src="img/custom/panera-cam-thumb.jpg"></td>
-                                <td><strong><?php $pf ? print "<span style='color:#36abff'>Pass</span>" : print "<span style='color:orange'>Fail</span>" ?></strong></td>
-                                <td>#<?php echo rand(1000,3000); ?></td>
+                                <td><span class="label label-<?php $pf ? print"success" : print"fail";?>"><?php $pf ? print "Pass!":print "Fail"; ?></span></td>
+                                <td>Cashier</td>
                                 <td>7/13/13</td>
                                 <td>3:32 pm EST</td>
                                 <td>Braintree</td>
@@ -350,13 +239,22 @@
                                     </div>
                                     <div class="span4">
                                       
-                                      <h5>Score</h5>
+                                      <h5>Score, Cashier Metric</h5>
                                         <div class="sample_receipt">
                                         <table class="block_table">
                                         <tr><td><strong>Score</strong></td><td><span class="label label-<?php $pf ? print"success" : print"fail";?>"><?php $pf ? print "Pass!":print "Fail"; ?></span></td></tr>
                                         <tr><td><strong>Employee:</strong></td><td>Elizabeth Jones</td></tr>
                                         <tr><td colspan=2><strong>Comments:</strong></td></tr>
                                         <tr><td colspan=2><?php $pf ? print"Cashier offered to list the ingredients for the order.":print"Cashier did not offer to list the ingredients for the Chicken Caesar Salad and Bacon Turkey Bravo"; ?></td></tr>                                       
+                                        </table>
+                                        </div>
+                                        <h5>Score, Quality Control</h5>
+                                        <div class="sample_receipt">
+                                        <table class="block_table">
+                                        <tr><td><strong>Score</strong></td><td><span class="label label-<?php $pf ? print"success" : print"fail";?>"><?php $pf ? print "Pass!":print "Fail"; ?></span></td></tr>
+                                        <tr><td><strong>Employee:</strong></td><td>Elizabeth Jones</td></tr>
+                                        <tr><td colspan=2><strong>Comments:</strong></td></tr>
+                                        <tr><td colspan=2>An order was improperly entered.</td></tr>                                       
                                         </table>
                                         </div>
                                     </div>

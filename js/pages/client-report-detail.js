@@ -131,14 +131,14 @@ var flotDefaultsLines = {
               labelBoxBorderColor: "#fff",
               position:'sw',
               noColumns: 0,
-              margin:[0,20]
+              margin:[5,210]
           }
         };
 // jQuery Flot Chart
-  var dashboard1 = [[1, 30], [2, 42], [3, 34], [4, 63],[5, 80],[6, 68],[7, 90]];
-  var dashboard2 = [[1, 20], [2, 40], [3, 50], [4, 43],[5, 68],[6, 80],[7, 49]];
-  var dashboard3 = [[1, 30], [2, 38], [3, 45], [4, 53],[5, 66],[6, 50],[7, 77]];
-  var dashboard4 = [[1, 42], [2, 22], [3, 64], [4, 43],[5, 45],[6, 75],[7, 95]];
+  var dashboard1 = [[1, 30], [2, 42], [3, 34], [4, 63],[5, 80],[6, 68],[7, 90],[8, 95],[9, 95],[10, 92]];
+  var dashboard2 = [[1, 20], [2, 40], [3, 50], [4, 43],[5, 68],[6, 80],[7, 49],[8, 53],[9, 76],[10, 82]];
+  var dashboard3 = [[1, 30], [2, 38], [3, 45], [4, 53],[5, 66],[6, 50],[7, 77],[8, 93],[9, 94],[10, 91]];
+  var dashboard4 = [[1, 42], [2, 22], [3, 64], [4, 43],[5, 45],[6, 75],[7, 85],[8, 87],[9, 91],[10, 98]];
   var dailyoverallpass = [[1, 50], [2, 40], [3, 45], [4, 23],[5, 55],[6, 65],[7, 61]];
   var dailyoverallfail = [[1, 80], [2, 75], [3, 15], [4, 3],[5, 13],[6, 11],[7, 6]];
   var dailyoverallmetric1 = [[1, 80], [2, 75], [3, 15], [4, 80],[5, 18],[6, 14],[7, 20]];
@@ -157,16 +157,7 @@ var flotDefaultsLines = {
   
   var plot = $.plot($("#statsChartoverview1"),
       [ { data: dashboard1, label: "Overall" },{ data: dashboard2, label: "Cashier"},{ data: dashboard3, label: "Expeditor"},{ data: dashboard4, label: "QC"}], flotDefaultsLines);
-  /*var plot = $.plot($("#statsChartdetail1"),
-      [ { data: dailyoverallpass, label: "Passes" },{ data: dailyoverallfail, label: "Fails"}], flotDefaultsLines);*/
-  var plot = $.plot($("#statsChartdetail2"),
-      [ { data: lunch, label: "Lunch Score"},{ data: dinner, label: "Dinner Score" }], flotDefaultsLines);
-  var plot = $.plot($("#statsChartdetail3"),
-      [ { data: met1, label: "Cashier Score"},{ data: met2, label: "Expeditor Score" }], flotDefaultsLines);
-  var plot = $.plot($("#statsChartdetail4"),
-      [ { data: met1, label: "Cashier Score"}], flotDefaultsLines);
-  var plot = $.plot($("#statsChartdetail5"),
-      [ { data: met2, label: "Expeditor Score" }], flotDefaultsLines);
+
 
   function showTooltip(x, y, contents) {
       $('<div id="tooltip">' + contents + '</div>').css( {
@@ -221,7 +212,7 @@ var flotDefaultsLines = {
        'This Month': [moment().startOf('month'), moment().endOf('month')],
        'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
     },
-    opens: 'left',
+    opens: 'right',
     separator: ' -- ',
     startDate: moment().subtract('days', 6),
     endDate: new Date(),

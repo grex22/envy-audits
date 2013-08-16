@@ -25,11 +25,13 @@ $(function(){
   
   $('input[name="video_mode"]').change(function(e){
     if($(this).val() == 'recorded'){
+      $('.camera_thumbnail_list').addClass('recorded_thumbs');
       $('#recorded_parameters').slideDown();
       $('.change_view_submit').removeClass('live').addClass('recorded');
     }else if($(this).val() == 'live'){
       $('#recorded_parameters').slideUp();
       $('.change_view_submit').removeClass('recorded').addClass('live');
+      $('.camera_thumbnail_list').removeClass('recorded_thumbs');
     }
   });
   
@@ -38,6 +40,8 @@ $(function(){
     var $checkbox = $(this).siblings(':checkbox');
     $checkbox.prop('checked', !$checkbox[0].checked);
   });
+  
+
   
   $('.select_all_cameras').click(function(e){
     e.preventDefault();

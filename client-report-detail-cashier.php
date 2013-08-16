@@ -102,21 +102,6 @@
                                 </a>
                               </div>
                             </div>
-                            <div class="accordion-group">
-                              <div class="accordion-heading">
-                                <span class="accordion-toggle collapsed" data-toggle="collapse" data-target="#collapseFive" href="#collapseive">
-                                  <i class="icon-paste"></i> Custom Reports
-                                </span>
-                              </div>
-                              <div id="collapseFive" class="accordion-body collapse">
-                                <div class="accordion-inner">
-                                  <ul>
-                                    <li><a href="#">Lunch vs. Dinner</a></li>
-                                    <li><a href="#">Weekday vs. Weekend</a></li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -155,10 +140,6 @@
                                     <div class="span12">
                                       
                                       <h4 class="widget_sub_title">
-                                        <div class="btn-group pull-right">
-                                          <button class="glow left active">TREND</button>
-                                          <button class="glow right">DAILY</button>
-                                        </div>
                                       Cashier Metric Score:</h4>
                                     </div>
                                   </div>
@@ -183,11 +164,7 @@
                                     <div class="span12">
                                       
                                       <h4 class="widget_sub_title">
-                                        <div class="btn-group pull-right">
-                                          <button class="glow left active">TREND</button>
-                                          <button class="glow right">DAILY</button>
-                                        </div>
-                                      Lunch vs. Dinner:</h4>
+                                      Day Part</h4>
                                     </div>
                                   </div>
                                   <div class="row-fluid">
@@ -207,11 +184,7 @@
                                     <div class="span12">
                                       
                                       <h4 class="widget_sub_title">
-                                        <div class="btn-group pull-right">
-                                          <button class="glow left active">TREND</button>
-                                          <button class="glow right">DAILY</button>
-                                        </div>
-                                      Weekday vs. Weekend:</h4>
+                                      Day of the Week:</h4>
                                     </div>
                                   </div>
                                   <div class="row-fluid">
