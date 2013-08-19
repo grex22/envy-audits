@@ -22,12 +22,12 @@
                             <div class="span4 report_links_wrap">
                               <ul class="nav">
                                   <li>
-                                    <a href="client-report-detail.php" class="active" >
+                                    <a href="client-report-detail.php">
                                       <i class="icon-home"></i> Overview
                                     </a>
                                   </li>
                                   <li>
-                                    <a href="client-report-locations.php">
+                                    <a href="client-report-locations.php" class="active" >
                                       <i class="icon-pushpin"></i> Locations
                                     </a>
                                   </li>
@@ -60,11 +60,11 @@
                         </div>
                         <div class="row-fluid report_header padded">
                           <div class="span9">
-                            <h3>Overview:
+                            <h3>Locations Report:
                               <select id="report_location" class="inline select2_jump">
-                                <option value="All Locations" selected="selected">All Locations</option>
+                                <option value="All Locations" >All Locations</option>
                                 <optgroup label="Southwest Region">
-                                  <option value="Braintree">Braintree</option>
+                                  <option value="Braintree" selected="selected">Braintree</option>
                                   <option value="Braintree">Lexington</option>
                                   <option value="Braintree">Milford</option>
                                   <option value="Braintree">Stanford</option>
@@ -78,7 +78,7 @@
                               </div>
                             </h3>
                           </div>
-                          <div class="span3">
+                          <!--<div class="span3">
                             <div class="btn-group pull-right more_button_padding">
                               <label class="inline">Data View: </label>
                               <button class="glow left active">Standard</button>
@@ -86,6 +86,7 @@
                               <button class="glow right">Day Part</button>
                             </div>
                           </div>
+                          -->
                         </div>
                         
                                                 
@@ -158,57 +159,48 @@
                               
                             </div>
                           </div>
+                          <div class="row-fluid">
+                            <h4 class="data_table_header">Employees</h4>
+                            <table class="table table-hover block_table">
+                            <thead>
+                              <tr>
+                                <th class="sortable">Employee Name</th>
+                                <th class="sortable">Employee #</th>
+                                <th class="sortable">Overall Score </th>
+                                <th class="sortable">Cashier </th>
+                                <th class="sortable">Expeditor </th>
+                                <th class="sortable">Quality Control </th>
+                                <th class=""></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <?php for($i=1;$i<=8;$i++){?>
+                              <tr>
+                                <td><a href="client-report-locations-detail.php"><?php
+                                  switch($i){
+                                    case 1: echo 'John Stevens'; break;
+                                    case 2: echo 'Alex Branford'; break;
+                                    case 3: echo 'Julia Benice'; break;
+                                    case 4: echo 'Albert Jackson'; break;
+                                    case 5: echo 'Lex Stanley'; break;
+                                    case 6: echo 'Jill Yinz'; break;
+                                    case 7: echo 'Jane Triplehorn'; break;
+                                    case 8: echo 'Taylor Pointe'; break;
+                                  }
+                                ?></a></td>
+                                <td>#10<?php echo rand(10,99); ?></td>
+                                <td>98</td>
+                                <td>98</td>
+                                <td>98</td>
+                                <td>98</td>
+                                <td><a href="#">Details</a></td>
+                              </tr>
+                              <?php } ?>
+                            </tbody>
+                        </table>
+                          </div>
                         
-                        </div>
-                        <div class="span3 report_small_col">
-                          <h4 class="data_table_header"><a href="#" class="pull-right header_link">View All &raquo;</a><i class="icon icon-pushpin"></i> Top Locations</h4>
-                          <table class="table table-condensed">
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><a href="#">Braintree</a></td>
-                  <td>98</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td><a href="#">Milford</a></td>
-                  <td>95</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td><a href="#">Lexington</a></td>
-                  <td>95</td>
-                </tr>
-                
-              </tbody>
-            </table>
-                          <h4 class="data_table_header">
-                          <a href="#" class="pull-right header_link">View All &raquo;</a>
-                          <i class="icon icon-group"></i> Top Employees
-                          </h4>
-                          <table class="table table-condensed">
-
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><a href="#">Mark Otto</a></td>
-                  <td>98</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td><a href="#">Mark Otto</a></td>
-                  <td>98</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td><a href="#">Mark Otto</a></td>
-                  <td>98</td>
-                </tr>
-              </tbody>
-            </table>
-                          
-                        </div>
-                        </div>
+                        
                         <div class="row-fluid">
                           <div class="pull-right pagination_well">
                           Show: <select>
@@ -319,8 +311,35 @@
                             <a class="btn-flat btn-flat-small white left"><i class="icon-chevron-left"></i></a>
                             <a class="btn-flat btn-flat-small white right"><i class="icon-chevron-right"></i></a>
                           </div>
+                          </div>                          
+                          
+                          
                           </div>
+                          </div>
+                          
+                          
+                          
+                          
+                        <div class="span3 report_small_col">
+                          
+                          <h4 class="data_table_header">Braintree, Store #1022</h4>
+                          <table>
+                          <tr><td>
+                          <img src="img/custom/map-specific.jpg" class="more_bottom_margin">
+                          </td></tr>
+                          <tr><td>
+                          <address>
+                          400 Franklin Street<br>
+                          Braintree, MA 02184<br>
+                          Braintree Five Corners Center‎<br>
+                          (781) 356-0601</address>
+                          </td></tr>
+                          </table>
+                          
+                          
                         </div>
+                        </div>
+                        
                         </div>
                         </div>
                       </div>

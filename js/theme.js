@@ -102,7 +102,7 @@ $(function () {
   $(".knob").each(function(){
     knobval = $(this).val();
     knobcolor = setColor(knobval);
-    $(this).trigger('configure', {'fgColor':knobcolor})
+    $(this).trigger('configure', {'inputColor':knobcolor,'fgColor':knobcolor})
   });
   
   $('a.has_submenu').click(function(e){

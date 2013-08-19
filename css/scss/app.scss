@@ -532,6 +532,7 @@ font-weight: bold;
 
 .pagination_well{
   font-size:11px;
+  margin-bottom: 10px;
   select{vertical-align:baseline;width:90px;height:26px;margin-left:5px;}
   .btn-group a{
     padding-top:4px;
@@ -704,6 +705,7 @@ h5.widget_sub_title{font-weight:500}
 .chart{padding:10px 0 35px 0;box-sizing:border-box}
 .flotchartcontainer .tab-pane{height:220px;}
 .flot_fix{padding:10px 0!important;height:250px;}
+.legendLabel{padding-right:6px;}
 
 .chart_data_column{
   height: 175px;
@@ -817,6 +819,8 @@ h5.widget_sub_title{font-weight:500}
 }
 
 .navbar#report_navbar{
+  margin-bottom:10px!important;
+  
   label{
     margin:8px 3px -1px 0;
     font-size:11px;
@@ -828,6 +832,7 @@ h5.widget_sub_title{font-weight:500}
     border:none;
     border-radius:0;
     border-bottom:1px solid #ccc;
+    background:#eeeeee;
     
     .report_links_wrap>ul{
       margin-right:25px;
@@ -836,12 +841,6 @@ h5.widget_sub_title{font-weight:500}
         border-right:1px solid lighten($brightblue, 20%);
         background:white;
         
-        &>a i{
-          font-size:23px;
-          text-shadow:none;
-          margin:0 auto;
-          display:block;
-        }
         &>a{
           font-size:13px;
           padding: 20px 29px 14px 29px;
@@ -849,6 +848,14 @@ h5.widget_sub_title{font-weight:500}
           background:$brightblue;
           color:white;
         }
+        
+        &>a i{
+          font-size:23px;
+          text-shadow:none;
+          margin:0 auto;
+          display:block;
+        }
+        
         &>a.active,&>a:hover{
           background: #1d8cdb;
           color:white;
@@ -875,8 +882,9 @@ h5.widget_sub_title{font-weight:500}
     }
     
     .navbar-search{
+      width:100%;
       margin-top:0;
-      .search-query{padding:5px 30px 5px 10px;border-radius:2px;line-height:15px;width:300px;}
+      .search-query{padding:5px 30px 5px 10px;border-radius:2px;line-height:15px;width:75%;}
       button[type=submit]{margin-top:0;}
     }
   
@@ -910,6 +918,21 @@ h5.widget_sub_title{font-weight:500}
       }
     }
   }
+}
+
+.search-envysion{
+  padding: 5px 30px 5px 10px!important;
+  border-radius: 2px!important;
+  line-height: 15px!important;
+  width: auto!important;
+}
+
+.report_header{
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 2px rgba(0,0,0,.10);
+  
+  h3{font-size:22px;}
 }
 
 .report_large_col{padding-right:20px;}
@@ -964,12 +987,16 @@ h5.widget_sub_title{font-weight:500}
   .glow{
     padding:10px 13px!important;
   }
-  
-  label.inline{
-    font-size: 11px;
-    margin-right:4px;
-    vertical-align: middle;
-  }
+}
+
+label.inline{
+  font-size: 11px;
+  margin-right:4px;
+  vertical-align: middle;
+}
+
+.more_button_padding .glow{
+  padding:10px 13px!important;
 }
   
 #report_nav{
@@ -1392,11 +1419,14 @@ form.audit_form label.question{
 }
 
 .knobs-inline{
-  margin-bottom:35px;
+  margin-bottom:15px;
   .knob-wrapper{
     display:inline-block;
     
-    &+.knob-wrapper{margin-left:5px;}
+    margin:0 5px 5px 0;
+  }
+  .knob{
+    font-size: 17px!important;
   }
   
   h4.inline{
@@ -1832,7 +1862,7 @@ input[readonly].knob{
   overflow-y:auto;
   font-size:11px;
   margin-bottom:10px;
-  box-shadow: 0px 1px 4px rgba(0,0,0,.3);
+  box-shadow: 0px 1px 3px rgba(0,0,0,.2);
   
   table{
     width: 100%;

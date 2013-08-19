@@ -154,10 +154,11 @@ var flotDefaultsLines = {
   var met1 = [[1, 60], [2, 60], [3, 55], [4, 43],[5, 88],[6, 85],[7, 91],[8, 90], [9, 10], [10, 45]];
   var met2 = [[1, 28], [2, 52], [3, 25], [4, 52],[5, 44],[6, 39],[7, 42],[8, 50], [9, 52], [10, 33]];
   
+  if($("#statsChartoverview1").length){
   
   var plot = $.plot($("#statsChartoverview1"),
       [ { data: dashboard1, label: "Overall" },{ data: dashboard2, label: "Cashier"},{ data: dashboard3, label: "Expeditor"},{ data: dashboard4, label: "QC"}], flotDefaultsLines);
-
+  }
 
   function showTooltip(x, y, contents) {
       $('<div id="tooltip">' + contents + '</div>').css( {
@@ -239,7 +240,9 @@ var flotDefaultsLines = {
   });
   
   //Autocomplete location dropdown initialization
-  $("#report_location").select2();
+  $("#report_location").select2().on('change',function(){
+    window.location = 'client-report-locations-detail.php';
+  });
   
   //Enlarge Camera
   $('.enlarge_cam').click(function(e){
