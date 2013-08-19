@@ -41,7 +41,7 @@
                         
                           <?php for($i=0; $i<4; $i++){ ?>
                           <div class="span3">
-                          <a href="client-report-detail.php" class="knob-wrapper <?php if($i == 0) echo "active"; ?>">
+                          <a href="client-report-detail-cashier.php" class="knob-wrapper <?php if($i == 0) echo "active"; ?>">
                             <table>
                               <tr>
                                 <td>

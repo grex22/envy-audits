@@ -92,7 +92,7 @@
                         <div class="row-fluid report_main_wrapper">
                         
                         <div class="span9 report_large_col">
-                        <h4 class="more_bottom_margin">Averages for Selected Dates:</h4>
+                        <h4 class="more_bottom_margin">Average Scores for Selected Dates:</h4>
                         <div class="row-fluid knobs-inline">
                         
                           <?php for($i=0; $i<4; $i++){ ?>
