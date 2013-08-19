@@ -205,8 +205,6 @@ var flotDefaultsLines = {
   //Instantiate Date Range Picker
   $('#report_daterange').daterangepicker({
     ranges: {
-       'Today': [new Date(), new Date()],
-       'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
        'Last 7 Days': [moment().subtract('days', 6), new Date()],
        'Last 30 Days': [moment().subtract('days', 29), new Date()],
        'This Month': [moment().startOf('month'), moment().endOf('month')],
@@ -223,7 +221,7 @@ var flotDefaultsLines = {
   function(start, end) {
 		$('#report_daterange span').html(moment(start).format('MMM D, YYYY') + ' - ' + moment(end).format('MMM D, YYYY'));
 	});
-  $('#report_daterange span').html(moment().subtract('days', 6).format('MMM D, YYYY') + ' -- ' + moment().format('MMM D, YYYY'));
+  $('#report_daterange span').html(moment().subtract('days', 6).format('MMM D, YYYY') + ' - ' + moment().format('MMM D, YYYY'));
   
   
   //Sample tables filter links
@@ -240,7 +238,8 @@ var flotDefaultsLines = {
     }
   });
   
-  
+  //Autocomplete location dropdown initialization
+  $("#report_location").select2();
   
   //Enlarge Camera
   $('.enlarge_cam').click(function(e){

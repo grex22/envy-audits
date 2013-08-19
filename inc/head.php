@@ -27,6 +27,9 @@ include('inc/functions.php');
     <!-- this page specific styles -->
     <link rel="stylesheet" href="css/compiled/index.css" type="text/css" media="screen" />
     
+    <!-- Select2 -->
+    <link href="css/lib/select2.css" rel="stylesheet"/>
+    
     <!-- custom styles -->
     <link rel="stylesheet" href="css/app.css" type="text/css" media="screen" />
 
@@ -38,6 +41,9 @@ include('inc/functions.php');
     
     <!-- Morris charts -->
     <link rel="stylesheet" type="text/css" href="css/lib/morris.css">
+    
+    
+    
     
 
     <!--[if lt IE 9]>

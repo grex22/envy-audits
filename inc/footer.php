@@ -33,6 +33,8 @@
     
     <!-- Date Range Picker -->
     <script src="js/daterangepicker.js"></script>
+    <!-- Select2 -->
+    <script src="js/select2.min.js"></script>
     
     <!-- page-specific scripts -->
     <?php if($_SERVER['PHP_SELF']=="/envysion/client-report-overview.php"): ?>

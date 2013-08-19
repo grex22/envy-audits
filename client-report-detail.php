@@ -19,7 +19,7 @@
                         <div class="navbar" id="report_navbar">
                           <div class="navbar-inner">
                             <div class="row-fluid">
-                            <div class="span9 report_links_wrap">
+                            <div class="span12 report_links_wrap">
                               <ul class="nav">
                                   <li>
                                     <a href="client-report-detail.php" class="active" >
@@ -42,22 +42,14 @@
                                     </a>
                                   </li>
                               </ul>
-                            <div class="pull-left">
-                              <label>Report Date Range:</label>
-                              <div id="report_daterange" class="report_jump_menu">
-                                <i class="icon-calendar"></i> 
-                                  <span></span>
-                              </div>
-                            </div>
-                            </div>
-                            
-                            <div class="span3">
                               <form class="navbar-search">
                                 <label>Search:</label>
                                 <input type="text" class="search-query" placeholder="Find locations and people...">
                                 <button type="submit" class="btn"><i class="icon-search"></i></button>
                               </form>
+
                             </div>
+                            
                             </div>
                             
                         </div>
@@ -66,7 +58,21 @@
                                                 
                         <div class="padded">
                         
-                        <h3>Overview, All Locations, Aug 10 - Aug 16, 2013</h3>
+                        <h3>Overview:
+                          <select id="report_location" class="inline select2_jump">
+                            <option value="All Locations" selected="selected">All Locations</option>
+                            <option value="Braintree">Braintree</option>
+                            <option value="Braintree">Lexington</option>
+                            <option value="Braintree">Milford</option>
+                            <option value="Braintree">Stanford</option>
+                            <option value="Braintree">Tournay</option>
+                            <option value="Braintree">Jackson</option>
+                          </select>
+                          <div id="report_daterange" class="report_jump_menu inline">
+                            <i class="icon-calendar"></i> 
+                              <span></span>
+                          </div>
+                        </h3>
                         <div class="row-fluid">
                           <div class="span12 report_subnav">
                             <div class="btn-group pull-right">
@@ -83,12 +89,12 @@
                             </div>
                           </div>
                         </div>
-                        <div class="row-fluid">
+                        <div class="row-fluid report_main_wrapper">
                         
-                        <div class="span9">
+                        <div class="span9 report_large_col">
+                        <h4 class="more_bottom_margin">Averages for Selected Dates:</h4>
                         <div class="row-fluid knobs-inline">
                         
-                          <h4 class="inline">Averages:</h4>
                           <?php for($i=0; $i<4; $i++){ ?>
                           <a href="client-report-detail-cashier.php" class="knob-wrapper <?php if($i == 0) echo "active"; ?>">
                             <table>
@@ -135,8 +141,8 @@
                           </div>
                         
                         </div>
-                        <div class="span3">
-                          <h4 class="data_table_header"><a href="#" class="pull-right header_link">View All &raquo;</a>Top Locations</h4>
+                        <div class="span3 report_small_col">
+                          <h4 class="data_table_header"><a href="#" class="pull-right header_link">View All &raquo;</a><i class="icon icon-pushpin"></i> Top Locations</h4>
                           <table class="table table-condensed">
               <tbody>
                 <tr>
@@ -159,7 +165,7 @@
             </table>
                           <h4 class="data_table_header">
                           <a href="#" class="pull-right header_link">View All &raquo;</a>
-                          Top Employees
+                          <i class="icon icon-group"></i> Top Employees
                           </h4>
                           <table class="table table-condensed">
 
@@ -167,19 +173,16 @@
                 <tr>
                   <td>1</td>
                   <td><a href="#">Mark Otto</a></td>
-                  <td>Braintree</td>
                   <td>98</td>
                 </tr>
                 <tr>
                   <td>2</td>
                   <td><a href="#">Mark Otto</a></td>
-                  <td>Braintree</td>
                   <td>98</td>
                 </tr>
                 <tr>
                   <td>3</td>
                   <td><a href="#">Mark Otto</a></td>
-                  <td>Braintree</td>
                   <td>98</td>
                 </tr>
               </tbody>
