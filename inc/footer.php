@@ -46,6 +46,12 @@
     <?php if($_SERVER['PHP_SELF']=="/envysion/client-report-detail.php"): ?>
       <script src="js/pages/client-report-detail.js"></script>
     <?php endif; ?>
+    <?php if($_SERVER['PHP_SELF']=="/envysion/client-report-detail-dow.php"): ?>
+      <script src="js/pages/client-report-detail.js"></script>
+    <?php endif; ?>
+    <?php if($_SERVER['PHP_SELF']=="/envysion/client-report-detail-dp.php"): ?>
+      <script src="js/pages/client-report-detail.js"></script>
+    <?php endif; ?>
     <?php if($_SERVER['PHP_SELF']=="/envysion/client-report-locations.php"): ?>
       <script src="js/pages/client-report-detail.js"></script>
     <?php endif; ?>

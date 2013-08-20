@@ -102,7 +102,7 @@
                           <input type="text" class="search-query search-envysion" placeholder="Find location...">
                           <button type="submit" class="btn"><i class="icon-search"></i></button>
                         </form>
-                        <h4 class="more_bottom_margin">Location: </h4>
+                        <h4 class="more_bottom_margin">All Locations: </h4>
                         
                         <table class="table table-hover block_table">
                             <thead>

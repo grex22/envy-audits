@@ -41,7 +41,7 @@
                         
                           <?php for($i=0; $i<4; $i++){ ?>
                           <div class="span3">
-                          <a href="client-report-detail-cashier.php" class="knob-wrapper <?php if($i == 0) echo "active"; ?>">
+                          <a href="client-report-detail.php" class="knob-wrapper <?php if($i == 0) echo "active"; ?>">
                             <table>
                               <tr>
                                 <td>
@@ -131,11 +131,11 @@
                         <h6>Best-Performing Locations:</h6>
                         <table class="table block_table graph_table">
                           <tbody>
-                            <tr><td>1</td><td><a href="client-report-detail.php">Braintree</a></td><td><span class="hgraph" style="width:81%"></span>95%</td></tr>
-                            <tr><td>2</td><td><a href="client-report-detail.php">Milford</a></td><td><span class="hgraph" style="width:80%"></span>94%</td></tr>
-                            <tr><td>3</td><td><a href="client-report-detail.php">Lexington</a></td><td><span class="hgraph" style="width:78%"></span>93%</td></tr>
-                            <tr><td>4</td><td><a href="client-report-detail.php">Rockland</a></td><td><span class="hgraph" style="width:77.5%"></span>92%</td></tr>
-                            <tr><td>5</td><td><a href="client-report-detail.php">Brockton</a></td><td><span class="hgraph" style="width:74.5%"></span>90%</td></tr>
+                            <tr><td>1</td><td><a href="client-report-locations-detail.php">Braintree</a></td><td><span class="hgraph" style="width:81%"></span>95%</td></tr>
+                            <tr><td>2</td><td><a href="client-report-locations-detail.php">Milford</a></td><td><span class="hgraph" style="width:80%"></span>94%</td></tr>
+                            <tr><td>3</td><td><a href="client-report-locations-detail.php">Lexington</a></td><td><span class="hgraph" style="width:78%"></span>93%</td></tr>
+                            <tr><td>4</td><td><a href="client-report-locations-detail.php">Rockland</a></td><td><span class="hgraph" style="width:77.5%"></span>92%</td></tr>
+                            <tr><td>5</td><td><a href="client-report-locations-detail.php">Brockton</a></td><td><span class="hgraph" style="width:74.5%"></span>90%</td></tr>
                           </tbody>
                         </table>
                       </div>
@@ -143,11 +143,11 @@
                         <h6>Worst-Performing Locations:</h6>
                         <table class="table block_table graph_table gray_graphs">
                           <tbody>
-                            <tr><td>1</td><td><a href="client-report-detail.php">Wyckton</a></td><td><span class="hgraph" style="width:61%"></span>75%</td></tr>
-                            <tr><td>2</td><td><a href="client-report-detail.php">Brighton</a></td><td><span class="hgraph" style="width:60%"></span>74%</td></tr>
-                            <tr><td>3</td><td><a href="client-report-detail.php">Larwill</a></td><td><span class="hgraph" style="width:58%"></span>70%</td></tr>
-                            <tr><td>4</td><td><a href="client-report-detail.php">Triston</a></td><td><span class="hgraph" style="width:52.5%"></span>66%</td></tr>
-                            <tr><td>5</td><td><a href="client-report-detail.php">Allegra</a></td><td><span class="hgraph" style="width:50.5%"></span>60%</td></tr>
+                            <tr><td>1</td><td><a href="client-report-locations-detail.php">Wyckton</a></td><td><span class="hgraph" style="width:61%"></span>75%</td></tr>
+                            <tr><td>2</td><td><a href="client-report-locations-detail.php">Brighton</a></td><td><span class="hgraph" style="width:60%"></span>74%</td></tr>
+                            <tr><td>3</td><td><a href="client-report-locations-detail.php">Larwill</a></td><td><span class="hgraph" style="width:58%"></span>70%</td></tr>
+                            <tr><td>4</td><td><a href="client-report-locations-detail.php">Triston</a></td><td><span class="hgraph" style="width:52.5%"></span>66%</td></tr>
+                            <tr><td>5</td><td><a href="client-report-locations-detail.php">Allegra</a></td><td><span class="hgraph" style="width:50.5%"></span>60%</td></tr>
                           </tbody>
                         </table>
                       </div>
@@ -187,16 +187,6 @@
                       <a href="#"><i class="icon-remove"></i></a>
                     </div>
                   </div>
-                
-                  <div class="row-fluid widget">
-                    <h4 class="widget_title no_bottom_margin">
-                      <i class="icon-pushpin"></i> My Locations
-                      <a class="btn-flat gray btn-flat-small pull-right">Detail View</a>
-                    </h4>
-                    <a href="client-report-detail.php"><img src="img/custom/fake-map.jpg"></a>
-                  </div>
-                  
-                  
                   
                   
                   

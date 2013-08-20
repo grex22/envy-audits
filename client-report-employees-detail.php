@@ -99,17 +99,9 @@
                         <div class="span3 report_small_col">
                         
                         
-                        <div class="report_widget padded">
-                          <h4 class="data_table_header">Elizabeth Jones</h4>
-                          <strong><a href="client-report-locations-detail.php">Braintree, Store #1022</a></strong>
-                          <address>
-                          400 Franklin Street<br>
-                          Braintree, MA 02184<br>
-                          (781) 356-0601</address>
-                          
-                          </div>
                         
-                        <h4 class="more_bottom_margin">Averages:</h4>
+                        
+                        <h4 class="more_bottom_margin">Scores:</h4>
                          
                         <div class="row-fluid knobs-stacked">
                         
@@ -160,7 +152,15 @@
                           <?php } ?>
                           </div>
                         
+                          <div class="report_widget padded">
+                          <h4 class="data_table_header">Elizabeth Jones</h4>
+                          <strong><a href="client-report-locations-detail.php">Braintree, Store #1022</a></strong>
+                          <address>
+                          400 Franklin Street<br>
+                          Braintree, MA 02184<br>
+                          (781) 356-0601</address>
                           
+                          </div>
                           
                         </div>
                         <div class="span9 report_large_col">
@@ -211,7 +211,7 @@
                                 <th class="sortable">Date </th>
                                 <th class="sortable">Time </th>
                                 <th class="sortable">Location </th>
-                                <th class="sortable">Transaction </th>
+                                <th class="sortable align-center">Transaction </th>
                                 <th class="close_holder"> </th>
                               </tr>
                             </thead>
@@ -224,7 +224,7 @@
                                 <td>7/13/13</td>
                                 <td>3:32 pm EST</td>
                                 <td>Braintree</td>
-                                <td><?php rand(0,1) ? print '<i class="icon-list-alt"></i>' : print ''; ?></td>
+                                <td class="align-center"><?php rand(0,1) ? print '<i class="icon-list-alt"></i>' : print ''; ?></td>
                                 <td class="close_holder"><i class="icon-remove"></i></td>
                               </tr>
                               <tr class="detail_row <?php $pf ? print"pass" : print"fail"; ?>">

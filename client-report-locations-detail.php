@@ -89,7 +89,7 @@
                           </div>
                         </div>
                         <div class="report_breadcrumbs">
-                          <a href="client-report-employees.php">&laquo; All Locations</a>
+                          <a href="client-report-locations.php">&laquo; All Locations</a>
                         </div>
                                                 
                         <div class="padded">
@@ -99,16 +99,9 @@
                         <div class="row-fluid report_main_wrapper">
                         <div class="span3 report_small_col">
                         
-                        <div class="report_widget padded">
-                          <h4 class="data_table_header">Braintree, Store #1022</h4>
-                          <address>
-                          400 Franklin Street<br>
-                          Braintree, MA 02184<br>
-                          (781) 356-0601</address>
-                          
-                          </div>
                         
-                        <h4 class="more_bottom_margin">Averages:</h4>
+                        
+                        <h4 class="more_bottom_margin">Scores:</h4>
                          
                         <div class="row-fluid knobs-stacked">
                         
@@ -159,7 +152,14 @@
                           <?php } ?>
                           </div>
                         
+                        <div class="report_widget padded">
+                          <h4 class="data_table_header">Braintree, Store #1022</h4>
+                          <address>
+                          400 Franklin Street<br>
+                          Braintree, MA 02184<br>
+                          (781) 356-0601</address>
                           
+                          </div>
                           
                         </div>
                         <div class="span9 report_large_col">
@@ -276,7 +276,7 @@
                                         <div class="sample_receipt">
                                         <table class="block_table">
                                         <tr><td><strong>Score</strong></td><td><span class="label label-<?php $pf ? print"success" : print"fail";?>"><?php $pf ? print "Pass!":print "Fail"; ?></span></td></tr>
-                                        <tr><td><strong>Employee:</strong></td><td>Elizabeth Jones</td></tr>
+                                        <tr><td><strong>Employee:</strong></td><td><a href="client-report-employees-detail.php">Elizabeth Jones</a></td></tr>
                                         <tr><td colspan=2><strong>Comments:</strong></td></tr>
                                         <tr><td colspan=2><?php $pf ? print"Cashier offered to list the ingredients for the order.":print"Cashier did not offer to list the ingredients for the Chicken Caesar Salad and Bacon Turkey Bravo"; ?></td></tr>                                       
                                         </table>
@@ -285,7 +285,7 @@
                                         <div class="sample_receipt">
                                         <table class="block_table">
                                         <tr><td><strong>Score</strong></td><td><span class="label label-<?php $pf ? print"success" : print"fail";?>"><?php $pf ? print "Pass!":print "Fail"; ?></span></td></tr>
-                                        <tr><td><strong>Employee:</strong></td><td>Elizabeth Jones</td></tr>
+                                        <tr><td><strong>Employee:</strong></td><td><a href="client-report-employees-detail.php">Elizabeth Jones</a></td></tr>
                                         <tr><td colspan=2><strong>Comments:</strong></td></tr>
                                         <tr><td colspan=2>An order was improperly entered.</td></tr>                                       
                                         </table>

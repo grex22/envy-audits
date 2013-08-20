@@ -131,7 +131,7 @@
                                 ?></a></td>
                                 <td class="">Braintree</td>
                                 <td class="align-center">#10<?php echo rand(10,99); ?></td>
-                                <?php $score = rand(0,100);?><td class="align-center"><?php $score > 50 ? print $score : print " -- "; ?></td>
+                                <?php $score = rand(50,100);?><td class="align-center"><?php echo $score; ?></td>
                                 <?php $score = rand(0,100);?><td class="align-center"><?php $score > 50 ? print $score : print " -- "; ?></td>
                                 <?php $score = rand(0,100);?><td class="align-center"><?php $score > 50 ? print $score : print " -- "; ?></td>
                                 <?php $score = rand(0,100);?><td class="align-center"><?php $score > 50 ? print $score : print " -- "; ?></td>

@@ -87,15 +87,106 @@ var flotDefaultsBars = {
               tickDecimals: 0,
               font: {size:11, color: "#9da3a9"},
               min:0,
+              max:100
           }
         };
+var flotDefaultsBarsDOW = {
+          series: {
+              bars: { show: true,
+                      barWidth: .6,
+                      align: "center",
+                      lineWidth: 1,
+                      fill: true,
+                      fillColor: { colors: [ { opacity: 0.05 }, { opacity: 0.09 } ] }
+                   },
+              points: { show: true, 
+                       lineWidth: 2,
+                       radius: 3
+                   },                   
+              stack: true
+          },
+          grid: { hoverable: true, 
+                 clickable: true, 
+                 tickColor: "#f9f9f9",
+                 borderWidth: 0
+              },
+          legend: {
+              labelBoxBorderColor: "#fff",
+              position:'sw',
+              noColumns: 0,
+              margin:[5,210]
+              },  
+          colors: ["#30a0eb", "orange", '#888888', "#e51d9b"],
+          xaxis: {
+              ticks: [[1, "Sunday"], [2, "Monday"], [3, "Tuesday"], [4,"Wednesday"], [5,"Thursday"], [6,"Friday"], 
+                     [7,"Saturday"]],
+              font: {
+                  size: 11,
+                  family: "Open Sans, Arial",
+                  variant: "small-caps",
+                  color: "#9da3a9"
+              }
+          },
+          yaxis: {
+              ticks:5, 
+              tickDecimals: 0,
+              font: {size:11, color: "#9da3a9"},
+              min:0,
+              max:100
+          }
+        };     
+
+var flotDefaultsBarsDP = {
+          series: {
+              bars: { show: true,
+                      barWidth: .6,
+                      align: "center",
+                      lineWidth: 1,
+                      fill: true,
+                      fillColor: { colors: [ { opacity: 0.05 }, { opacity: 0.09 } ] }
+                   },
+              points: { show: true, 
+                       lineWidth: 2,
+                       radius: 3
+                   },                   
+              stack: true
+          },
+          grid: { hoverable: true, 
+                 clickable: true, 
+                 tickColor: "#f9f9f9",
+                 borderWidth: 0
+              },
+          legend: {
+              labelBoxBorderColor: "#fff",
+              position:'sw',
+              noColumns: 0,
+              margin:[5,210]
+              },  
+          colors: ["#30a0eb", "orange", '#888888', "#e51d9b"],
+          xaxis: {
+              ticks: [[1, "Lunch"], [2, "Dinner"]],
+              font: {
+                  size: 11,
+                  family: "Open Sans, Arial",
+                  variant: "small-caps",
+                  color: "#9da3a9"
+              }
+          },
+          yaxis: {
+              ticks:5, 
+              tickDecimals: 0,
+              font: {size:11, color: "#9da3a9"},
+              min:0,
+              max:100
+          }
+        };            
 
 var flotDefaultsLines = {
           series: {
               lines: { show: true,
-                      lineWidth: 1,
+                      lineWidth: .5,
                       fill: true,
-                      fillColor: { colors: [ { opacity: 0.03 }, { opacity: 0.03 } ] }
+                      fillColor: { colors: [ { opacity: 0.025 }, { opacity: 0.025 } ] }
                    },
               points: { show: true, 
                        lineWidth: 2,
@@ -111,8 +202,8 @@ var flotDefaultsLines = {
               }, 
           colors: ["#30a0eb", "orange", '#888888', "#e51d9b"],
           xaxis: {
-              ticks: [[1, "5/19"], [2, "5/26"], [3, "6/3"], [4,"6/10"], [5,"6/17"], [6,"6/24"], 
-                     [7,"7/1"],[8,"7/8"],[9,"7/15"],[10,"7/22"]],
+              ticks: [[1, "8/11"], [2, "8/12"], [3, "8/13"], [4,"8/14"], [5,"8/15"], [6,"8/16"], 
+                     [7,"8/17"],[8,"8/18"],[9,"8/19"],[10,"8/20"]],
               font: {
                   size: 10,
                   family: "Open Sans, Arial",
@@ -145,6 +236,9 @@ var flotDefaultsLines = {
   var dailyoverallmetric2 = [[1, 70], [2, 65], [3, 25], [4, 77],[5, 13],[6, 11],[7, 6]];
   var dailyoverallmetric3 = [[1, 60], [2, 60], [3, 35], [4, 66],[5, 23],[6, 21],[7, 1]];
   
+  var dayoftheweek = [[1, 30], [2, 42], [3, 34], [4, 63],[5, 80],[6, 68],[7, 90]];
+  var daypart = [[1, 88], [2, 76]];
+  
   var overall = [[1, 50], [2, 40], [3, 45], [4, 23],[5, 55],[6, 65],[7, 61],[8, 50], [9, 40], [10, 45]];
   var visitors = [[1, 25], [2, 50], [3, 23], [4, 48],[5, 38],[6, 40],[7, 47],[8, 25], [9, 50], [10, 23]];
   
@@ -157,12 +251,25 @@ var flotDefaultsLines = {
   if($("#statsChartoverview1").length){
   var plot = $.plot($("#statsChartoverview1"),
       [ { data: dashboard1, label: "Combined" },{ data: dashboard2, label: "Cashier"},{ data: dashboard3, label: "Expeditor"},{ data: dashboard4, label: "QC"}], flotDefaultsLines);
+      plot.getData()[0].lines.lineWidth = 3;
+      plot.draw();
   }
   if($("#employee-detail-chart").length){
   var plot = $.plot($("#employee-detail-chart"),
       [ { data: dashboard2, label: "Cashier"}],
       flotDefaultsLines);
+      plot.getData()[0].lines.lineWidth = 3;
+      plot.draw();
   }
+  
+  if($("#dayofweekgraph").length){
+    var plot = $.plot($("#dayofweekgraph"),
+      [ { data: dayoftheweek, label: "Combined Score" }], flotDefaultsBarsDOW);
+  }
+  if($("#daypart").length){
+    var plot = $.plot($("#daypart"),
+      [ { data: daypart, label: "Combined Score" }], flotDefaultsBarsDP);
+  }  
   
   
 
@@ -181,7 +288,7 @@ var flotDefaultsLines = {
   }
 
   var previousPoint = null;
-  $("[id^=statsChartdetail],[id^=statsChartoverview]").bind("plothover", function (event, pos, item) {
+  $("[id^=statsChartdetail],[id^=statsChartoverview],[id=daypart],[id=dayofweekgraph]").bind("plothover", function (event, pos, item) {
       if (item) {
           if (previousPoint != item.dataIndex) {
               previousPoint = item.dataIndex;
@@ -228,7 +335,7 @@ var flotDefaultsLines = {
   function(start, end) {
 		$('#report_daterange span').html(moment(start).format('MMM D, YYYY') + ' - ' + moment(end).format('MMM D, YYYY'));
 	});
-  $('#report_daterange span').html(moment().subtract('days', 6).format('MMM D, YYYY') + ' - ' + moment().format('MMM D, YYYY'));
+  $('#report_daterange span').html(moment().subtract('days', 9).format('MMM D, YYYY') + ' - ' + moment().format('MMM D, YYYY'));
   
   
   //Sample tables filter links
@@ -271,6 +378,13 @@ var flotDefaultsLines = {
       $('.knob-wrapper').removeClass('active');
       $(this).addClass('active');
     }
+  });
+  
+  //Data view buttons behavior
+  $('.data_view_buttons button').on('click',function(e){
+    e.preventDefault();
+    var url = $(this).attr('data-url');
+    window.location = url;
   });
   
 });

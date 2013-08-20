@@ -272,7 +272,7 @@ table.more_bottom_margin {
   margin-bottom: 50px !important; }
 
 .row-fluid.more_bottom_margin {
-  margin-bottom: 40px !important; }
+  margin-bottom: 50px !important; }
 
 .flush_top_margin {
   margin-top: -10px; }
@@ -1144,7 +1144,7 @@ form.audit_form label.question {
     margin-top: 1px;
     position: relative; }
     .knobs-stacked .knob-wrapper.active {
-      border-width: 0 0 0 6px; }
+      border-width: 0 0 2px 6px; }
       .knobs-stacked .knob-wrapper.active:after {
         font-family: "FontAwesome";
         content: "\f054";

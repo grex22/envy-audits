@@ -31,6 +31,12 @@ function get_nav_menus(){
     case ("/envysion/client-report-overview.php"):
     case ("/envysion/client-report-detail.php"):
     case ("/envysion/client-report-detail-cashier.php"):
+    case ("/envysion/client-report-employees.php"):
+    case ("/envysion/client-report-employees-detail.php"):
+    case ("/envysion/client-report-locations-detail.php"):
+    case ("/envysion/client-report-locations.php"):
+    case ("/envysion/client-report-detail-dp.php"):
+    case ("/envysion/client-report-detail-dow.php"):
       $menu_array = array(
         array("index.php","",'icon-tasks',"Dashboard"),
         array("watch-video.php","",'icon-play-circle',"Watch Video"),
