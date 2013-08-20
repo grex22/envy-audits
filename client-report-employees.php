@@ -27,12 +27,12 @@
                                     </a>
                                   </li>
                                   <li>
-                                    <a href="client-report-locations.php" class="active" >
+                                    <a href="client-report-locations.php">
                                       <i class="icon-pushpin"></i> Locations
                                     </a>
                                   </li>
                                   <li>
-                                    <a href="client-report-employees.php">
+                                    <a href="client-report-employees.php" class="active" >
                                       <i class="icon-group"></i> Employees
                                     </a>
                                   </li>
@@ -60,17 +60,15 @@
                         </div>
                         <div class="row-fluid report_header padded">
                           <div class="span9">
-                            <h3>Location:
-                              <select id="report_location" class="inline select2_jump">
-                                <option value="client-report-locations.php" selected="selected">All Locations</option>
-                                <optgroup label="Southwest Region">
-                                  <option value="client-report-locations-detail.php">Braintree</option>
-                                  <option value="client-report-locations-detail.php">Lexington</option>
-                                  <option value="client-report-locations-detail.php">Milford</option>
-                                  <option value="client-report-locations-detail.php">Stanford</option>
-                                  <option value="client-report-locations-detail.php">Tournay</option>
-                                  <option value="client-report-locations-detail.php">Jackson</option>
-                                </optgroup>
+                            <h3>Employee:
+                              <select id="report_employee" class="inline select2_jump">
+                                <option value="client-report-employees.php"  selected="selected">All Employees</option>
+                                  <option value="client-report-employees-detail.php">Elizabeth Jones</option>
+                                  <option value="client-report-employees-detail.php">Alex Smith</option>
+                                  <option value="client-report-employees-detail.php">Peyton Ellis</option>
+                                  <option value="client-report-employees-detail.php">Mike Viniaterri</option>
+                                  <option value="client-report-employees-detail.php">Faux Nombre</option>
+                                  <option value="client-report-employees-detail.php">Alisha Jackson</option>
                               </select>
                               <div id="report_daterange" class="report_jump_menu inline">
                                 <i class="icon-calendar"></i> 
@@ -99,10 +97,10 @@
                         <div class="span12">
 
                         <form class="navbar-search flush_top_margin pull-right">
-                          <input type="text" class="search-query search-envysion" placeholder="Find location...">
+                          <input type="text" class="search-query search-envysion" placeholder="Find employee...">
                           <button type="submit" class="btn"><i class="icon-search"></i></button>
                         </form>
-                        <h4 class="more_bottom_margin">Location: </h4>
+                        <h4 class="more_bottom_margin">Employees, All Locations: </h4>
                         
                         <table class="table table-hover block_table">
                             <thead>

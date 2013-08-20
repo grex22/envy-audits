@@ -155,10 +155,16 @@ var flotDefaultsLines = {
   var met2 = [[1, 28], [2, 52], [3, 25], [4, 52],[5, 44],[6, 39],[7, 42],[8, 50], [9, 52], [10, 33]];
   
   if($("#statsChartoverview1").length){
-  
   var plot = $.plot($("#statsChartoverview1"),
-      [ { data: dashboard1, label: "Overall" },{ data: dashboard2, label: "Cashier"},{ data: dashboard3, label: "Expeditor"},{ data: dashboard4, label: "QC"}], flotDefaultsLines);
+      [ { data: dashboard1, label: "Combined" },{ data: dashboard2, label: "Cashier"},{ data: dashboard3, label: "Expeditor"},{ data: dashboard4, label: "QC"}], flotDefaultsLines);
   }
+  if($("#employee-detail-chart").length){
+  var plot = $.plot($("#employee-detail-chart"),
+      [ { data: dashboard2, label: "Cashier"}],
+      flotDefaultsLines);
+  }
+  
+  
 
   function showTooltip(x, y, contents) {
       $('<div id="tooltip">' + contents + '</div>').css( {
@@ -241,7 +247,10 @@ var flotDefaultsLines = {
   
   //Autocomplete location dropdown initialization
   $("#report_location").select2().on('change',function(){
-    window.location = 'client-report-locations-detail.php';
+    window.location = $(this).val();
+  });
+  $("#report_employee").select2().on('change',function(){
+    window.location = $(this).val();
   });
   
   //Enlarge Camera
@@ -254,6 +263,14 @@ var flotDefaultsLines = {
       $(this).closest('div').removeClass('span8').addClass('span4');
       $(this).children('img').attr('src','img/custom/panera-cam-condensed.jpg');
     }
-  });  
+  });
+  
+  $('.knob-wrapper').click(function(e){
+    e.preventDefault();
+    if(!$(this).hasClass('active')){
+      $('.knob-wrapper').removeClass('active');
+      $(this).addClass('active');
+    }
+  });
   
 });

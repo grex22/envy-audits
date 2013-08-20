@@ -268,6 +268,12 @@ a.active .navbar_icon,
 .more_bottom_margin {
   margin-bottom: 15px !important; }
 
+table.more_bottom_margin {
+  margin-bottom: 50px !important; }
+
+.row-fluid.more_bottom_margin {
+  margin-bottom: 40px !important; }
+
 .flush_top_margin {
   margin-top: -10px; }
 
@@ -555,12 +561,12 @@ h5.widget_sub_title {
 .gray_graphs .hgraph {
   background: #887777; }
 
-#report_daterange, #report_location, #location_jump, #metric_jump, .report_jump_menu {
+#report_daterange, #report_location, #report_employee, #location_jump, #metric_jump, .report_jump_menu {
   cursor: pointer; }
-  #report_daterange span, #report_location span, #location_jump span, #metric_jump span, .report_jump_menu span {
+  #report_daterange span, #report_location span, #report_employee span, #location_jump span, #metric_jump span, .report_jump_menu span {
     display: inline-block;
     padding: 0px 4px; }
-  #report_daterange:after, #report_location:after, #location_jump:after, #metric_jump:after, .report_jump_menu:after {
+  #report_daterange:after, #report_location:after, #report_employee:after, #location_jump:after, #metric_jump:after, .report_jump_menu:after {
     top: 7px; }
 
 .miniglancecharts {
@@ -668,37 +674,59 @@ h5.widget_sub_title {
 
 .report_header {
   padding-bottom: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); }
   .report_header h3 {
     font-size: 22px; }
 
 .report_large_col {
-  padding-right: 20px; }
+  padding-left: 20px;
+  border-left: 1px dotted #e1e1e1; }
 
 .report_small_col table {
-  margin-bottom: 40px; }
+  margin-bottom: 10px; }
+
+.report_small_col .knob-wrapper table {
+  margin-bottom: 0px; }
+
+.report_breadcrumbs {
+  display: block;
+  font-size: 11px;
+  margin-left: 15px; }
+
+.report_widget {
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: 1px dotted #ddd;
+  padding: 8px;
+  position: relative; }
+  .report_widget address {
+    margin-bottom: 0;
+    font-size: 11px;
+    line-height: 16px; }
+
+.btn-group.block {
+  display: block; }
+
+.subhead {
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block; }
 
 .select2-container .select2-choice {
   background: none;
   padding: 5px 30px 4px 30px;
-  border: 1px solid #eee;
+  border: 1px solid #f2f2f2;
   font-size: 17px;
   position: relative;
-  width: 200px; }
+  width: 200px;
+  font-weight: 500; }
   .select2-container .select2-choice div {
     background: none;
     border: none; }
     .select2-container .select2-choice div b {
       background: none;
       position: relative; }
-  .select2-container .select2-choice:before {
-    content: "\f08d";
-    font-family: "FontAwesome";
-    font-size: 17px;
-    color: #36abff;
-    position: absolute;
-    left: 12px; }
   .select2-container .select2-choice:after {
     font-family: "FontAwesome";
     content: "\f078";
@@ -707,6 +735,22 @@ h5.widget_sub_title {
     top: 4px;
     color: #887777;
     font-size: 11px; }
+
+#s2id_report_employee .select2-choice:before {
+  content: "\f0c0";
+  font-family: "FontAwesome";
+  font-size: 17px;
+  color: #36abff;
+  position: absolute;
+  left: 10px; }
+
+#s2id_report_location .select2-choice:before {
+  content: "\f08d";
+  font-family: "FontAwesome";
+  font-size: 17px;
+  color: #36abff;
+  position: absolute;
+  left: 12px; }
 
 .report_subnav {
   margin: 15px 0 40px;
@@ -791,6 +835,9 @@ label.inline {
     #report_nav ul ul {
       margin-left: 15px; }
 
+#change_view_camera_picker #report_nav {
+  width: 23.076923076923077%; }
+
 .accordion-inner li.active {
   font-weight: bold; }
 
@@ -819,6 +866,7 @@ label.inline {
 
 .report_jump_menu {
   font-size: 14px;
+  font-weight: 500;
   display: block;
   background: #fff;
   padding: 5px 30px 5px 10px;
@@ -1040,22 +1088,22 @@ form.audit_form label.question {
   display: inline-block;
   vertical-align: top;
   background: #fdfdfd;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
   border: 1px dotted #dfdfdf;
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
   transition: 0.2s;
   -o-transition: 0.2s;
   -webkit-backface-visibility: hidden;
-  padding: 8px; }
+  padding: 10px 14px; }
   .knob-wrapper.glance {
     height: 100px; }
     .knob-wrapper.glance .param {
       line-height: 15px; }
   .knob-wrapper:hover, .knob-wrapper.active {
-    background: #fdfdfd !important;
+    background: #f7f7f7 !important;
     text-decoration: none; }
   .knob-wrapper.active {
     font-weight: bold; }
@@ -1079,14 +1127,39 @@ form.audit_form label.question {
   .knob-wrapper + .knob-wrapper {
     margin-left: 25px; }
 
-.knobs-inline {
+.knobs-stacked {
   margin-bottom: 15px; }
-  .knobs-inline .knob-wrapper {
-    display: inline-block;
-    margin: 0 5px 5px 0; }
-  .knobs-inline .knob {
+  .knobs-stacked .knob-wrapper {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    display: block;
+    font-size: 13px;
+    margin: 0 5px 5px 0;
+    border-width: 0px 0 0 3px;
+    border-style: solid;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    transition: 0.2s;
+    -o-transition: 0.2s;
+    -webkit-backface-visibility: hidden;
+    margin-top: 1px;
+    position: relative; }
+    .knobs-stacked .knob-wrapper.active {
+      border-width: 0 0 0 6px; }
+      .knobs-stacked .knob-wrapper.active:after {
+        font-family: "FontAwesome";
+        content: "\f054";
+        position: absolute;
+        right: 6px;
+        top: 37%;
+        color: #ddd;
+        font-size: 21px;
+        font-weight: 200; }
+  .knobs-stacked .knob {
     font-size: 17px !important; }
-  .knobs-inline h4.inline {
+    .knobs-stacked .knob:focus {
+      border: none;
+      box-shadow: none !important; }
+  .knobs-stacked h4.inline {
     margin: 19px 10px 0 0;
     font-size: 15px; }
 

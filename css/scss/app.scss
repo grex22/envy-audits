@@ -441,7 +441,12 @@ a.active .navbar_icon,
 .more_bottom_margin{
   margin-bottom:15px!important;
 }
-
+table.more_bottom_margin{
+  margin-bottom:50px!important;
+}
+.row-fluid.more_bottom_margin{
+  margin-bottom:40px!important;
+}
 .flush_top_margin{margin-top:-10px;}
 
 .main_header{
@@ -781,7 +786,7 @@ h5.widget_sub_title{font-weight:500}
 }
 .gray_graphs .hgraph{background:$warmgray;}
 
-#report_daterange,#report_location,#location_jump,#metric_jump,.report_jump_menu{
+#report_daterange,#report_location,#report_employee,#location_jump,#metric_jump,.report_jump_menu{
   cursor:pointer;
  span{
   display:inline-block;
@@ -929,22 +934,45 @@ h5.widget_sub_title{font-weight:500}
 
 .report_header{
   padding-bottom: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   box-shadow: 0 2px 2px rgba(0,0,0,.10);
   
   h3{font-size:22px;}
 }
 
-.report_large_col{padding-right:20px;}
-.report_small_col table {margin-bottom:40px;}
+.report_large_col{padding-left:20px;border-left: 1px dotted #e1e1e1;}
+.report_small_col table{margin-bottom:10px;}
+.report_small_col .knob-wrapper table{margin-bottom:0px;}
+
+.report_breadcrumbs{display:block;font-size:11px;margin-left:15px;}
+
+.report_widget{
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: 1px dotted #ddd;
+  padding: 8px;
+  position:relative;
+  
+  address{margin-bottom:0;font-size:11px;line-height:16px;}
+}
+
+.btn-group.block{
+  display:block;
+}
+.subhead{
+  font-weight:bold;
+  margin-bottom:4px;
+  display:block;
+}
 
 .select2-container .select2-choice{
   background: none;
   padding: 5px 30px 4px 30px;
-  border: 1px solid #eee;
+  border: 1px solid #f2f2f2;
   font-size:17px;
   position:relative;
   width:200px;
+  font-weight:500;
   
   div{
     background:none;
@@ -953,19 +981,9 @@ h5.widget_sub_title{font-weight:500}
     b{
       background:none;
       position:relative;
-      
     }
   }
-  
-  &:before{
-    content:"\f08d";
-    font-family:"FontAwesome";
-    font-size:17px;
-    color:$brightblue;
-    position:absolute;
-    left:12px;
-  }
-  
+
   &:after{
     font-family:"FontAwesome";
     content: "\f078";
@@ -975,6 +993,23 @@ h5.widget_sub_title{font-weight:500}
     color:$warmgray;
     font-size:11px;
   }
+}
+
+#s2id_report_employee .select2-choice:before{
+  content:"\f0c0";
+  font-family:"FontAwesome";
+  font-size:17px;
+  color:$brightblue;
+  position:absolute;
+  left:10px;
+}
+#s2id_report_location .select2-choice:before{
+  content:"\f08d";
+  font-family:"FontAwesome";
+  font-size:17px;
+  color:$brightblue;
+  position:absolute;
+  left:12px;
 }
 
 .report_subnav{
@@ -1088,6 +1123,8 @@ label.inline{
   }
 }
 
+#change_view_camera_picker #report_nav{width:23.076923076923077%}
+
 .accordion-inner li.active{font-weight:bold}
 .jump_menus{
   padding:15px;
@@ -1118,6 +1155,7 @@ label.inline{
 }
 .report_jump_menu{
   font-size:14px;
+  font-weight:500;
   display: block;
   background: #fff;
   padding: 5px 30px 5px 10px;
@@ -1370,10 +1408,10 @@ form.audit_form label.question{
 .knob-wrapper {
   display: inline-block; vertical-align: top;
   background: #fdfdfd;
-  @include border-radius(7px);
+  @include border-radius(3px);
   border: 1px dotted #dfdfdf;
   @include transition(.2s);
-  padding:8px;
+  padding: 10px 14px;
   
   
   &.glance{
@@ -1384,7 +1422,7 @@ form.audit_form label.question{
   }
   
   &:hover, &.active{
-    background:#fdfdfd!important;
+    background:#f7f7f7!important;
     text-decoration:none;
   }
   
@@ -1418,15 +1456,39 @@ form.audit_form label.question{
   & + .knob-wrapper{margin-left:25px;}  
 }
 
-.knobs-inline{
+.knobs-stacked{
   margin-bottom:15px;
   .knob-wrapper{
-    display:inline-block;
-    
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    display:block;
+    font-size: 13px;
     margin:0 5px 5px 0;
+    border-width:0px 0 0 3px;
+    border-style: solid;
+    @include transition(.2s);
+    margin-top:1px;
+    position:relative;
+    &.active{
+      border-width:0 0 0 6px;
+      
+      &:after{
+        font-family: "FontAwesome";
+        content: "\f054";
+        position: absolute;
+        right: 6px;
+        top: 37%;
+        color: #ddd;
+        font-size: 21px;
+        font-weight: 200;
+      }
+    }
   }
   .knob{
     font-size: 17px!important;
+    &:focus{
+      border:none;
+      box-shadow:none!important;
+    }
   }
   
   h4.inline{

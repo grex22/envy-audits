@@ -62,14 +62,14 @@
                           <div class="span9">
                             <h3>Overview:
                               <select id="report_location" class="inline select2_jump">
-                                <option value="All Locations" selected="selected">All Locations</option>
+                                <option value="client-report-locations.php" selected="selected">All Locations</option>
                                 <optgroup label="Southwest Region">
-                                  <option value="Braintree">Braintree</option>
-                                  <option value="Braintree">Lexington</option>
-                                  <option value="Braintree">Milford</option>
-                                  <option value="Braintree">Stanford</option>
-                                  <option value="Braintree">Tournay</option>
-                                  <option value="Braintree">Jackson</option>
+                                  <option value="client-report-locations-detail.php">Braintree</option>
+                                  <option value="client-report-locations-detail.php">Lexington</option>
+                                  <option value="client-report-locations-detail.php">Milford</option>
+                                  <option value="client-report-locations-detail.php">Stanford</option>
+                                  <option value="client-report-locations-detail.php">Tournay</option>
+                                  <option value="client-report-locations-detail.php">Jackson</option>
                                 </optgroup>
                               </select>
                               <div id="report_daterange" class="report_jump_menu inline">
@@ -81,8 +81,8 @@
                           <div class="span3">
                             <div class="btn-group pull-right more_button_padding">
                               <label class="inline">Data View: </label>
-                              <button class="glow left active">Standard</button>
-                              <button class="glow middle">Day of the Week</button>
+                              <button class="glow left active">Overview</button>
+                              <button class="glow middle">Day of Week</button>
                               <button class="glow right">Day Part</button>
                             </div>
                           </div>
@@ -90,17 +90,15 @@
                         
                                                 
                         <div class="padded">
-                        
-                        
-                        
+                      
                         <div class="row-fluid report_main_wrapper">
-                        
-                        <div class="span9 report_large_col">
-                        <h4 class="more_bottom_margin">Average Scores for Selected Dates:</h4>
-                        <div class="row-fluid knobs-inline">
+                        <div class="span3 report_small_col">
+                          <h4 class="more_bottom_margin">Averages:</h4>
+                         
+                        <div class="row-fluid knobs-stacked">
                         
                           <?php for($i=0; $i<4; $i++){ ?>
-                          <a href="client-report-detail-cashier.php" style="border:1px solid <?php
+                          <a href="client-report-detail-cashier.php" style="border-color:<?php
                             switch($i){
                               case 0: echo "#30a0eb"; break;
                               case 1: echo "orange"; break;
@@ -133,8 +131,8 @@
                                 <td class="gauge_score">
                                   <?php
                                     switch($i){
-                                      case 0: echo "Overall Score"; break;
-                                      case 1: echo "Cashier Metric"; break;
+                                      case 0: echo "Combined Score"; break;
+                                      case 1: echo "Cashier"; break;
                                       case 2: echo "Expeditor"; break;
                                       case 3: echo "Quality Control"; break;
                                     }
@@ -145,6 +143,11 @@
                           </a>
                           <?php } ?>
                           </div>
+                          
+                          
+                        </div>
+                        <div class="span9 report_large_col">
+                         <h4 class="more_bottom_margin">Trend:</h4>
                           <div class="row-fluid">
                             
                             <div class="chart">
@@ -158,57 +161,66 @@
                               
                             </div>
                           </div>
-                        
-                        </div>
-                        <div class="span3 report_small_col">
-                          <h4 class="data_table_header"><a href="#" class="pull-right header_link">View All &raquo;</a><i class="icon icon-pushpin"></i> Top Locations</h4>
-                          <table class="table table-condensed">
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><a href="#">Braintree</a></td>
-                  <td>98</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td><a href="#">Milford</a></td>
-                  <td>95</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td><a href="#">Lexington</a></td>
-                  <td>95</td>
-                </tr>
-                
-              </tbody>
-            </table>
-                          <h4 class="data_table_header">
-                          <a href="#" class="pull-right header_link">View All &raquo;</a>
-                          <i class="icon icon-group"></i> Top Employees
+                        <div class="row-fluid more_bottom_margin">
+                          <div class="span6">
+                            <h4 class="data_table_header no_bottom_margin"><a href="client-report-locations.php">Best Location Scores</a></h4>
+                            <span class="subhead">Overall Score, All Locations</span>
+                            <table class="table table-condensed">
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td><a href="client-report-locations-detail.php">Braintree</a></td>
+                                  <td>98</td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td><a href="client-report-locations-detail.php">Milford</a></td>
+                                  <td>95</td>
+                                </tr>
+                                <tr>
+                                  <td>3</td>
+                                  <td><a href="client-report-locations-detail.php">Lexington</a></td>
+                                  <td>95</td>
+                                </tr>
+                                
+                              </tbody>
+                            </table>
+                            <div class="btn-group align-right block">
+                              <a href="client-report-locations.php" class="btn-flat primary">View All <i class="icon-circle-arrow-right icon-white"></i></a>
+                            </div>
+                          </div>
+                          <div class="span6">
+                          <h4 class="data_table_header  no_bottom_margin">
+                          
+                          <a href="client-report-employees.php">Best Employee Scores</a>
                           </h4>
+                          <span class="subhead">Overall Score, All Locations</span>
                           <table class="table table-condensed">
 
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td><a href="#">Mark Otto</a></td>
-                  <td>98</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td><a href="#">Mark Otto</a></td>
-                  <td>98</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td><a href="#">Mark Otto</a></td>
-                  <td>98</td>
-                </tr>
-              </tbody>
-            </table>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td><a href="client-report-employees-detail.php">Mark Otto</a></td>
+                                <td>98</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td><a href="client-report-employees-detail.php">Mark Otto</a></td>
+                                <td>98</td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td><a href="client-report-employees-detail.php">Mark Otto</a></td>
+                                <td>98</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                            <div class="btn-group align-right block">
+                            <a href="client-report-employees.php" class="btn-flat primary">View All <i class="icon-circle-arrow-right icon-white"></i></a>
+                            </div>
+                          </div>
+                          </div>
                           
-                        </div>
-                        </div>
                         <div class="row-fluid">
                           <div class="pull-right pagination_well">
                           Show: <select>
@@ -265,7 +277,7 @@
                                         <div class="sample_receipt">
                                         <table class="block_table">
                                         <tr><td><strong>Score</strong></td><td><span class="label label-<?php $pf ? print"success" : print"fail";?>"><?php $pf ? print "Pass!":print "Fail"; ?></span></td></tr>
-                                        <tr><td><strong>Employee:</strong></td><td>Elizabeth Jones</td></tr>
+                                        <tr><td><strong>Employee:</strong></td><td><a href="client-report-detail-employee.php">Elizabeth Jones</a></td></tr>
                                         <tr><td colspan=2><strong>Comments:</strong></td></tr>
                                         <tr><td colspan=2><?php $pf ? print"Cashier offered to list the ingredients for the order.":print"Cashier did not offer to list the ingredients for the Chicken Caesar Salad and Bacon Turkey Bravo"; ?></td></tr>                                       
                                         </table>
@@ -274,7 +286,7 @@
                                         <div class="sample_receipt">
                                         <table class="block_table">
                                         <tr><td><strong>Score</strong></td><td><span class="label label-<?php $pf ? print"success" : print"fail";?>"><?php $pf ? print "Pass!":print "Fail"; ?></span></td></tr>
-                                        <tr><td><strong>Employee:</strong></td><td>Elizabeth Jones</td></tr>
+                                        <tr><td><strong>Employee:</strong></td><td><a href="client-report-detail-employee.php">Elizabeth Jones</a></td></tr>
                                         <tr><td colspan=2><strong>Comments:</strong></td></tr>
                                         <tr><td colspan=2>An order was improperly entered.</td></tr>                                       
                                         </table>
@@ -287,7 +299,7 @@
                                       <tr><td>Receipt #:</td><td>10145</td></tr>
                                       <tr><td>Register #:</td><td>1</td></tr>
                                       <tr><td>EnVR:</td><td>1521 - Braintree</td></tr>
-                                      <tr><td>Cashier:</td><td>Elizabeth Jones</td></tr>
+                                      <tr><td>Cashier:</td><td><a href="client-report-detail-employee.php">Elizabeth Jones</a></td></tr>
                                       <tr><td colspan=2 class="align-center">
                                       
                                       Thursday 07/24 6:45:04 PM EDT<br>
@@ -321,6 +333,11 @@
                           </div>
                           </div>
                         </div>
+                        </div>
+                        
+                        
+                        </div>
+                        
                         </div>
                         </div>
                       </div>

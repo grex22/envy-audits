@@ -34,7 +34,7 @@ function get_nav_menus(){
       $menu_array = array(
         array("index.php","",'icon-tasks',"Dashboard"),
         array("watch-video.php","",'icon-play-circle',"Watch Video"),
-        array("client-report-overview.php","active",'icon-bar-chart',"Intelligence")
+        array("client-report-detail.php","active",'icon-bar-chart',"Intelligence")
       );
       $brand_img = "panera";
       break;
@@ -42,7 +42,7 @@ function get_nav_menus(){
       $menu_array = array(
         array("index.php","",'icon-tasks',"Dashboard"),
         array("watch-video.php","active",'icon-play-circle',"Watch Video"),
-        array("client-report-overview.php","",'icon-bar-chart',"Intelligence")
+        array("client-report-detail.php","",'icon-bar-chart',"Intelligence")
       );
       $brand_img = "panera";
       break;       
@@ -50,7 +50,7 @@ function get_nav_menus(){
       $menu_array = array(
         array("index.php","active",'icon-tasks',"Dashboard"),
         array("watch-video.php","",'icon-play-circle',"Watch Video"),
-        array("client-report-overview.php","",'icon-bar-chart',"Intelligence")
+        array("client-report-detail.php","",'icon-bar-chart',"Intelligence")
       );
       $brand_img = "panera";
       break;
