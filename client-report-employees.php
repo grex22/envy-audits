@@ -102,12 +102,13 @@
                         </form>
                         <h4 class="more_bottom_margin">Employees, All Locations: </h4>
                         
-                        <table class="table table-hover block_table">
+                            <table class="table table-hover block_table more_bottom_margin">
                             <thead>
                               <tr>
+                                <th class="sortable">Employee Name</th>
                                 <th class="sortable">Location</th>
-                                <th class="sortable align-center">Store Number</th>
-                                <th class="sortable align-center">Overall Score </th>
+                                <th class="sortable align-center">Employee #</th>
+                                <th class="sortable align-center">Combined Score </th>
                                 <th class="sortable align-center">Cashier </th>
                                 <th class="sortable align-center">Expeditor </th>
                                 <th class="sortable align-center">Quality Control </th>
@@ -116,28 +117,32 @@
                             <tbody>
                               <?php for($i=1;$i<=8;$i++){?>
                               <tr>
-                                <td><a href="client-report-locations-detail.php"><?php
+                                <td><a href="client-report-employees-detail.php"><?php
                                   switch($i){
-                                    case 1: echo 'Braintree'; break;
-                                    case 2: echo 'Remmy'; break;
-                                    case 3: echo 'Stanford'; break;
-                                    case 4: echo 'Portage'; break;
-                                    case 5: echo 'Lexington'; break;
-                                    case 6: echo 'Milford'; break;
-                                    case 7: echo 'Winona'; break;
-                                    case 8: echo 'Tippe Point'; break;
+                                    case 1: echo 'John Stevens'; break;
+                                    case 2: echo 'Alex Branford'; break;
+                                    case 3: echo 'Julia Benice'; break;
+                                    case 4: echo 'Albert Jackson'; break;
+                                    case 5: echo 'Lex Stanley'; break;
+                                    case 6: echo 'Jill Yinz'; break;
+                                    case 7: echo 'Jane Triplehorn'; break;
+                                    case 8: echo 'Taylor Pointe'; break;
                                   }
                                 ?></a></td>
+                                <td class="">Braintree</td>
                                 <td class="align-center">#10<?php echo rand(10,99); ?></td>
-                                <?php $score = rand(0,100);?><td class="align-center"><?php echo $score; ?></td>
-                                <?php $score = rand(0,100);?><td class="align-center"><?php echo $score; ?></td>
-                                <?php $score = rand(0,100);?><td class="align-center"><?php echo $score; ?></td>
-                                <?php $score = rand(0,100);?><td class="align-center"><?php echo $score; ?></td>
-
+                                <?php $score = rand(0,100);?><td class="align-center"><?php $score > 50 ? print $score : print " -- "; ?></td>
+                                <?php $score = rand(0,100);?><td class="align-center"><?php $score > 50 ? print $score : print " -- "; ?></td>
+                                <?php $score = rand(0,100);?><td class="align-center"><?php $score > 50 ? print $score : print " -- "; ?></td>
+                                <?php $score = rand(0,100);?><td class="align-center"><?php $score > 50 ? print $score : print " -- "; ?></td>
                               </tr>
                               <?php } ?>
                             </tbody>
                         </table>
+                        
+                        
+                        
+                      
                         
                         
                         </div>
