@@ -40,6 +40,10 @@ select {
 .glow.solo {
   border-radius: 4px; }
 
+.nav-header.informational {
+  text-transform: none;
+  color: #888; }
+
 /*                                  */
 /* Main Elements                    */
 /*                                  */
