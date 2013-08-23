@@ -14,6 +14,11 @@
                       <div class="row-fluid widget">
                       <div class="span12">
                         <h4 class="widget_title no_bottom_margin no_arrow">
+                        <div class="btn-group pull-right more_button_padding">
+                          <button class="glow left">Email <i class="icon-envelope"></i></button>
+                          <button class="glow middle">Export <i class="icon-download-alt"></i></button>
+                          <button class="glow right">Print <i class="icon-print"></i></button>
+                        </div>
                         <i class="icon-bar-chart"></i> Intelligence &raquo; 
                         Panera 2.0 Audit</h4>
                         <div class="navbar" id="report_navbar">
@@ -45,13 +50,6 @@
                                 <button type="submit" class="btn"><i class="icon-search"></i></button>
                               </form>
 
-                            </div>
-                            <div class="span4 padded">
-                              <div class="btn-group pull-right more_button_padding">
-                                <button class="glow left">Email <i class="icon-envelope"></i></button>
-                                <button class="glow middle">Export <i class="icon-download-alt"></i></button>
-                                <button class="glow right">Print <i class="icon-print"></i></button>
-                              </div>
                             </div>
                             
                             </div>
@@ -147,6 +145,11 @@
                           
                         </div>
                         <div class="span9 report_large_col">
+                         <div class="btn-group pull-right">
+                          <button class="btn minimal-flat left active" data-url="client-report-detail.php">Daily</button>
+                          <button class="btn minimal-flat middle" data-url="client-report-detail-dow.php">Weekly</button>
+                          <button class="btn minimal-flat right" data-url="client-report-detail-dp.php">Report Period</button>
+                        </div>
                          <h4 class="more_bottom_margin">Trend: </h4>
                           <div class="row-fluid">
                             

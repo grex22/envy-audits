@@ -321,6 +321,8 @@ var flotDefaultsLines = {
     ranges: {
        'Last 7 Days': [moment().subtract('days', 6), new Date()],
        'Last 30 Days': [moment().subtract('days', 29), new Date()],
+       'Prev Report Period': [moment().subtract('weeks',1).day('Wednesday'), moment().day('Tuesday')],
+       'This Report Period': [moment().day('Wednesday'), new Date()],
        'This Month': [moment().startOf('month'), moment().endOf('month')],
        'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
     },

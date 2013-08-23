@@ -200,6 +200,15 @@ a.btn-flat {
     .navbar_envysion .nav > li .navbar_icon {
       vertical-align: middle; }
 
+.btn.minimal-flat {
+  background: #f9f9f9;
+  font-size: 11px;
+  padding: 2px 8px;
+  box-shadow: none; }
+  .btn.minimal-flat.active {
+    color: #36abff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); }
+
 .circle_callout {
   background: #36abff;
   height: 20px;
@@ -1158,6 +1167,17 @@ form.audit_form label.question {
         color: #ddd;
         font-size: 21px;
         font-weight: 200; }
+  .knobs-stacked.less_padding .knob-wrapper {
+    padding: 9px; }
+    .knobs-stacked.less_padding .knob-wrapper:after {
+      font-family: "FontAwesome";
+      content: "\f054";
+      position: absolute;
+      right: 6px;
+      top: 32%;
+      color: #ddd;
+      font-size: 21px;
+      font-weight: 200; }
   .knobs-stacked .knob {
     font-size: 17px !important; }
     .knobs-stacked .knob:focus {

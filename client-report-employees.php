@@ -14,6 +14,11 @@
                       <div class="row-fluid widget">
                       <div class="span12">
                         <h4 class="widget_title no_bottom_margin no_arrow">
+                        <div class="btn-group pull-right more_button_padding">
+                          <button class="glow left">Email <i class="icon-envelope"></i></button>
+                          <button class="glow middle">Export <i class="icon-download-alt"></i></button>
+                          <button class="glow right">Print <i class="icon-print"></i></button>
+                        </div>
                         <i class="icon-bar-chart"></i> Intelligence &raquo; 
                         Panera 2.0 Audit</h4>
                         <div class="navbar" id="report_navbar">
@@ -46,13 +51,7 @@
                               </form>
 
                             </div>
-                            <div class="span4 padded">
-                              <div class="btn-group pull-right more_button_padding">
-                                <button class="glow left">Email <i class="icon-envelope"></i></button>
-                                <button class="glow middle">Export <i class="icon-download-alt"></i></button>
-                                <button class="glow right">Print <i class="icon-print"></i></button>
-                              </div>
-                            </div>
+
                             
                             </div>
                             

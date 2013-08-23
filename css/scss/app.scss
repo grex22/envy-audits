@@ -280,6 +280,8 @@ a.btn-flat{text-decoration:none!important;}
   padding:10px 14px;
 }
 
+
+
 .btn-flat-small{
   padding:3px 10px;
   font-size:11px;
@@ -370,6 +372,17 @@ a.btn-flat{text-decoration:none!important;}
     .caret{vertical-align:middle;margin-top:-1px!important;}
     
     .navbar_icon{vertical-align:middle}
+  }
+}
+
+.btn.minimal-flat{
+  background: #f9f9f9;
+  font-size: 11px;
+  padding: 2px 8px;
+  box-shadow:none;
+  &.active{
+    color:$brightblue;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.2);
   }
 }
 
@@ -1488,6 +1501,24 @@ form.audit_form label.question{
       }
     }
   }
+  
+  &.less_padding{
+    .knob-wrapper{
+      padding:9px;
+      
+      &:after{
+        font-family: "FontAwesome";
+        content: "\f054";
+        position: absolute;
+        right: 6px;
+        top: 32%;
+        color: #ddd;
+        font-size: 21px;
+        font-weight: 200;
+      }
+    }
+  }
+  
   .knob{
     font-size: 17px!important;
     &:focus{
