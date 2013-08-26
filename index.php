@@ -22,19 +22,13 @@
                 <div class="span9">
                   <div class="row-fluid widget">
                     <h4 class="widget_title">
-                      <i class="icon-bar-chart"></i> How are We Doing?
-                      
-                      
+                      <div class="btn-group pull-right">
+                        <a class="btn-flat gray btn-flat-small pull-right" href="client-report-detail.php">View Full Report</a>
+                      </div>
+                      <i class="icon-bar-chart"></i> Panera 2.0 Audit
                     </h4>
                     
-                    <div class="padded">
-                    <h5 class="widget_sub_title">
-                      <div class="btn-group pull-right">
-                        <a class="btn-flat gray btn-flat-small pull-right">View Full Report</a>
-                      </div>
-                        Panera 2.0 Audit:
-                    </h5>
-                    
+                    <div class="padded">                
                     
                       
                     <div class="row-fluid">
@@ -64,7 +58,7 @@
                                       case 3: echo "81"; break;
                                     }
 
-                                  ?>" class="knob" data-thickness=".3" data-inputColor="#333" data-bgColor="#dddddd" data-fgColor="<?php
+                                  ?>" class="knob" data-thickness=".2" data-inputColor="#333" data-bgColor="#dddddd" data-fgColor="<?php
                                     switch($i){
                                       case 0: echo "#30a0eb"; break;
                                       case 1: echo "orange"; break;
@@ -95,11 +89,7 @@
                         
                         <div class="span9 report_large_col">
                         <div class="row-fluid">
-                      <div class="btn-group pull-right">
-                        <button class="btn minimal-flat left active" data-url="client-report-detail.php">Daily</button>
-                        <button class="btn minimal-flat middle" data-url="client-report-detail-dow.php">Weekly</button>
-                        <button class="btn minimal-flat right" data-url="client-report-detail-dp.php">Report Period</button>
-                      </div>
+                      
                       <h4 class="more_bottom_margin">Scores, All Locations, Aug 11 &mdash; Aug 21, 2013</h4>
                       </div>
                           <div class="row-fluid">
@@ -108,14 +98,16 @@
                               <div class="tab-content flotchartcontainer">
                                 <div class="tab-pane active" id="overall">
                                   <div class="row-fluid">
-                                    <div id="statsChartoverview1" class="span12 flot_fix"></div>
+                                    <a href="client-report-detail.php" class="chart_link">
+                                      <div id="statsChartoverview1" class="span12 flot_fix"></div>
+                                    </a>
                                   </div>
                                 </div>
                               </div>
                               
                             </div>
                           </div>
-                        <div class="row-fluid more_bottom_margin">
+                        <div class="row-fluid">
                           <div class="span6">
                             <h4 class="data_table_header no_bottom_margin"><a href="client-report-locations.php">Best Location Scores</a></h4>
                             <span class="subhead">Overall Score, All Locations</span>
@@ -177,45 +169,7 @@
                           
                           </div>
                     </div>
-                    
-
-                    
-                    <!--
-                    <div class="row-fluid">
-                    
-                    <h5 class="widget_sub_title">
-                        My Locations:
-                    </h5>
-                    
-                    </div>
-                    <div class="row-fluid">
-                      <div class="span6">
-                        <h6>Best-Performing Locations:</h6>
-                        <table class="table block_table graph_table">
-                          <tbody>
-                            <tr><td>1</td><td><a href="client-report-locations-detail.php">Braintree</a></td><td><span class="hgraph" style="width:81%"></span>95%</td></tr>
-                            <tr><td>2</td><td><a href="client-report-locations-detail.php">Milford</a></td><td><span class="hgraph" style="width:80%"></span>94%</td></tr>
-                            <tr><td>3</td><td><a href="client-report-locations-detail.php">Lexington</a></td><td><span class="hgraph" style="width:78%"></span>93%</td></tr>
-                            <tr><td>4</td><td><a href="client-report-locations-detail.php">Rockland</a></td><td><span class="hgraph" style="width:77.5%"></span>92%</td></tr>
-                            <tr><td>5</td><td><a href="client-report-locations-detail.php">Brockton</a></td><td><span class="hgraph" style="width:74.5%"></span>90%</td></tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div class="span6">
-                        <h6>Worst-Performing Locations:</h6>
-                        <table class="table block_table graph_table gray_graphs">
-                          <tbody>
-                            <tr><td>1</td><td><a href="client-report-locations-detail.php">Wyckton</a></td><td><span class="hgraph" style="width:61%"></span>75%</td></tr>
-                            <tr><td>2</td><td><a href="client-report-locations-detail.php">Brighton</a></td><td><span class="hgraph" style="width:60%"></span>74%</td></tr>
-                            <tr><td>3</td><td><a href="client-report-locations-detail.php">Larwill</a></td><td><span class="hgraph" style="width:58%"></span>70%</td></tr>
-                            <tr><td>4</td><td><a href="client-report-locations-detail.php">Triston</a></td><td><span class="hgraph" style="width:52.5%"></span>66%</td></tr>
-                            <tr><td>5</td><td><a href="client-report-locations-detail.php">Allegra</a></td><td><span class="hgraph" style="width:50.5%"></span>60%</td></tr>
-                          </tbody>
-                        </table>
-                      </div>
-
-                    </div>
-                    -->
+                
                   </div>
                   </div>
                   
@@ -259,6 +213,7 @@
             </div>
             
         </div>
+        
     </div>
     
     <!-- Modals -->

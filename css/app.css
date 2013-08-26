@@ -1169,7 +1169,7 @@ form.audit_form label.question {
         font-weight: 200; }
   .knobs-stacked.less_padding .knob-wrapper {
     padding: 9px; }
-    .knobs-stacked.less_padding .knob-wrapper:after {
+    .knobs-stacked.less_padding .knob-wrapper.active:after {
       font-family: "FontAwesome";
       content: "\f054";
       position: absolute;

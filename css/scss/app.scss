@@ -1506,7 +1506,7 @@ form.audit_form label.question{
     .knob-wrapper{
       padding:9px;
       
-      &:after{
+      &.active:after{
         font-family: "FontAwesome";
         content: "\f054";
         position: absolute;
