@@ -103,6 +103,8 @@
                         </form>
                         <h4 class="more_bottom_margin">All Locations: </h4>
                         
+                        <img src="img/custom/locations-map.jpg">
+                        
                         <table class="table table-hover block_table">
                             <thead>
                               <tr>

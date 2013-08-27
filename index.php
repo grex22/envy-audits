@@ -205,6 +205,13 @@
                     </div>
                   </div>
                   
+                  <div class="row-fluid widget">
+                    <h4 class="widget_title no_bottom_margin">
+                      <i class="icon-pushpin"></i> My Locations
+                    </h4>
+                    <img src="img/custom/fake-map.jpg">
+                  </div>
+                  
                   
                   
                 </div>                  
