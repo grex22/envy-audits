@@ -31,7 +31,7 @@ include('inc/functions.php');
     <link href="css/lib/select2.css" rel="stylesheet"/>
     
     <!-- custom styles -->
-    <link rel="stylesheet" href="css/app.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/app.css" type="text/css" rel="stylesheet" />
 
     <!-- open sans font -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>

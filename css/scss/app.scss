@@ -1994,6 +1994,9 @@ input[readonly].knob{
   .navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
     padding: 0px;
   }
+  .navbar#report_navbar .navbar-inner .report_links_wrap > ul > li > a {
+    padding: 20px 23px 14px 23px;
+  }
 }
 
 
@@ -2017,3 +2020,8 @@ input[readonly].knob{
 {
   background: rgba(0, 0, 0, 0.3);
 }
+
+/*                                  */
+/* Print styles for reports page    */
+/*                                  */
+@import "print";

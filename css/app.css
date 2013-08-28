@@ -1546,7 +1546,10 @@ input[readonly].knob {
     position: fixed; } }
 @media (max-width: 979px) {
   .navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
-    padding: 0px; } }
+    padding: 0px; }
+
+  .navbar#report_navbar .navbar-inner .report_links_wrap > ul > li > a {
+    padding: 20px 23px 14px 23px; } }
 /*                                  */
 /* Webkit only scrollbar style      */
 /*                                  */
@@ -1561,3 +1564,79 @@ input[readonly].knob {
 
 ::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.3); }
+
+/*                                  */
+/* Print styles for reports page    */
+/*                                  */
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  body {
+    padding-top: 0px; }
+
+  #content_wrapper {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    padding: 0; }
+
+  .knobs-stacked .knob-wrapper {
+    border: none !important;
+    display: inline-block; }
+
+  .widget {
+    border: none !important; }
+
+  .main_wrapper > .container-fluid {
+    padding: 0; }
+
+  #footer, .navbar_envysion, #report_navbar {
+    display: none !important; }
+
+  #main_header_wrapper {
+    margin: 0; }
+
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a[href]:after {
+    content: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }

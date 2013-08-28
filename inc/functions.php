@@ -80,7 +80,7 @@ function get_nav_menus(){
                         <!--<b class="caret"></b>-->
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="personal-info.html">Personal info</a></li>
+                        <li><a href="#">Personal info</a></li>
                         <li><a href="#">Account settings</a></li>
                         <li><a href="#">Billing</a></li>
                         <li><a href="#">Export your data</a></li>
@@ -88,11 +88,11 @@ function get_nav_menus(){
                     </ul>
                 </li>
                 <li class="dropdown support">
-                    <a href="personal-info.html" class="dropdown-toggle iconlink" data-toggle="dropdown" role="button">
+                    <a href="#" class="dropdown-toggle iconlink" data-toggle="dropdown" role="button">
                         <span class="navbar_icon"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="personal-info.html">Personal info</a></li>
+                        <li><a href="#">Personal info</a></li>
                         <li><a href="#">Account settings</a></li>
                         <li><a href="#">Billing</a></li>
                         <li><a href="#">Export your data</a></li>
@@ -100,11 +100,11 @@ function get_nav_menus(){
                     </ul>
                 </li>
                 <li class="dropdown settings">
-                    <a href="personal-info.html" class="dropdown-toggle iconlink" data-toggle="dropdown" role="button">
+                    <a href="#" class="dropdown-toggle iconlink" data-toggle="dropdown" role="button">
                         <span class="navbar_icon"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="personal-info.html">Personal info</a></li>
+                        <li><a href="#">Personal info</a></li>
                         <li><a href="#">Account settings</a></li>
                         <li class="divider"></li>
                         <li style="margin-left:20px;"><strong>For Demo Nav:</strong></li>
