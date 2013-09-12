@@ -61,6 +61,9 @@ function get_nav_menus(){
       $brand_img = "panera";
       break;
   endswitch;
+  
+  //Vindaloo Hot Logo Override
+  $brand_img = "vindaloohot";
   ?>
   <a class="brand" href="index.php"><img src="img/custom/<?php echo $brand_img; ?>.png"></a>
             <ul class="nav pull-left main_nav">

@@ -4,7 +4,7 @@
                 <div class="row-fluid main_header">
                     <!--<div class="span3">
                       <h3>Score Samples</h3>
-                      <strong>Project:</strong> Panera Bread<br>
+                      <strong>Project:</strong> Vindaloo Hot!<br>
                       <strong>Period:</strong> July 12 - July 19th, 2013<br>
                       <a href="#" class="btn-flat btn-primary btn-flat-small" style="margin-left:0">Change Project</a>
                       
@@ -15,7 +15,7 @@
                         </div>
                         <h3 class="inline">Score Samples &raquo;</h3>
                         <div class="audit_current inline">
-                          <span><strong>Project: </strong> Panera Bread Co.</span>
+                          <span><strong>Project: </strong> Vindaloo Hot!</span>
                           <span><strong>Period: </strong> 7/13/13 - 7/20/13</span>
                           <span><a href="#">Change... </a></span>
                         </div>

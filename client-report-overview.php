@@ -6,11 +6,11 @@
                       <h3>
                         <div class="pull-right header_jump"><strong>Audit:</strong> 
                           <div class="dropdown inline">
-                            <a class="dropdown-toggle report_jump_menu" data-toggle="dropdown" href="#">Panera 2.0</a>
+                            <a class="dropdown-toggle report_jump_menu" data-toggle="dropdown" href="#">Vindaloo Hot!</a>
                             <ul class="dropdown-menu jump_list" role="menu" aria-labelledby="dLabel">
-                              <li><a href="#">Panera 2.0</a></li>
-                              <li><a href="#">Panera ETM</a></li>
-                              <li><a href="#">Panera Accuracy Study</a></li>
+                              <li><a href="#">Vindaloo Hot! 2.0</a></li>
+                              <li><a href="#">Vindaloo Hot! ETM</a></li>
+                              <li><a href="#">Vindaloo Hot! Accuracy Study</a></li>
                             </ul>
                           </div>
                           <strong>Audit Period:</strong> 
@@ -63,7 +63,7 @@
                     while($i <= 3):
                     ?>
                     <div class="row-fluid">
-                      <h4 class="section_title"><i class="icon-folder-open"></i> <a href="client-report-detail.php">Panera Bread Co., Southwest</a></h4>
+                      <h4 class="section_title"><i class="icon-folder-open"></i> <a href="client-report-detail.php">Vindaloo Hot! Southwest</a></h4>
                       <div class="project_glance row-fluid">
                         <div class="span2 align-right">
                           <a class="knob-wrapper glance" href="client-report-detail.php">

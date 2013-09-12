@@ -24,7 +24,7 @@
                           </div>
                           
                           
-                          <strong>Panera 2.0 Audit</strong> &raquo; <?php echo $title; ?><br>
+                          <strong>Vindaloo Hot! Audit</strong> &raquo; <?php echo $title; ?><br>
                           <div class="report_subnav">
                             <div class="btn-group pull-right">
                               <button class="glow left">Email <i class="icon-envelope"></i></button>

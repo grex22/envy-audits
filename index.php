@@ -25,7 +25,7 @@
                       <div class="btn-group pull-right">
                         <a class="btn-flat gray btn-flat-small pull-right" href="client-report-detail.php">View Full Report</a>
                       </div>
-                      <i class="icon-bar-chart"></i> Panera 2.0 Audit
+                      <i class="icon-bar-chart"></i> Vindaloo Hot! Audit
                     </h4>
                     
                     <div class="padded">                

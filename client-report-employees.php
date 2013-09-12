@@ -20,7 +20,7 @@
                           <button class="glow right">Print <i class="icon-print"></i></button>
                         </div>
                         <i class="icon-bar-chart"></i> Intelligence &raquo; 
-                        Panera 2.0 Audit</h4>
+                        Vindaloo Hot! Audit</h4>
                         <div class="navbar" id="report_navbar">
                           <div class="navbar-inner">
                             <div class="row-fluid">
