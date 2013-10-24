@@ -1548,6 +1548,74 @@ input[readonly].knob {
   .navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
     padding: 0px; } }
 /*                                  */
+/* Dashboard Project Styles         */
+/*                                  */
+.widget.projectcard {
+  padding-bottom: 0; }
+  .widget.projectcard .chart {
+    padding: 0;
+    height: 97px;
+    overflow: hidden; }
+  .widget.projectcard .flot_fix {
+    height: 105px;
+    padding: 0 !important;
+    width: 102.8%;
+    margin-left: -1.4%; }
+  .widget.projectcard .knob-wrapper {
+    font-size: 11px;
+    text-align: center;
+    padding: 6px 5px 6px 5px;
+    display: block;
+    border-width: 3px 0 0 0;
+    border-style: solid;
+    border-radius: 0;
+    height: 100%;
+    background: none; }
+    .widget.projectcard .knob-wrapper:hover {
+      background: none !important; }
+    .widget.projectcard .knob-wrapper span {
+      display: block;
+      margin-top: -1px;
+      line-height: 1.2; }
+  .widget.projectcard table {
+    width: 100%;
+    table-layout: fixed; }
+    .widget.projectcard table td {
+      height: 100%;
+      vertical-align: top; }
+  .widget.projectcard .project-overlay-container {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+  .widget.projectcard .project-overlay {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    background: rgba(54, 171, 255, 0.8);
+    z-index: 900;
+    padding-top: 67px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    opacity: 0;
+    display: block;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-backface-visibility: hidden;
+    text-decoration: none;
+    color: white;
+    font-size: 18px; }
+  .widget.projectcard .project-overlay-container:hover .project-overlay {
+    opacity: 1;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-backface-visibility: hidden; }
+
+/*                                  */
 /* Webkit only scrollbar style      */
 /*                                  */
 ::-webkit-scrollbar {

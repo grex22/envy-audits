@@ -52,6 +52,14 @@ function get_nav_menus(){
       );
       $brand_img = "panera";
       break;       
+    case ("/envysion/index-regional.php"):
+      $menu_array = array(
+        array("index.php","",'icon-tasks',"Dashboard"),
+        array("watch-video.php","active",'icon-play-circle',"Watch Video"),
+        array("client-report-detail.php","",'icon-bar-chart',"Intelligence")
+      );
+      $brand_img = "vindaloohot";
+      break;      
     default:
       $menu_array = array(
         array("index.php","active",'icon-tasks',"Dashboard"),
@@ -121,8 +129,8 @@ function get_nav_menus(){
                 </li>
             </ul>            
         </div>
-        <?php if(false /*$_SERVER['PHP_SELF'] == "/envysion/index.php"*/): ?>
-        <div class="notice_static"><a href="#" class="close_notice">&times;</a>Notice: System Downtime Scheduled for March 11 from 9pm - 10pm EST</div>
+        <?php if($_SERVER['PHP_SELF'] == "/envysion/index.php"): ?>
+        <!--<div class="notice_static"><a href="#" class="close_notice">&times;</a>Notice: System Downtime Scheduled for March 11 from 9pm - 10pm EST</div>-->
         <?php endif; ?>
     </div>
     <!-- end navbar --><?php

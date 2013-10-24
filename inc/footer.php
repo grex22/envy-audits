@@ -73,6 +73,9 @@
     <?php if($_SERVER['PHP_SELF']=="/envysion/watch-video.php"): ?>
       <script src="js/pages/watch-video.js"></script>
     <?php endif; ?>
+    <?php if($_SERVER['PHP_SELF']=="/envysion/index-regional.php"): ?>
+      <script src="js/pages/index-regional.js"></script>
+    <?php endif; ?>
     
 
     <script type="text/javascript">
