@@ -61,7 +61,7 @@
                                 <tr>
                                     <td><a href="#" class="btn-flat btn-flat-small gray"><i class='icon-edit'></i> Score</a></td>
                                     <td>
-                                        Panera Bread Co.
+                                        <?php echo $global_client_name; ?>
                                     </td>
                                     <td>
                                         <a href="#" class="description">Uniform Compliance</a>
@@ -80,7 +80,7 @@
                                 <tr>
                                     <td><a href="#" class="btn-flat btn-flat-small gray"><i class='icon-edit'></i> Score</a></td>
                                     <td>
-                                        Panera Bread Co.
+                                        <?php echo $global_client_name; ?> 
                                     </td>
                                     <td>
                                         <a href="#" class="description">Expeditor Location</a>
@@ -99,7 +99,7 @@
                                 <tr>
                                     <td><a href="#" class="btn-flat btn-flat-small gray"><i class='icon-edit'></i> Score</a></td>
                                     <td>
-                                        Panera Bread Co.
+                                        <?php echo $global_client_name; ?> 
                                     </td>
                                     <td>
                                         <a href="#" class="description">Dining Room Security</a>
@@ -132,7 +132,7 @@
                         </div>
                         </label>
                     </h4>
-                    <h4 class="section_title first"><i class="icon-folder-open"></i> Panera Bread Co., Southwest</h4>
+                    <h4 class="section_title first"><i class="icon-folder-open"></i> <?php echo $global_client_name; ?>, Southwest</h4>
                     <table class="table table-hover">
                             <thead>
                                 <tr>
@@ -231,7 +231,7 @@
                                 
                             </tbody>
                         </table>
-                    <h4 class="section_title"><i class="icon-folder-open"></i> Panera Bread Co. Uniform Standards</h4>
+                    <h4 class="section_title"><i class="icon-folder-open"></i> <?php echo $global_client_name; ?> Uniform Standards</h4>
                     <table class="table table-hover">
                             <thead>
                                 <tr>
@@ -330,7 +330,7 @@
                                 
                             </tbody>
                         </table>
-                        <h4 class="section_title"><i class="icon-folder-open"></i> Panera Bread Co. Project #3</h4>
+                        <h4 class="section_title"><i class="icon-folder-open"></i> <?php echo $global_client_name; ?> Project #3</h4>
                     <table class="table table-hover">
                             <thead>
                                 <tr>

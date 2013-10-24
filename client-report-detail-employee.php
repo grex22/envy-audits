@@ -81,7 +81,7 @@
                                   <ul>
                                     <li>
                                       <a href="#" data-toggle="collapse" class="collapsed has_submenu" data-target="#demo3">
-                                      Panera 2.0 Audit
+                                      <?php echo $global_project_name_prefix; ?> Audit
                                       </a>
                                       <div id="demo3" class="collapse in">
                                       <ul>

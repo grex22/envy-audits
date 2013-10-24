@@ -69,6 +69,12 @@ function get_nav_menus(){
       $brand_img = "panera";
       break;
   endswitch;
+  //Temporary Override
+  $brand_img = "vindaloohot";
+  
+  global $global_project_name_prefix, $global_client_name;
+  $global_project_name_prefix = "Vindaloo Hot 2.0";
+  $global_client_name = "Vindaloo Hot"
   ?>
   <a class="brand" href="index.php"><img src="img/custom/<?php echo $brand_img; ?>.png"></a>
             <ul class="nav pull-left main_nav">
@@ -119,6 +125,7 @@ function get_nav_menus(){
                         <li class="divider"></li>
                         <li style="margin-left:20px;"><strong>Client</strong></li>
                         <li><a href="index.php">Dashboard</a></li>
+                        <li><a href="index-regional.php">Dashboard - Regional</a></li>
                         <li><a href="client-report-overview.php">Audit Overview</a></li>
                         <li><a href="client-report-detail.php">Audit Detail</a></li>
                         <li><a href="client-report-detail-cashier.php">Cashier Audit Detail</a></li>
