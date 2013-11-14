@@ -31,10 +31,16 @@ function get_nav_menus(){
     case ("/envysion/client-report-overview.php"):
     case ("/envysion/client-report-detail.php"):
     case ("/envysion/client-report-detail-cashier.php"):
+    case ("/envysion/client-report-employees.php"):
+    case ("/envysion/client-report-employees-detail.php"):
+    case ("/envysion/client-report-locations-detail.php"):
+    case ("/envysion/client-report-locations.php"):
+    case ("/envysion/client-report-detail-dp.php"):
+    case ("/envysion/client-report-detail-dow.php"):
       $menu_array = array(
         array("index.php","",'icon-tasks',"Dashboard"),
         array("watch-video.php","",'icon-play-circle',"Watch Video"),
-        array("client-report-overview.php","active",'icon-bar-chart',"Intelligence")
+        array("client-report-detail.php","active",'icon-bar-chart',"Intelligence")
       );
       $brand_img = "panera";
       break;
@@ -42,19 +48,33 @@ function get_nav_menus(){
       $menu_array = array(
         array("index.php","",'icon-tasks',"Dashboard"),
         array("watch-video.php","active",'icon-play-circle',"Watch Video"),
-        array("client-report-overview.php","",'icon-bar-chart',"Intelligence")
+        array("client-report-detail.php","",'icon-bar-chart',"Intelligence")
       );
       $brand_img = "panera";
       break;       
+    case ("/envysion/index-regional.php"):
+      $menu_array = array(
+        array("index.php","active",'icon-tasks',"Dashboard"),
+        array("watch-video.php","",'icon-play-circle',"Watch Video"),
+        array("client-report-detail.php","",'icon-bar-chart',"Intelligence")
+      );
+      $brand_img = "vindaloohot";
+      break;      
     default:
       $menu_array = array(
         array("index.php","active",'icon-tasks',"Dashboard"),
         array("watch-video.php","",'icon-play-circle',"Watch Video"),
-        array("client-report-overview.php","",'icon-bar-chart',"Intelligence")
+        array("client-report-detail.php","",'icon-bar-chart',"Intelligence")
       );
       $brand_img = "panera";
       break;
   endswitch;
+  //Temporary Override
+  $brand_img = "vindaloohot";
+  
+  global $global_project_name_prefix, $global_client_name;
+  $global_project_name_prefix = "Vindaloo Hot 2.0";
+  $global_client_name = "Vindaloo Hot"
   ?>
   <a class="brand" href="index.php"><img src="img/custom/<?php echo $brand_img; ?>.png"></a>
             <ul class="nav pull-left main_nav">
@@ -105,6 +125,7 @@ function get_nav_menus(){
                         <li class="divider"></li>
                         <li style="margin-left:20px;"><strong>Client</strong></li>
                         <li><a href="index.php">Dashboard</a></li>
+                        <li><a href="index-regional.php">Dashboard - Multi</a></li>
                         <li><a href="client-report-overview.php">Audit Overview</a></li>
                         <li><a href="client-report-detail.php">Audit Detail</a></li>
                         <li><a href="client-report-detail-cashier.php">Cashier Audit Detail</a></li>
@@ -115,8 +136,8 @@ function get_nav_menus(){
                 </li>
             </ul>            
         </div>
-        <?php if(false /*$_SERVER['PHP_SELF'] == "/envysion/index.php"*/): ?>
-        <div class="notice_static"><a href="#" class="close_notice">&times;</a>Notice: System Downtime Scheduled for March 11 from 9pm - 10pm EST</div>
+        <?php if($_SERVER['PHP_SELF'] == "/envysion/index.php"): ?>
+        <!--<div class="notice_static"><a href="#" class="close_notice">&times;</a>Notice: System Downtime Scheduled for March 11 from 9pm - 10pm EST</div>-->
         <?php endif; ?>
     </div>
     <!-- end navbar --><?php

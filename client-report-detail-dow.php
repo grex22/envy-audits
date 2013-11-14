@@ -51,6 +51,7 @@
                               </form>
 
                             </div>
+
                             
                             </div>
                             
@@ -79,8 +80,8 @@
                           <div class="span3">
                             <div class="btn-group pull-right more_button_padding data_view_buttons">
                               <label class="inline">Data View: </label>
-                              <button class="glow left active" data-url="client-report-detail.php">Overview</button>
-                              <button class="glow middle" data-url="client-report-detail-dow.php">Day of Week</button>
+                              <button class="glow left " data-url="client-report-detail.php">Overview</button>
+                              <button class="glow middle active" data-url="client-report-detail-dow.php">Day of Week</button>
                               <button class="glow right" data-url="client-report-detail-dp.php">Day Part</button>
                             </div>
                           </div>
@@ -145,84 +146,21 @@
                           
                         </div>
                         <div class="span9 report_large_col">
-                         <div class="btn-group pull-right">
-                          <button class="btn minimal-flat left active" data-url="client-report-detail.php">Daily</button>
-                          <button class="btn minimal-flat middle" data-url="client-report-detail-dow.php">Weekly</button>
-                          <button class="btn minimal-flat right" data-url="client-report-detail-dp.php">Report Period</button>
-                        </div>
-                         <h4 class="more_bottom_margin">Trend: </h4>
+                         <h4 class="more_bottom_margin">Score by Day of the Week: </h4>
                           <div class="row-fluid">
                             
                             <div class="chart">
                               <div class="tab-content flotchartcontainer">
                                 <div class="tab-pane active" id="overall">
                                   <div class="row-fluid">
-                                    <div id="statsChartoverview1" class="span12 flot_fix"></div>
+                                    <div id="dayofweekgraph" class="span12 flot_fix"></div>
                                   </div>
                                 </div>
                               </div>
                               
                             </div>
                           </div>
-                        <div class="row-fluid more_bottom_margin">
-                          <div class="span6">
-                            <h4 class="data_table_header no_bottom_margin"><a href="client-report-locations.php">Best Location Scores</a></h4>
-                            <span class="subhead">Overall Score, All Locations</span>
-                            <table class="table table-condensed">
-                              <tbody>
-                                <tr>
-                                  <td>1</td>
-                                  <td><a href="client-report-locations-detail.php">Braintree</a></td>
-                                  <td class="align-right">98</td>
-                                </tr>
-                                <tr>
-                                  <td>2</td>
-                                  <td><a href="client-report-locations-detail.php">Milford</a></td>
-                                  <td class="align-right">95</td>
-                                </tr>
-                                <tr>
-                                  <td>3</td>
-                                  <td><a href="client-report-locations-detail.php">Lexington</a></td>
-                                  <td class="align-right">95</td>
-                                </tr>
-                                
-                              </tbody>
-                            </table>
-                            <div class="btn-group align-right block">
-                              <a href="client-report-locations.php" class="btn-flat primary">View All <i class="icon-circle-arrow-right icon-white"></i></a>
-                            </div>
-                          </div>
-                          <div class="span6">
-                          <h4 class="data_table_header  no_bottom_margin">
-                          
-                          <a href="client-report-employees.php">Best Employee Scores</a>
-                          </h4>
-                          <span class="subhead">Overall Score, All Locations</span>
-                          <table class="table table-condensed">
-
-                            <tbody>
-                              <tr>
-                                <td>1</td>
-                                <td><a href="client-report-employees-detail.php">Mark Otto</a></td>
-                                <td class="align-right">98</td>
-                              </tr>
-                              <tr>
-                                <td>2</td>
-                                <td><a href="client-report-employees-detail.php">Mark Otto</a></td>
-                                <td class="align-right">98</td>
-                              </tr>
-                              <tr>
-                                <td>3</td>
-                                <td><a href="client-report-employees-detail.php">Mark Otto</a></td>
-                                <td class="align-right">98</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                            <div class="btn-group align-right block">
-                            <a href="client-report-employees.php" class="btn-flat primary">View All <i class="icon-circle-arrow-right icon-white"></i></a>
-                            </div>
-                          </div>
-                          </div>
+                        
                           
                         <div class="row-fluid">
                           <div class="pull-right pagination_well">
@@ -248,6 +186,7 @@
                                 <th>Preview</th>
                                 <th class="sortable">Score </th>
                                 <th class="sortable">Metric </th>
+                                <th class="sortable">Day of Week </th>
                                 <th class="sortable">Date </th>
                                 <th class="sortable">Time </th>
                                 <th class="sortable">Location </th>
@@ -266,6 +205,7 @@
                                 <td>Cashier<?php if($i == 1){ ?>
                                     <br>Quality Control
                                   <?php } ?></td>
+                                <td><strong><?php $i <= 7 ? print "Monday" : print "Tuesday"; ?></strong></td>
                                 <td>7/13/13</td>
                                 <td>3:32 pm EST</td>
                                 <td>Braintree</td>

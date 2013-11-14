@@ -4,7 +4,7 @@
                 <div class="row-fluid main_header">
                     <!--<div class="span3">
                       <h3>Score Samples</h3>
-                      <strong>Project:</strong> Panera Bread<br>
+                      <strong>Project:</strong> <?php echo $global_client_name; ?><br>
                       <strong>Period:</strong> July 12 - July 19th, 2013<br>
                       <a href="#" class="btn-flat btn-primary btn-flat-small" style="margin-left:0">Change Project</a>
                       
@@ -15,7 +15,7 @@
                         </div>
                         <h3 class="inline">Score Samples &raquo;</h3>
                         <div class="audit_current inline">
-                          <span><strong>Project: </strong> Panera Bread Co.</span>
+                          <span><strong>Project: </strong> <?php echo $global_client_name; ?></span>
                           <span><strong>Period: </strong> 7/13/13 - 7/20/13</span>
                           <span><a href="#">Change... </a></span>
                         </div>
@@ -115,15 +115,15 @@
                       
                       <div class="dropdown inline">
                         <a class="dropdown-toggle btn-flat btn-flat-small " id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="#">
-                          <i class="icon-white icon-flag"></i> Flag
+                          <i class="icon-white icon-trash"></i> Remove
                         </a>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                          <li><a href="#"><i class="icon-flag" style="color:red"></i> Supervisor should review</a></li>
-                          <li><a href="#"><i class="icon-flag" style="color:orange"></i> Sample does not apply</a></li>
-                          <li><a href="#"><i class="icon-flag" style="color:purple"></i> Unclear sample</a></li>
+                          <li class="nav-header informational">Remove this sample from scoring?</li>
+                          <li> <a href="#">Yes</a></li>
+                          <li> <a href="#">No</a></li>                          
                         </ul>
                       </div>
-                      <a href="#instructions_modal" class="btn-flat btn-flat-small" data-toggle="modal"><i class="icon-question-sign icon-white"></i> Help!</a>
+                      <a href="#instructions_modal" class="btn-flat btn-flat-small" data-toggle="modal"><i class="icon-question-sign icon-white"></i> Rules</a>
                       
                       <hr>
                       
@@ -233,7 +233,6 @@
         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
       </div>
       <div class="modal-footer">
-        <label class="pull-left"> Don't show this message again for this report <input type="checkbox"></label>
         <a href="#" class="btn-flat primary" data-dismiss="modal">Ok, Got It!</a>
       </div>
     </div>
