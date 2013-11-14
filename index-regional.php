@@ -63,6 +63,7 @@
                         	<table cellpadding="0" cellspacing="0">
                           	<tr>
                             <?php for($i=0; $i<$numgauges[$k]; $i++){ ?>
+                            <?php if($numgauges[$k] == 2 && $i == 0) continue; ?>
                             <td>
                           <a href="client-report-detail.php" style="border-color:<?php
                             switch($i){
@@ -79,10 +80,10 @@
                                   
                                     switch($i){
                                       case 0: echo "75"; break;
-                                      case 1: echo "49"; break;
+                                      case 1: echo "75"; break;
                                       case 2: echo "95"; break;
                                       case 3: echo "81"; break;
-                                      case 4: echo "65"; break;
+                                      case 4: echo "49"; break;
                                     }
 
                                   ?>" class="knob" data-thickness=".25" data-inputColor="#333" data-bgColor="#dddddd" data-fgColor="<?php

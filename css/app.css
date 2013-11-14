@@ -148,16 +148,16 @@ a.btn-flat {
 .navbar_envysion {
   margin-bottom: 0; }
   .navbar_envysion .navbar-inner {
-    background: white;
     border-radius: 0;
     border-width: 0 0 1px 0;
     border-bottom: 1px solid #dddddd;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
     height: 52px;
+    background: white!important;
+    opacity:.97;
+    filter: -;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)"!important;
     /*@include box-shadow(0 0 4px rgba(0,0,0,.3));*/
-    opacity: .97; }
+     }
   .navbar_envysion .brand {
     padding: 8px 20px;
     margin-left: 0; }

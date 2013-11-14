@@ -42,7 +42,15 @@ include('inc/functions.php');
     <!-- Morris charts -->
     <link rel="stylesheet" type="text/css" href="css/lib/morris.css">
     
-    
+    <style>
+    .floatingHeader {
+      position: fixed;
+      top: 52px;
+      visibility: hidden;
+      background:white;
+      border-bottom:1px solid #eee;
+    }
+    </style>
     
     
 

@@ -25,9 +25,9 @@
                     <h4 class="widget_title">
                         <i class="icon-warning-sign"></i> Scores Due in the Next 5 Days
                     </h4>
-                    <table class="table table-hover">
-                            <thead>
-                                <tr>
+                    <table class="table table-hover persist-area">
+                            <thead class="">
+                                <tr class="persist-header">
                                     <th class="">
                                     </th>
                                     <th class=" sortable">
@@ -133,9 +133,9 @@
                         </label>
                     </h4>
                     <h4 class="section_title first"><i class="icon-folder-open"></i> <?php echo $global_client_name; ?>, Southwest</h4>
-                    <table class="table table-hover">
+                    <table class="table table-hover persist-area">
                             <thead>
-                                <tr>
+                                <tr class="persist-header">
                                     <th class="span1">
                                     </th>
                                     <th class="span2 sortable">
@@ -232,9 +232,9 @@
                             </tbody>
                         </table>
                     <h4 class="section_title"><i class="icon-folder-open"></i> <?php echo $global_client_name; ?> Uniform Standards</h4>
-                    <table class="table table-hover">
+                    <table class="table table-hover  persist-area">
                             <thead>
-                                <tr>
+                                <tr class="persist-header">
                                     <th class="span1">
                                     </th>
                                     <th class="span2 sortable">
@@ -440,6 +440,8 @@
             
         </div>
     </div>
+
+    
     
     <!-- Modals -->
     <div id="widget_modal" class="modal hide fade">

@@ -54,8 +54,8 @@ function get_nav_menus(){
       break;       
     case ("/envysion/index-regional.php"):
       $menu_array = array(
-        array("index.php","",'icon-tasks',"Dashboard"),
-        array("watch-video.php","active",'icon-play-circle',"Watch Video"),
+        array("index.php","active",'icon-tasks',"Dashboard"),
+        array("watch-video.php","",'icon-play-circle',"Watch Video"),
         array("client-report-detail.php","",'icon-bar-chart',"Intelligence")
       );
       $brand_img = "vindaloohot";
@@ -125,7 +125,7 @@ function get_nav_menus(){
                         <li class="divider"></li>
                         <li style="margin-left:20px;"><strong>Client</strong></li>
                         <li><a href="index.php">Dashboard</a></li>
-                        <li><a href="index-regional.php">Dashboard - Regional</a></li>
+                        <li><a href="index-regional.php">Dashboard - Multi</a></li>
                         <li><a href="client-report-overview.php">Audit Overview</a></li>
                         <li><a href="client-report-detail.php">Audit Detail</a></li>
                         <li><a href="client-report-detail-cashier.php">Cashier Audit Detail</a></li>
