@@ -33,6 +33,8 @@
     
     <!-- Date Range Picker -->
     <script src="js/daterangepicker.js"></script>
+    <!-- Select2 -->
+    <script src="js/select2.min.js"></script>
     
     <!-- page-specific scripts -->
     <?php if($_SERVER['PHP_SELF']=="/envysion/client-report-overview.php"): ?>
@@ -44,6 +46,24 @@
     <?php if($_SERVER['PHP_SELF']=="/envysion/client-report-detail.php"): ?>
       <script src="js/pages/client-report-detail.js"></script>
     <?php endif; ?>
+    <?php if($_SERVER['PHP_SELF']=="/envysion/client-report-detail-dow.php"): ?>
+      <script src="js/pages/client-report-detail.js"></script>
+    <?php endif; ?>
+    <?php if($_SERVER['PHP_SELF']=="/envysion/client-report-detail-dp.php"): ?>
+      <script src="js/pages/client-report-detail.js"></script>
+    <?php endif; ?>
+    <?php if($_SERVER['PHP_SELF']=="/envysion/client-report-locations.php"): ?>
+      <script src="js/pages/client-report-detail.js"></script>
+    <?php endif; ?>
+    <?php if($_SERVER['PHP_SELF']=="/envysion/client-report-locations-detail.php"): ?>
+      <script src="js/pages/client-report-detail.js"></script>
+    <?php endif; ?>
+    <?php if($_SERVER['PHP_SELF']=="/envysion/client-report-employees.php"): ?>
+      <script src="js/pages/client-report-detail.js"></script>
+    <?php endif; ?>
+    <?php if($_SERVER['PHP_SELF']=="/envysion/client-report-employees-detail.php"): ?>
+      <script src="js/pages/client-report-detail.js"></script>
+    <?php endif; ?>
     <?php if($_SERVER['PHP_SELF']=="/envysion/client-report-detail-cashier.php"): ?>
       <script src="js/pages/client-report-detail-cashier.js"></script>
     <?php endif; ?>
@@ -52,6 +72,9 @@
     <?php endif; ?>
     <?php if($_SERVER['PHP_SELF']=="/envysion/watch-video.php"): ?>
       <script src="js/pages/watch-video.js"></script>
+    <?php endif; ?>
+    <?php if($_SERVER['PHP_SELF']=="/envysion/index-regional.php"): ?>
+      <script src="js/pages/index-regional.js"></script>
     <?php endif; ?>
     
 

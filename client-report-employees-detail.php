@@ -27,17 +27,17 @@
                             <div class="span4 report_links_wrap">
                               <ul class="nav">
                                   <li>
-                                    <a href="client-report-detail.php" class="active" >
+                                    <a href="client-report-detail.php">
                                       <i class="icon-home"></i> Overview
                                     </a>
                                   </li>
                                   <li>
-                                    <a href="client-report-locations.php">
+                                    <a href="client-report-locations.php"  >
                                       <i class="icon-pushpin"></i> Locations
                                     </a>
                                   </li>
                                   <li>
-                                    <a href="client-report-employees.php">
+                                    <a href="client-report-employees.php" class="active">
                                       <i class="icon-group"></i> Employees
                                     </a>
                                   </li>
@@ -51,6 +51,7 @@
                               </form>
 
                             </div>
+
                             
                             </div>
                             
@@ -58,17 +59,16 @@
                         </div>
                         <div class="row-fluid report_header padded">
                           <div class="span9">
-                            <h3>Overview:
-                              <select id="report_location" class="inline select2_jump">
-                                <option value="client-report-locations.php" selected="selected">All Locations</option>
-                                <optgroup label="Southwest Region">
-                                  <option value="client-report-locations-detail.php">Braintree</option>
-                                  <option value="client-report-locations-detail.php">Lexington</option>
-                                  <option value="client-report-locations-detail.php">Milford</option>
-                                  <option value="client-report-locations-detail.php">Stanford</option>
-                                  <option value="client-report-locations-detail.php">Tournay</option>
-                                  <option value="client-report-locations-detail.php">Jackson</option>
-                                </optgroup>
+                          
+                            <h3>Employee:
+                              <select id="report_employee" class="inline select2_jump">
+                                <option value="client-report-employees.php" >All Employees</option>
+                                  <option value="client-report-employees-detail.php" selected="selected">Elizabeth Jones</option>
+                                  <option value="client-report-employees-detail.php">Alex Smith</option>
+                                  <option value="client-report-employees-detail.php">Peyton Ellis</option>
+                                  <option value="client-report-employees-detail.php">Mike Viniaterri</option>
+                                  <option value="client-report-employees-detail.php">Faux Nombre</option>
+                                  <option value="client-report-employees-detail.php">Alisha Jackson</option>
                               </select>
                               <div id="report_daterange" class="report_jump_menu inline">
                                 <i class="icon-calendar"></i> 
@@ -76,26 +76,35 @@
                               </div>
                             </h3>
                           </div>
-                          <div class="span3">
-                            <div class="btn-group pull-right more_button_padding data_view_buttons">
+                          <!--<div class="span3">
+                            <div class="btn-group pull-right more_button_padding">
                               <label class="inline">Data View: </label>
-                              <button class="glow left active" data-url="client-report-detail.php">Overview</button>
-                              <button class="glow middle" data-url="client-report-detail-dow.php">Day of Week</button>
-                              <button class="glow right" data-url="client-report-detail-dp.php">Day Part</button>
+                              <button class="glow left active">Overview</button>
+                              <button class="glow middle">Day of Week</button>
+                              <button class="glow right">Day Part</button>
                             </div>
-                          </div>
+                          </div>-->
                         </div>
                         
+                        <div class="report_breadcrumbs">
+                          <a href="client-report-employees.php">&laquo; All Employees</a>
+                        </div>
                                                 
                         <div class="padded">
-                      
+                        
+                        
+                        
                         <div class="row-fluid report_main_wrapper">
                         <div class="span3 report_small_col">
-                          <h4 class="more_bottom_margin">Scores:</h4>
+                        
+                        
+                        
+                        
+                        <h4 class="more_bottom_margin">Scores:</h4>
                          
                         <div class="row-fluid knobs-stacked">
                         
-                          <?php for($i=0; $i<4; $i++){ ?>
+                          <?php for($i=0; $i<1; $i++){ ?>
                           <a href="client-report-detail-cashier.php" style="border-color:<?php
                             switch($i){
                               case 0: echo "#30a0eb"; break;
@@ -129,7 +138,7 @@
                                 <td class="gauge_score">
                                   <?php
                                     switch($i){
-                                      case 0: echo "Combined Score"; break;
+                                      case 0: echo "Cashier"; break;
                                       case 1: echo "Cashier"; break;
                                       case 2: echo "Expeditor"; break;
                                       case 3: echo "Quality Control"; break;
@@ -141,89 +150,44 @@
                           </a>
                           <?php } ?>
                           </div>
+                        
+                          <div class="report_widget padded">
+                          <h4 class="data_table_header">Elizabeth Jones</h4>
+                          <strong><a href="client-report-locations-detail.php">Braintree, Store #1022</a></strong>
+                          <address>
+                          400 Franklin Street<br>
+                          Braintree, MA 02184<br>
+                          (781) 356-0601</address>
                           
+                          </div>
                           
                         </div>
                         <div class="span9 report_large_col">
-                         <div class="btn-group pull-right">
+                        <div class="btn-group pull-right">
                           <button class="btn minimal-flat left active" data-url="client-report-detail.php">Daily</button>
                           <button class="btn minimal-flat middle" data-url="client-report-detail-dow.php">Weekly</button>
                           <button class="btn minimal-flat right" data-url="client-report-detail-dp.php">Report Period</button>
                         </div>
-                         <h4 class="more_bottom_margin">Trend: </h4>
+                        <h4 class="more_bottom_margin">Trend:</h4>
+                        
+                        
+                        
                           <div class="row-fluid">
                             
                             <div class="chart">
                               <div class="tab-content flotchartcontainer">
                                 <div class="tab-pane active" id="overall">
                                   <div class="row-fluid">
-                                    <div id="statsChartoverview1" class="span12 flot_fix"></div>
+                                    <div id="employee-detail-chart" class="span12 flot_fix"></div>
                                   </div>
                                 </div>
                               </div>
                               
                             </div>
                           </div>
-                        <div class="row-fluid more_bottom_margin">
-                          <div class="span6">
-                            <h4 class="data_table_header no_bottom_margin"><a href="client-report-locations.php">Best Location Scores</a></h4>
-                            <span class="subhead">Overall Score, All Locations</span>
-                            <table class="table table-condensed">
-                              <tbody>
-                                <tr>
-                                  <td>1</td>
-                                  <td><a href="client-report-locations-detail.php">Braintree</a></td>
-                                  <td class="align-right">98</td>
-                                </tr>
-                                <tr>
-                                  <td>2</td>
-                                  <td><a href="client-report-locations-detail.php">Milford</a></td>
-                                  <td class="align-right">95</td>
-                                </tr>
-                                <tr>
-                                  <td>3</td>
-                                  <td><a href="client-report-locations-detail.php">Lexington</a></td>
-                                  <td class="align-right">95</td>
-                                </tr>
-                                
-                              </tbody>
-                            </table>
-                            <div class="btn-group align-right block">
-                              <a href="client-report-locations.php" class="btn-flat primary">View All <i class="icon-circle-arrow-right icon-white"></i></a>
-                            </div>
-                          </div>
-                          <div class="span6">
-                          <h4 class="data_table_header  no_bottom_margin">
                           
-                          <a href="client-report-employees.php">Best Employee Scores</a>
-                          </h4>
-                          <span class="subhead">Overall Score, All Locations</span>
-                          <table class="table table-condensed">
-
-                            <tbody>
-                              <tr>
-                                <td>1</td>
-                                <td><a href="client-report-employees-detail.php">Mark Otto</a></td>
-                                <td class="align-right">98</td>
-                              </tr>
-                              <tr>
-                                <td>2</td>
-                                <td><a href="client-report-employees-detail.php">Mark Otto</a></td>
-                                <td class="align-right">98</td>
-                              </tr>
-                              <tr>
-                                <td>3</td>
-                                <td><a href="client-report-employees-detail.php">Mark Otto</a></td>
-                                <td class="align-right">98</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                            <div class="btn-group align-right block">
-                            <a href="client-report-employees.php" class="btn-flat primary">View All <i class="icon-circle-arrow-right icon-white"></i></a>
-                            </div>
-                          </div>
-                          </div>
-                          
+                        
+                        
                         <div class="row-fluid">
                           <div class="pull-right pagination_well">
                           Show: <select>
@@ -259,13 +223,8 @@
                             <?php for($i=1; $i<15; $i++){ $pf = rand(0,2); ?>
                               <tr class="<?php $pf ? print"pass" : print"fail"; ?>">
                                 <td><img class="sample_thumb" src="img/custom/panera-cam-thumb.jpg"></td>
-                                <td><span class="label label-<?php $pf ? print"success" : print"fail";?>"><?php $pf ? print "Pass!":print "Fail"; ?></span><?php if($i == 1){ ?>
-                                    <br><span class="label label-<?php $pf ? print"success" : print"fail";?>"><?php $pf ? print "Pass!":print "Fail"; ?></span>
-                                  <?php } ?>
-                                </td>
-                                <td>Cashier<?php if($i == 1){ ?>
-                                    <br>Quality Control
-                                  <?php } ?></td>
+                                <td><span class="label label-<?php $pf ? print"success" : print"fail";?>"><?php $pf ? print "Pass!":print "Fail"; ?></span></td>
+                                <td>Cashier</td>
                                 <td>7/13/13</td>
                                 <td>3:32 pm EST</td>
                                 <td>Braintree</td>
@@ -285,7 +244,7 @@
                                         <div class="sample_receipt">
                                         <table class="block_table">
                                         <tr><td><strong>Score</strong></td><td><span class="label label-<?php $pf ? print"success" : print"fail";?>"><?php $pf ? print "Pass!":print "Fail"; ?></span></td></tr>
-                                        <tr><td><strong>Employee:</strong></td><td><a href="client-report-detail-employee.php">Elizabeth Jones</a></td></tr>
+                                        <tr><td><strong>Employee:</strong></td><td>Elizabeth Jones</td></tr>
                                         <tr><td colspan=2><strong>Comments:</strong></td></tr>
                                         <tr><td colspan=2><?php $pf ? print"Cashier offered to list the ingredients for the order.":print"Cashier did not offer to list the ingredients for the Chicken Caesar Salad and Bacon Turkey Bravo"; ?></td></tr>                                       
                                         </table>
@@ -294,7 +253,7 @@
                                         <div class="sample_receipt">
                                         <table class="block_table">
                                         <tr><td><strong>Score</strong></td><td><span class="label label-<?php $pf ? print"success" : print"fail";?>"><?php $pf ? print "Pass!":print "Fail"; ?></span></td></tr>
-                                        <tr><td><strong>Employee:</strong></td><td><a href="client-report-detail-employee.php">Elizabeth Jones</a></td></tr>
+                                        <tr><td><strong>Employee:</strong></td><td>Elizabeth Jones</td></tr>
                                         <tr><td colspan=2><strong>Comments:</strong></td></tr>
                                         <tr><td colspan=2>An order was improperly entered.</td></tr>                                       
                                         </table>
@@ -307,7 +266,7 @@
                                       <tr><td>Receipt #:</td><td>10145</td></tr>
                                       <tr><td>Register #:</td><td>1</td></tr>
                                       <tr><td>EnVR:</td><td>1521 - Braintree</td></tr>
-                                      <tr><td>Cashier:</td><td><a href="client-report-detail-employee.php">Elizabeth Jones</a></td></tr>
+                                      <tr><td>Cashier:</td><td>Elizabeth Jones</td></tr>
                                       <tr><td colspan=2 class="align-center">
                                       
                                       Thursday 07/24 6:45:04 PM EDT<br>
@@ -339,10 +298,15 @@
                             <a class="btn-flat btn-flat-small white left"><i class="icon-chevron-left"></i></a>
                             <a class="btn-flat btn-flat-small white right"><i class="icon-chevron-right"></i></a>
                           </div>
+                          </div>                          
+                          
+                          
                           </div>
-                        </div>
-                        </div>
-                        
+                          </div>
+                          
+                          
+                          
+                          
                         
                         </div>
                         

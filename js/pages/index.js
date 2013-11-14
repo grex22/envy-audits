@@ -93,9 +93,9 @@ var flotDefaultsBars = {
 var flotDefaultsLines = {
           series: {
               lines: { show: true,
-                      lineWidth: 1,
+                      lineWidth: .5,
                       fill: true,
-                      fillColor: { colors: [ { opacity: 0.03 }, { opacity: 0.03 } ] }
+                      fillColor: { colors: [ { opacity: 0.025 }, { opacity: 0.025 } ] }
                    },
               points: { show: true, 
                        lineWidth: 2,
@@ -111,8 +111,8 @@ var flotDefaultsLines = {
               }, 
           colors: ["#30a0eb", "orange", '#888888', "#e51d9b"],
           xaxis: {
-              ticks: [[1, "5/19"], [2, "5/26"], [3, "6/3"], [4,"6/10"], [5,"6/17"], [6,"6/24"], 
-                     [7,"7/1"],[8,"7/8"],[9,"7/15"],[10,"7/22"]],
+              ticks: [[1, "8/11"], [2, "8/12"], [3, "8/13"], [4,"8/14"], [5,"8/15"], [6,"8/16"], 
+                     [7,"8/17"],[8,"8/18"],[9,"8/19"],[10,"8/20"]],
               font: {
                   size: 10,
                   family: "Open Sans, Arial",
@@ -131,19 +131,39 @@ var flotDefaultsLines = {
               labelBoxBorderColor: "#fff",
               position:'sw',
               noColumns: 0,
-              margin:[0,0]
+              margin:[5,210]
           }
         };
+        
 // jQuery Flot Chart
-  var dashboard1 = [[1, 30], [2, 42], [3, 34], [4, 63],[5, 80],[6, 68],[7, 75]];
-  var dashboard2 = [[1, 20], [2, 40], [3, 50], [4, 43],[5, 68],[6, 80],[7, 49]];
-  var dashboard3 = [[1, 30], [2, 38], [3, 45], [4, 53],[5, 66],[6, 50],[7, 95]];
-  var dashboard4 = [[1, 42], [2, 22], [3, 64], [4, 43],[5, 45],[6, 75],[7, 81]];
+  var dashboard1 = [[1, 30], [2, 42], [3, 34], [4, 63],[5, 80],[6, 68],[7, 90],[8, 95],[9, 95],[10, 92]];
+  var dashboard2 = [[1, 20], [2, 40], [3, 50], [4, 43],[5, 68],[6, 80],[7, 49],[8, 53],[9, 76],[10, 82]];
+  var dashboard3 = [[1, 30], [2, 38], [3, 45], [4, 53],[5, 66],[6, 50],[7, 77],[8, 93],[9, 94],[10, 91]];
+  var dashboard4 = [[1, 42], [2, 22], [3, 64], [4, 43],[5, 45],[6, 75],[7, 85],[8, 87],[9, 91],[10, 98]];
+  var dailyoverallpass = [[1, 50], [2, 40], [3, 45], [4, 23],[5, 55],[6, 65],[7, 61]];
+  var dailyoverallfail = [[1, 80], [2, 75], [3, 15], [4, 3],[5, 13],[6, 11],[7, 6]];
+  var dailyoverallmetric1 = [[1, 80], [2, 75], [3, 15], [4, 80],[5, 18],[6, 14],[7, 20]];
+  var dailyoverallmetric2 = [[1, 70], [2, 65], [3, 25], [4, 77],[5, 13],[6, 11],[7, 6]];
+  var dailyoverallmetric3 = [[1, 60], [2, 60], [3, 35], [4, 66],[5, 23],[6, 21],[7, 1]];
+  
+  var dayoftheweek = [[1, 30], [2, 42], [3, 34], [4, 63],[5, 80],[6, 68],[7, 90]];
+  var daypart = [[1, 88], [2, 76]];
+  
+  var overall = [[1, 50], [2, 40], [3, 45], [4, 23],[5, 55],[6, 65],[7, 61],[8, 50], [9, 40], [10, 45]];
+  var visitors = [[1, 25], [2, 50], [3, 23], [4, 48],[5, 38],[6, 40],[7, 47],[8, 25], [9, 50], [10, 23]];
+  
+  var lunch = [[1, 60], [2, 60], [3, 55], [4, 43],[5, 88],[6, 85],[7, 91],[8, 90], [9, 10], [10, 45]];
+  var dinner = [[1, 25], [2, 50], [3, 23], [4, 48],[5, 38],[6, 40],[7, 47],[8, 25], [9, 50], [10, 23]];
 
+  var met1 = [[1, 60], [2, 60], [3, 55], [4, 43],[5, 88],[6, 85],[7, 91],[8, 90], [9, 10], [10, 45]];
+  var met2 = [[1, 28], [2, 52], [3, 25], [4, 52],[5, 44],[6, 39],[7, 42],[8, 50], [9, 52], [10, 33]];
   
-  
-  var plot = $.plot($("#dashboarddemochart"),
-      [ { data: dashboard1, label: "Overall" },{ data: dashboard2, label: "Cashier"},{ data: dashboard3, label: "Expeditor"},{ data: dashboard4, label: "QC"}], flotDefaultsLines);
+  if($("#statsChartoverview1").length){
+  var plot = $.plot($("#statsChartoverview1"),
+      [ { data: dashboard1, label: "Combined" },{ data: dashboard2, label: "Cashier"},{ data: dashboard3, label: "Expeditor"},{ data: dashboard4, label: "QC"}], flotDefaultsLines);
+      plot.getData()[0].lines.lineWidth = 3;
+      plot.draw();
+  }
 
 
   function showTooltip(x, y, contents) {
@@ -161,7 +181,7 @@ var flotDefaultsLines = {
   }
 
   var previousPoint = null;
-  $("[id^=dashboarddemochart]").bind("plothover", function (event, pos, item) {
+  $("[id^=statsChartoverview1]").bind("plothover", function (event, pos, item) {
       if (item) {
           if (previousPoint != item.dataIndex) {
               previousPoint = item.dataIndex;
@@ -206,5 +226,14 @@ var flotDefaultsLines = {
 		$('#report_daterange span').html(moment(start).format('MMM D, YYYY') + ' - ' + moment(end).format('MMM D, YYYY'));
 	});
   $('#report_daterange span').html(moment().subtract('days', 6).format('MMM D, YYYY') + ' -- ' + moment().format('MMM D, YYYY'));
+  
+  //Knob (gauges) click animation
+  $('.knob-wrapper').click(function(e){
+    e.preventDefault();
+    if(!$(this).hasClass('active')){
+      $('.knob-wrapper').removeClass('active');
+      $(this).addClass('active');
+    }
+  });
   
 });

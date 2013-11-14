@@ -102,11 +102,56 @@ $(function () {
   $(".knob").each(function(){
     knobval = $(this).val();
     knobcolor = setColor(knobval);
-    $(this).trigger('configure', {'fgColor':knobcolor})
+    $(this).trigger('configure', {'inputColor':knobcolor,'fgColor':knobcolor})
   });
   
   $('a.has_submenu').click(function(e){
     e.preventDefault();
   });
 
+  function UpdateTableHeaders() {
+       $(".persist-area").each(function() {
+       
+           var el             = $(this),
+               offset         = el.offset(),
+               scrollTop      = $(window).scrollTop()+52,
+               floatingHeader = $(".floatingHeader", this)
+           
+           if ((scrollTop > offset.top) && (scrollTop < offset.top + el.height())) {
+               floatingHeader.css({
+                "visibility": "visible"
+               });
+           } else {
+               floatingHeader.css({
+                "visibility": "hidden"
+               });      
+           };
+       });
+    }
+
+
+       var clonedHeaderRow;
+
+       $(".persist-area").each(function() {
+           clonedHeaderRow = $(".persist-header", this);
+           clonedHeaderRow
+             .before(clonedHeaderRow.clone())
+             .css("width", clonedHeaderRow.width())
+             .addClass("floatingHeader");
+           
+           var origWidths = new Array();
+           $(this).find('.persist-header:first-child th').each(function(){
+            origWidths.push($(this).width());
+           });
+           $.each(origWidths, function(index, value) {
+            clonedHeaderRow.children("th:nth-child("+(index+1)+")").css("width",value);
+           });
+       });
+       
+       $(window)
+        .scroll(UpdateTableHeaders)
+        .trigger("scroll");
+       
+  
+  
 });
