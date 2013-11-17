@@ -70,7 +70,7 @@ function get_nav_menus(){
       break;
   endswitch;
   //Temporary Override
-  $brand_img = "vindaloohot";
+  $brand_img = "panera";
   
   global $global_project_name_prefix, $global_client_name;
   $global_project_name_prefix = "Vindaloo Hot 2.0";

@@ -1639,7 +1639,7 @@ input[readonly].knob {
   overflow-y: auto; }
 
 .span8 .audit-table-wrap {
-  height: 553px;
+  height: 500px;
   overflow-y: auto; }
 
 .audit-table-wrap em {
@@ -1663,7 +1663,7 @@ input[readonly].knob {
   .audit_table > .span8 thead tr {
     background: #f9f9f9; }
   .audit_table > .span8 th {
-    border-bottom: 3px solid #36abff;
+    border-bottom: 3px solid #cccccc;
     padding-bottom: 5px; }
   .audit_table > .span8 td:first-child,
   .audit_table > .span8 th:first-child {

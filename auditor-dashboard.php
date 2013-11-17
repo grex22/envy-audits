@@ -84,8 +84,8 @@
                       </div>
                       <div class="span8">
                         <div class="audit-table-right-header">
-                          <h4 class="data_table_header">Nov 9, 2013
-                            <div class="filter_links">
+                          <h4 class="data_table_header"><em>Date:</em> Nov 9, 2013
+                            <div class="filter_links pull-right">
                               Show: &nbsp; <a href="#" class="active">Not Scored (21)</a> | <a href="#">Scored (49)</a> | <a href="#">All (62)</a>
                             </div>
                           </h4>

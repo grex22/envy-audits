@@ -3,7 +3,7 @@
   overflow-y:auto;
 }
 .span8 .audit-table-wrap{
-  height: 553px;
+  height: 500px;
   overflow-y:auto;
 }
 .audit-table-wrap em{margin-left:10px;font-size:11px;}
@@ -24,7 +24,7 @@
     box-shadow: inset 8px 0px 18px -8px #ccc;
     thead tr{background: #f9f9f9;}
     th{
-      border-bottom:3px solid $brightblue;
+      border-bottom:3px solid #ccc ;
       padding-bottom:5px;
     }
     td:first-child,
