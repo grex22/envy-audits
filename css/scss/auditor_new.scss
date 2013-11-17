@@ -1,0 +1,140 @@
+.span4 .audit-table-wrap{
+  height: 500px;
+  overflow-y:auto;
+}
+.span8 .audit-table-wrap{
+  height: 553px;
+  overflow-y:auto;
+}
+.audit-table-wrap em{margin-left:10px;font-size:11px;}
+.filter_links{font-size:12px;}
+.audit_table{
+
+  &>.span4{
+    border-right: 1px solid #ccc;
+    thead tr{background: #ccc;}
+    th{
+      border-bottom:3px solid orange;
+      padding-bottom:5px;
+    }
+  }
+  &>.span8{
+    width: 68.376068376068375%;
+    margin-left: 0;
+    box-shadow: inset 8px 0px 18px -8px #ccc;
+    thead tr{background: #f9f9f9;}
+    th{
+      border-bottom:3px solid $brightblue;
+      padding-bottom:5px;
+    }
+    td:first-child,
+    th:first-child{padding-left:15px;}
+  }
+  table{margin-bottom:0}
+  
+  .table-hover tbody tr:hover > td,
+  .table-hover tbody tr.active > td,
+  .table-hover tbody tr:hover > th {
+    background-color: #e1e1e1;
+    font-weight:bold;
+  }
+  .table-hover tbody tr.active{
+    border-left:4px solid orange;
+  }
+}
+
+.audit-left-table{
+  tr{position:relative;}
+  td{
+    background:#f4f4f4;
+    border-color:#ccc;
+    cursor:pointer;
+  }
+  td:last-child .rel_wrap:after{
+    font-family:"FontAwesome";
+    content: "\f054";
+    right:5px;
+    position:absolute;
+    display:none;
+    color:$brightblue;
+    font-weight:normal;
+  }
+  tr:hover, tr.active{
+    .rel_wrap:after{
+      display:inline;
+    }
+  }
+}
+.audit-table-right-header{
+  height:54px;
+  background:#f9f9f9;
+  padding:16px 0 0 15px;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+}
+.audit-right-table{
+  tr{
+    cursor:pointer;
+    position:relative;
+        
+    &:hover{
+      td{font-weight:bold;}
+    }
+  }
+  td:last-child .rel_wrap:after{
+    content: "Score";
+    right:5px;
+    position:absolute;
+    display:none;
+    color:$brightblue;
+  }
+  tr:hover{
+    .rel_wrap:after{
+      display:inline;
+    }
+  }
+}
+.rel_wrap{position:relative;}
+.show-on-hover{
+  opacity:0;
+}
+tr:hover td .show-on-hover{
+  opacity:1;
+}
+.mt10{
+  margin-top:10px;
+}
+
+h4.widget_title.no_arrow:after{
+  display:none;
+}
+
+#report_navbar.report_navbar_compact{
+  margin-bottom:0!important;
+  ul{
+    width:100%;
+    height:53px;
+    
+    li{
+      border-right:none!important;
+      width:33.3%;
+      
+      a{
+        padding: 15px 15px 18px 15px !important;
+        border-right: 1px solid #9cd6ff;
+        
+        &.active:after{display:none;}
+      
+        i{
+          font-size:16px!important;
+          display:inline-block!important;
+          vertical-align:middle;
+        }
+      }
+    }
+  }
+  .span8{
+    padding:8px 15px 0 0;
+    text-align:right;
+  }
+}

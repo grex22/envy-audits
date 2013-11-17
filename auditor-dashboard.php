@@ -3,434 +3,132 @@
             <div id="main_header_wrapper">
                 <div class="row-fluid main_header">
                     <div class="span12">
+                      <a class="btn-flat large primary pull-right mt10" href="#" data-toggle="modal">
+                        <i class="icon-arrow-right"></i> Begin Scoring
+                      </a>
                       <h3>
                         Auditor Dashboard
-                        <a class="btn-flat primary pull-right" href="#widget_modal" data-toggle="modal">
-                          <i class="icon-th-large"></i> Edit Widgets
-                        </a>
                       </h3>
-                      <div id="header_panel">
-                        <h4>Edit Widgets Interface</h4>
-                        &laquo; Placeholder &raquo;
-                      </div>
+                      <p><em>Not Sure Where to Start?</em> Simply click "Begin Scoring" to be taken to the highest-priority samples, in order</p>
                     </div>
                 </div>
             </div>
+           
             
             <div id="content_wrapper">
+            
               <div class="row-fluid ui-elements">
                 <div class="span12">
                 
-                  <div class="row-fluid widget">                    
-                    <h4 class="widget_title">
-                        <i class="icon-warning-sign"></i> Scores Due in the Next 5 Days
+                  <div class="row-fluid widget no_bottom_padding">                    
+                    <h4 class="widget_title no_bottom_margin no_arrow">
+                        Datasets 
+                            <div id="report_daterange" class="report_jump_menu inline">
+                              <i class="icon-calendar"></i> 
+                              <span>Nov 7, 2013 - Nov 13, 2013</span>
+                            </div>
                     </h4>
-                    <table class="table table-hover persist-area">
-                            <thead class="">
-                                <tr class="persist-header">
-                                    <th class="">
-                                    </th>
-                                    <th class=" sortable">
-                                        <span class="line"></span>Project
-                                    </th>
-                                    <th class=" sortable">
-                                        <span class="line"></span>Metric
-                                    </th>
-                                    <th class=" sortable">
-                                        <span class="line"></span>Location
-                                    </th>
-                                    <th class=" sortable">
-                                        <span class="line"></span>Dates
-                                    </th>
-                                    <th class=" align-center sortable">
-                                        <span class="line"></span>Total
-                                    </th>
-                                    <th class=" align-center sortable">
-                                        <span class="line"></span>Remaining
-                                    </th>
-                                    <th class=" align-center sortable">
-                                        <span class="line"></span>%
-                                    </th>
-                                    <th class=" sortable">
-                                        <span class="line"></span>Time Remaining 
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- row -->
-                                <tr>
-                                    <td><a href="#" class="btn-flat btn-flat-small gray"><i class='icon-edit'></i> Score</a></td>
-                                    <td>
-                                        <?php echo $global_client_name; ?>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="description">Uniform Compliance</a>
-                                    </td>
-                                    <td>
-                                        Tucson - Southwest
-                                    </td>
-                                    <td class="description">
-                                        6/15/13 &mdash; 6/22/13
-                                    </td>
-                                    <td class="align-center">133</td>
-                                    <td class="align-center">22</td>
-                                    <td class="align-center">21%</td>
-                                    <td>2 Days</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#" class="btn-flat btn-flat-small gray"><i class='icon-edit'></i> Score</a></td>
-                                    <td>
-                                        <?php echo $global_client_name; ?> 
-                                    </td>
-                                    <td>
-                                        <a href="#" class="description">Expeditor Location</a>
-                                    </td>
-                                    <td>
-                                        Tucson - Southwest
-                                    </td>
-                                    <td class="description">
-                                        6/15/13 &mdash; 6/22/13
-                                    </td>
-                                    <td class="align-center">133</td>
-                                    <td class="align-center">22</td>
-                                    <td class="align-center">21%</td>
-                                    <td>2 Days</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#" class="btn-flat btn-flat-small gray"><i class='icon-edit'></i> Score</a></td>
-                                    <td>
-                                        <?php echo $global_client_name; ?> 
-                                    </td>
-                                    <td>
-                                        <a href="#" class="description">Dining Room Security</a>
-                                    </td>
-                                    <td>
-                                        Tucson - Store #122
-                                    </td>
-                                    <td class="description">
-                                        6/15/13 &mdash; 6/22/13
-                                    </td>
-                                    <td class="align-center">133</td>
-                                    <td class="align-center">22</td>
-                                    <td class="align-center">21%</td>
-                                    <td>2 Days</td>
-                                </tr>
-                                
-                                
-                            </tbody>
-                        </table>
-                  </div>
-                  <div class="row-fluid widget">                    
-                    <div class="row-fluid table-wrapper products-table">
-                    <h4 class="widget_title no_bottom_margin">
-                        <i class="icon-bar-chart"></i> All Projects Needing Scores
-                        <label class="pull-right"> View by:
-                        <div class="btn-group">
-                          <button class="btn-flat gray btn-flat-small left active">Project</button>
-                          <button class="btn-flat gray btn-flat-small middle">Metric</button>
-                          <button class="btn-flat gray btn-flat-small right">Due Date</button>
+                    
+                    <div class="row-fluid audit_table">
+                      <div class="span4">
+                        <div class="navbar report_navbar_compact thirds no_bottom_margin" id="report_navbar">
+                      <div class="navbar-inner">
+                        <div class="row-fluid">
+                          <div class="report_links_wrap span12">
+                            <ul class="nav">
+                                <li>
+                                  <a href="#" class="active">
+                                    <i class="icon-calendar"></i> Dates
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <i class="icon-pushpin"></i> Locations
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <i class="icon-th-large"></i> Datasets
+                                  </a>
+                                </li>
+                            </ul>
+                          </div>
                         </div>
-                        </label>
-                    </h4>
-                    <h4 class="section_title first"><i class="icon-folder-open"></i> <?php echo $global_client_name; ?>, Southwest</h4>
-                    <table class="table table-hover persist-area">
-                            <thead>
-                                <tr class="persist-header">
-                                    <th class="span1">
-                                    </th>
-                                    <th class="span2 sortable">
-                                        <span class="line"></span>Metric
-                                    </th>
-                                    <th class="span2 sortable">
-                                        <span class="line"></span>Location
-                                    </th>
-                                    <th class="span2 sortable">
-                                        <span class="line"></span>Dates
-                                    </th>
-                                    <th class="span1 align-center sortable">
-                                        <span class="line"></span>Total
-                                    </th>
-                                    <th class="span1 align-center sortable">
-                                        <span class="line"></span>Remaining
-                                    </th>
-                                    <th class="span1 align-center sortable">
-                                        <span class="line"></span>%
-                                    </th>
-                                    <th class="span2 sortable">
-                                        <span class="line"></span>Time Remaining 
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- row -->
-                                <tr>
-                                    <td><a href="#" class="btn-flat btn-flat-small gray"><i class='icon-edit'></i> Score</a></td>
-                                    <td>
-                                        <a href="#" class="description">Uniform Compliance</a>
-                                    </td>
-                                    <td>
-                                        Tucson - Southwest
-                                    </td>
-                                    <td class="description">
-                                        6/15/13 &mdash; 6/22/13
-                                    </td>
-                                    <td class="align-center">133</td>
-                                    <td class="align-center">22</td>
-                                    <td class="align-center">21%</td>
-                                    <td>2 Days</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#" class="btn-flat btn-flat-small gray"><i class='icon-edit'></i> Score</a></td>
-                                    <td>
-                                        <a href="#" class="description">Greeting Metric</a>
-                                    </td>
-                                    <td>
-                                        Tucson - Southwest
-                                    </td>
-                                    <td class="description">
-                                        6/15/13 &mdash; 6/22/13
-                                    </td>
-                                    <td class="align-center">133</td>
-                                    <td class="align-center">22</td>
-                                    <td class="align-center">21%</td>
-                                    <td>2 Days</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#" class="btn-flat btn-flat-small gray"><i class='icon-edit'></i> Score</a></td>
-                                    <td>
-                                        <a href="#" class="description">Expeditor Location</a>
-                                    </td>
-                                    <td>
-                                        Tucson - Southwest
-                                    </td>
-                                    <td class="description">
-                                        6/15/13 &mdash; 6/22/13
-                                    </td>
-                                    <td class="align-center">133</td>
-                                    <td class="align-center">22</td>
-                                    <td class="align-center">21%</td>
-                                    <td>2 Days</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#" class="btn-flat btn-flat-small gray"><i class='icon-edit'></i> Score</a></td>
-                                    <td>
-                                        <a href="#" class="description">Dining Room Security</a>
-                                    </td>
-                                    <td>
-                                        Tucson - Store #122
-                                    </td>
-                                    <td class="description">
-                                        6/15/13 &mdash; 6/22/13
-                                    </td>
-                                    <td class="align-center">133</td>
-                                    <td class="align-center">22</td>
-                                    <td class="align-center">21%</td>
-                                    <td>2 Days</td>
-                                </tr>
-                                
-                                
-                            </tbody>
+                      </div>
+                    </div>
+                        <table class="table no_bottom_margin">
+                          <thead>
+                              <tr>
+                                  <th class=" sortable" width="50%">
+                                      Date
+                                  </th>
+                                  <th width="50%" class="align-center sortable">
+                                      Complete
+                                  </th>
+                              </tr>
+                          </thead>
                         </table>
-                    <h4 class="section_title"><i class="icon-folder-open"></i> <?php echo $global_client_name; ?> Uniform Standards</h4>
-                    <table class="table table-hover  persist-area">
-                            <thead>
-                                <tr class="persist-header">
-                                    <th class="span1">
-                                    </th>
-                                    <th class="span2 sortable">
-                                        <span class="line"></span>Metric
-                                    </th>
-                                    <th class="span2 sortable">
-                                        <span class="line"></span>Location
-                                    </th>
-                                    <th class="span2 sortable">
-                                        <span class="line"></span>Dates
-                                    </th>
-                                    <th class="span1 align-center sortable">
-                                        <span class="line"></span>Total
-                                    </th>
-                                    <th class="span1 align-center sortable">
-                                        <span class="line"></span>Remaining
-                                    </th>
-                                    <th class="span1 align-center sortable">
-                                        <span class="line"></span>%
-                                    </th>
-                                    <th class="span2 sortable">
-                                        <span class="line"></span>Time Remaining 
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- row -->
-                                <tr>
-                                    <td><a href="#" class="btn-flat btn-flat-small gray"><i class='icon-edit'></i> Score</a></td>
-                                    <td>
-                                        <a href="#" class="description">Uniform Compliance</a>
-                                    </td>
-                                    <td>
-                                        Tucson - Southwest
-                                    </td>
-                                    <td class="description">
-                                        6/15/13 &mdash; 6/22/13
-                                    </td>
-                                    <td class="align-center">133</td>
-                                    <td class="align-center">22</td>
-                                    <td class="align-center">21%</td>
-                                    <td>2 Days</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#" class="btn-flat btn-flat-small gray"><i class='icon-edit'></i> Score</a></td>
-                                    <td>
-                                        <a href="#" class="description">Greeting Metric</a>
-                                    </td>
-                                    <td>
-                                        Tucson - Southwest
-                                    </td>
-                                    <td class="description">
-                                        6/15/13 &mdash; 6/22/13
-                                    </td>
-                                    <td class="align-center">133</td>
-                                    <td class="align-center">22</td>
-                                    <td class="align-center">21%</td>
-                                    <td>2 Days</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#" class="btn-flat btn-flat-small gray"><i class='icon-edit'></i> Score</a></td>
-                                    <td>
-                                        <a href="#" class="description">Expeditor Location</a>
-                                    </td>
-                                    <td>
-                                        Tucson - Southwest
-                                    </td>
-                                    <td class="description">
-                                        6/15/13 &mdash; 6/22/13
-                                    </td>
-                                    <td class="align-center">133</td>
-                                    <td class="align-center">22</td>
-                                    <td class="align-center">21%</td>
-                                    <td>2 Days</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#" class="btn-flat btn-flat-small gray"><i class='icon-edit'></i> Score</a></td>
-                                    <td>
-                                        <a href="#" class="description">Dining Room Security</a>
-                                    </td>
-                                    <td>
-                                        Tucson - Store #122
-                                    </td>
-                                    <td class="description">
-                                        6/15/13 &mdash; 6/22/13
-                                    </td>
-                                    <td class="align-center">133</td>
-                                    <td class="align-center">22</td>
-                                    <td class="align-center">21%</td>
-                                    <td>2 Days</td>
-                                </tr>
-                                
-                                
-                            </tbody>
-                        </table>
-                        <h4 class="section_title"><i class="icon-folder-open"></i> <?php echo $global_client_name; ?> Project #3</h4>
-                    <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th class="span1">
-                                    </th>
-                                    <th class="span2 sortable">
-                                        <span class="line"></span>Metric
-                                    </th>
-                                    <th class="span2 sortable">
-                                        <span class="line"></span>Location
-                                    </th>
-                                    <th class="span2 sortable">
-                                        <span class="line"></span>Dates
-                                    </th>
-                                    <th class="span1 align-center sortable">
-                                        <span class="line"></span>Total
-                                    </th>
-                                    <th class="span1 align-center sortable">
-                                        <span class="line"></span>Remaining
-                                    </th>
-                                    <th class="span1 align-center sortable">
-                                        <span class="line"></span>%
-                                    </th>
-                                    <th class="span2 sortable">
-                                        <span class="line"></span>Time Remaining 
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- row -->
-                                <tr>
-                                    <td><a href="#" class="btn-flat btn-flat-small gray"><i class='icon-edit'></i> Score</a></td>
-                                    <td>
-                                        <a href="#" class="description">Uniform Compliance</a>
-                                    </td>
-                                    <td>
-                                        Tucson - Southwest
-                                    </td>
-                                    <td class="description">
-                                        6/15/13 &mdash; 6/22/13
-                                    </td>
-                                    <td class="align-center">133</td>
-                                    <td class="align-center">22</td>
-                                    <td class="align-center">21%</td>
-                                    <td>2 Days</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#" class="btn-flat btn-flat-small gray"><i class='icon-edit'></i> Score</a></td>
-                                    <td>
-                                        <a href="#" class="description">Greeting Metric</a>
-                                    </td>
-                                    <td>
-                                        Tucson - Southwest
-                                    </td>
-                                    <td class="description">
-                                        6/15/13 &mdash; 6/22/13
-                                    </td>
-                                    <td class="align-center">133</td>
-                                    <td class="align-center">22</td>
-                                    <td class="align-center">21%</td>
-                                    <td>2 Days</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#" class="btn-flat btn-flat-small gray"><i class='icon-edit'></i> Score</a></td>
-                                    <td>
-                                        <a href="#" class="description">Expeditor Location</a>
-                                    </td>
-                                    <td>
-                                        Tucson - Southwest
-                                    </td>
-                                    <td class="description">
-                                        6/15/13 &mdash; 6/22/13
-                                    </td>
-                                    <td class="align-center">133</td>
-                                    <td class="align-center">22</td>
-                                    <td class="align-center">21%</td>
-                                    <td>2 Days</td>
-                                </tr>
-                                <tr>
-                                    <td><a href="#" class="btn-flat btn-flat-small gray"><i class='icon-edit'></i> Score</a></td>
-                                    <td>
-                                        <a href="#" class="description">Dining Room Security</a>
-                                    </td>
-                                    <td>
-                                        Tucson - Store #122
-                                    </td>
-                                    <td class="description">
-                                        6/15/13 &mdash; 6/22/13
-                                    </td>
-                                    <td class="align-center">133</td>
-                                    <td class="align-center">22</td>
-                                    <td class="align-center">21%</td>
-                                    <td>2 Days</td>
-                                </tr>
-                                
-                                
-                            </tbody>
-                        </table> 
+                        <div class="audit-table-wrap">
+                          <table class="table table-hover audit-left-table">
+                                  
+                              <tbody>
+                                  <?php
+                                    for($i = 7; $i <= 13; $i++){?><tr<?php if($i == 9) echo " class='active'"; ?>>
+                                      <td width="50%">Nov <?php echo $i; ?>, 2013</td>
+                                      <td width="50%" class="align-center"><div class="rel_wrap">21% <em>(22/133)</em></div></td>
+                                  </tr><?php } ?>
+                                  
+                              </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="span8">
+                        <div class="audit-table-right-header">
+                          <h4 class="data_table_header">Nov 9, 2013
+                            <div class="filter_links">
+                              Show: &nbsp; <a href="#" class="active">Not Scored (21)</a> | <a href="#">Scored (49)</a> | <a href="#">All (62)</a>
+                            </div>
+                          </h4>
+                            
+                        </div>
+                        <table class="table table-hover no_bottom_margin">
+                              <thead>
+                                  <tr>
+                                      <th width="35%" class="sortable">
+                                          Name
+                                      </th>
+                                      <th width="25%" class=" sortable">
+                                          Metric
+                                      </th>
+                                      <th width="20%" class="align-center sortable">
+                                          Complete
+                                      </th>
+
+                                      <th width="20%" class=" sortable">
+                                          Date 
+                                      </th>
+                                  </tr>
+                              </thead>
+                          </table>
+                          <div class="audit-table-wrap">
+                              <table class="table table-hover audit-right-table">
+                                <tbody>
+                                    <?php
+                                      for($i = 1; $i <= 19; $i++){?><tr>
+                                        <td width="35%">Cashier Transactions</td>
+                                        <td width="25%">Cashier Confirmation</td>
+                                        <td width="20%" class="align-center">21% <em>(22/133)</em></td>
+                                        <td width="19%"><div class="rel_wrap">Nov 9, 2013</div></td>
+                                    </tr><?php } ?>
+                                    
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                   </div>
-                  </div>
+                  
                   
                   
                 </div>
