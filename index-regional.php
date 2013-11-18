@@ -21,52 +21,86 @@
               <div class="row-fluid ui-elements">
                 <div class="span9">
                 <div class="row-fluid">
-                <?php $numgauges = array(3,2,5,3,4); ?>
-                <?php for($k=0; $k<5; $k++){ ?>
+                <?php
+                $dasharray = array(
+                  array(
+                    'title' => 'Panera 2.0',
+                    'gauges' => array(
+                      'Combined' => 75,
+                      'Cashier' => 75,
+                      'QC' => 96,
+                      'Quality Control' => 81,
+                      'Deployment' => 88
+                    )
+                  ),
+                  array(
+                    'title' => 'Enable The Manager',
+                    'gauges' => array(
+                      'Combined' => 75,
+                      'Opening MIC' => 75,
+                      'Mid MIC' => 96,
+                      'Closing MIC' => 49
+                    )
+                  ),
+                  array(
+                    'title' => 'Line-Time &amp; Abandonment',
+                    'gauges' => array(
+                      'Combined' => 55,
+                      'Line-Time' => 75,
+                      'Abandonment' => 49
+                    )
+                  ),
+                  array(
+                    'title' => 'Customer Experience',
+                    'gauges' => array(
+                      'Combined' => 88,
+                      'Surveys' => 75,
+                      'Time-to-Order' => 75,
+                      'Time-to-Pickup' => 96,
+                    )
+                  ),
+                  array(
+                    'title' => 'LP Exceptions',
+                    'gauges' => array(
+                      'Combined' => 87,
+                      'Empl Disc\'s' => 75,
+                      'Small Txns' => 96,
+                      'Refunds' => 88
+                    )
+                  ),
+                );
+                $i = 1;
+                foreach($dasharray as $card):
+                  $numgauges = sizeof($card['gauges']);
+                  if(($i % 2) == 1) echo "</div><div class='row-fluid'>";
+                  ?>
                   
-                  
-                  <?php if( ($k % 2) == 0 ): ?>
-                  </div><div class="row-fluid">
-                  <?php endif; ?>
-
-                  
-                  	<div class="span6">
+                  <div class="span6">
                     <div class="row-fluid widget projectcard">
                     <h4 class="widget_title no_bottom_margin">
                       <div class="btn-group pull-right">
                         <a class="btn-flat gray btn-flat-small pull-right" href="client-report-detail.php">Full Report</a>
                       </div>
-                      <i class="icon-bar-chart"></i> <?php
-                      
-                        switch($k){
-                          case 0: echo "Counter Operations"; break;
-                          case 1: echo "Drive-Thru Metrics"; break;
-                          case 2: echo "Mkt &amp; Sales Metrics"; break;
-                          case 3: echo "Customer Satisfaction"; break;
-                          case 4: echo "Freestyle Launch"; break;
-                        }
-                      
-                      ?>
+                      <i class="icon-bar-chart"></i> <?php echo $card['title']; ?>
                     </h4>
                     <div class="project-overlay-container">
                     <a href="#" class="project-overlay">View Full Report <i class='icon-white icon-arrow-right'></i></a>
                     <div class="row-fluid chart">
                       <div class="flotchartcontainer">
-                        <div id="statsChartoverview<?php echo $k; ?>" class="flot_fix" data-num-of-gauges="<?php echo $numgauges[$k]; ?>"></div>
+                        <div id="statsChartoverview<?php echo $i; ?>" class="flot_fix" data-num-of-gauges="<?php echo $numgauges; ?>"></div>
                       </div>
                     </div>                
                     
-                    <div class="row-fluid">
-                          
-                         
+                    <div class="row-fluid">                        
                         <div class="row-fluid less_padding knobs-table">
                         	<table cellpadding="0" cellspacing="0">
                           	<tr>
-                            <?php for($i=0; $i<$numgauges[$k]; $i++){ ?>
-                            <?php if($numgauges[$k] == 2 && $i == 0) continue; ?>
+                            <?php $j = 0; ?>
+                            <?php foreach($card['gauges'] as $key => $value): ?>
+                            <?php if($numgauges == 2 && $j == 0) continue; ?>
                             <td>
                           <a href="client-report-detail.php" style="border-color:<?php
-                            switch($i){
+                            switch($j){
                               case 0: echo "#30a0eb"; break;
                               case 1: echo "orange"; break;
                               case 2: echo "#888888"; break;
@@ -74,20 +108,9 @@
                               case 4: echo "#7e91aa"; break;
                             }
                           ?>" class="knob-wrapper">
-
                           
-                            	<input type="text" value="<?php 
-                                  
-                                    switch($i){
-                                      case 0: echo "75"; break;
-                                      case 1: echo "75"; break;
-                                      case 2: echo "95"; break;
-                                      case 3: echo "81"; break;
-                                      case 4: echo "49"; break;
-                                    }
-
-                                  ?>" class="knob" data-thickness=".25" data-inputColor="#333" data-bgColor="#dddddd" data-fgColor="<?php
-                                    switch($i){
+                            	<input type="text" value="<?php echo $value; ?>" class="knob" data-thickness=".25" data-inputColor="#333" data-bgColor="#dddddd" data-fgColor="<?php
+                                    switch($j){
                                       case 0: echo "#30a0eb"; break;
                                       case 1: echo "orange"; break;
                                       case 2: echo "#888888"; break;
@@ -96,19 +119,11 @@
                                     }
                                   
                                   ?>" data-width="55" data-height="30" data-readOnly="true" data-angleOffset="-100" data-angleArc="200">
-                           				<span><?php
-                                    switch($i){
-                                      case 0: echo "Combined"; break;
-                                      case 1: echo "Cashier"; break;
-                                      case 2: echo "Expeditor"; break;
-                                      case 3: echo "Quality Control"; break;
-                                      case 4: echo "Drive Thru"; break;
-                                    }
-                                  ?>
-                                  </span>
+                           				<span><?php echo $key; ?></span>
                                   </a>
                                   </td>
-                          <?php } ?>
+                          <?php $j++; ?>
+                          <?php endforeach; ?>
                                  
                             </tr>
                           </table>
@@ -122,8 +137,13 @@
                   </div>
                   </div>
                   </div>
+                  
+                  <?php
+                  
+                  $i++;
+                endforeach;
+                ?>
 
-                  <?php } ?>
                   
                   </div>
                 </div>
