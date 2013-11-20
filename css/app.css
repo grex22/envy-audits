@@ -1634,6 +1634,57 @@ input[readonly].knob {
   background: rgba(0, 0, 0, 0.3); }
 
 /* Imports */
+.row-fluid .offset0 {
+  margin-left: 0; }
+
+.row-fluid .span12.offset0 {
+  width: 99.99999999999999%;
+  *width: 99.93055555555554%; }
+
+.row-fluid .span11.offset0 {
+  width: 91.66666666666666%;
+  *width: 91.59722222222221%; }
+
+.row-fluid .span10.offset0 {
+  width: 83.33333333333331%;
+  *width: 83.26388888888887%; }
+
+.row-fluid .span9.offset0 {
+  width: 74.99999999999999%;
+  *width: 74.93055555555554%; }
+
+.row-fluid .span8.offset0 {
+  width: 66.66666666666666%;
+  *width: 66.59722222222221%; }
+
+.row-fluid .span7.offset0 {
+  width: 58.33333333333333%;
+  *width: 58.263888888888886%; }
+
+.row-fluid .span6.offset0 {
+  width: 49.99999999999999%;
+  *width: 49.93055555555555%; }
+
+.row-fluid .span5.offset0 {
+  width: 41.66666666666666%;
+  *width: 41.597222222222214%; }
+
+.row-fluid .span4.offset0 {
+  width: 33.33333333333333%;
+  *width: 33.263888888888886%; }
+
+.row-fluid .span3.offset0 {
+  width: 24.999999999999996%;
+  *width: 24.930555555555554%; }
+
+.row-fluid .span2.offset0 {
+  width: 16.666666666666664%;
+  *width: 16.59722222222222%; }
+
+.row-fluid .span1.offset0 {
+  width: 8.333333333333332%;
+  *width: 8.263888888888888%; }
+
 .span4 .audit-table-wrap {
   height: 500px;
   overflow-y: auto; }
@@ -1649,17 +1700,15 @@ input[readonly].knob {
 .filter_links {
   font-size: 12px; }
 
-.audit_table > .span4 {
-  border-right: 1px solid #ccc; }
-  .audit_table > .span4 thead tr {
-    background: #ccc; }
-  .audit_table > .span4 th {
-    border-bottom: 3px solid orange;
-    padding-bottom: 5px; }
+.audit_table > .span4 thead tr {
+  background: #ccc; }
+.audit_table > .span4 th {
+  border-bottom: 3px solid orange;
+  padding-bottom: 5px; }
 .audit_table > .span8 {
-  width: 68.376068376068375%;
-  margin-left: 0;
-  box-shadow: inset 8px 0px 18px -8px #ccc; }
+  box-shadow: inset 8px 0px 18px -8px #ccc;
+  height: 586px;
+  position: relative; }
   .audit_table > .span8 thead tr {
     background: #f9f9f9; }
   .audit_table > .span8 th {
@@ -1675,8 +1724,6 @@ input[readonly].knob {
 .audit_table .table-hover tbody tr:hover > th {
   background-color: #e1e1e1;
   font-weight: bold; }
-.audit_table .table-hover tbody tr.active {
-  border-left: 4px solid orange; }
 
 .audit-left-table tr {
   position: relative; }
@@ -1702,19 +1749,26 @@ input[readonly].knob {
   box-sizing: border-box;
   -moz-box-sizing: border-box; }
 
-.audit-right-table tr {
-  cursor: pointer;
-  position: relative; }
-  .audit-right-table tr:hover td {
-    font-weight: bold; }
-.audit-right-table td:last-child .rel_wrap:after {
-  content: "Score";
-  right: 5px;
-  position: absolute;
-  display: none;
-  color: #36abff; }
-.audit-right-table tr:hover .rel_wrap:after {
-  display: inline; }
+.audit-right-table {
+  /*
+  td:last-child .rel_wrap:after{
+    content: "Score";
+    right:5px;
+    position:absolute;
+    display:none;
+    color:$brightblue;
+  }
+  tr:hover{
+    .rel_wrap:after{
+      display:inline;
+    }
+  }
+  */ }
+  .audit-right-table tr {
+    cursor: pointer;
+    position: relative; }
+    .audit-right-table tr:hover td {
+      font-weight: bold; }
 
 .rel_wrap {
   position: relative; }
@@ -1740,14 +1794,39 @@ h4.widget_title.no_arrow:after {
       border-right: none !important;
       width: 33.3%; }
       #report_navbar.report_navbar_compact ul li a {
-        padding: 15px 15px 18px 15px !important;
-        border-right: 1px solid #9cd6ff; }
+        padding: 15px 0px 18px 0px !important;
+        border-right: 1px solid #9cd6ff;
+        text-align: center; }
         #report_navbar.report_navbar_compact ul li a.active:after {
           display: none; }
         #report_navbar.report_navbar_compact ul li a i {
           font-size: 16px !important;
           display: inline-block !important;
           vertical-align: middle; }
-  #report_navbar.report_navbar_compact .span8 {
-    padding: 8px 15px 0 0;
-    text-align: right; }
+
+@media (max-width: 900px) {
+  #report_navbar.report_navbar_compact ul li a i {
+    display: none !important; } }
+#results {
+  display: none; }
+
+#empty_message {
+  text-align: center;
+  padding: 60px 30px;
+  font-size: 16px;
+  color: #999; }
+
+#loading_overlay {
+  position: absolute;
+  display: none;
+  width: 220px;
+  height: 19px;
+  top: 180px;
+  left: 50%;
+  margin-left: -110px; }
+
+.data_table_header_title {
+  font-weight: bold; }
+
+.minimum_width {
+  min-width: 850px; }

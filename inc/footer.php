@@ -76,6 +76,9 @@
     <?php if($_SERVER['PHP_SELF']=="/envysion/index-regional.php"): ?>
       <script src="js/pages/index-regional.js"></script>
     <?php endif; ?>
+    <?php if($_SERVER['PHP_SELF']=="/envysion/auditor-dashboard.php"): ?>
+      <script src="js/pages/auditor-dashboard.js"></script>
+    <?php endif; ?>
     
 
     <script type="text/javascript">

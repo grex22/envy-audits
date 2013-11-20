@@ -29,7 +29,7 @@
                       'Combined' => 75,
                       'Cashier' => 75,
                       'QC' => 96,
-                      'Quality Control' => 81,
+                      'Expeditor' => 81,
                       'Deployment' => 88
                     )
                   ),
