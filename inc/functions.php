@@ -70,11 +70,11 @@ function get_nav_menus(){
       break;
   endswitch;
   //Temporary Override
-  $brand_img = "panera";
+  $brand_img = "modfoods";
   
   global $global_project_name_prefix, $global_client_name;
-  $global_project_name_prefix = "Vindaloo Hot 2.0";
-  $global_client_name = "Vindaloo Hot"
+  $global_project_name_prefix = "Mod Foods 2.0";
+  $global_client_name = "Mod Foods"
   ?>
   <a class="brand" href="index.php"><img src="img/custom/<?php echo $brand_img; ?>.png"></a>
             <ul class="nav pull-left main_nav">

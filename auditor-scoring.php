@@ -128,36 +128,81 @@
                       <hr>
                       
                       <form class="audit_form form">
-                        <label class="question">How would you characterize this agent's screening? <a href="#" data-toggle="tooltip" title="Brief, descriptive help text for this question." class="help_tootltip"><i class="icon-question-sign"></i></a></label>
-                        <label class="radio">
+                        <label class="question">Order Confirmation: <a href="#" data-toggle="tooltip" title="Brief, descriptive help text for this question." class="help_tootltip"><i class="icon-question-sign"></i></a></label>
+                        <label class="radio inline">
                           <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                          Thorough
+                          Pass
                         </label>
-                        <label class="radio">
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                          Moderate
+                        <label class="radio inline">
+                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option2">
+                          Fail
                         </label>
-                        <label class="radio">
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                          Highly Invasive
+
+                        <hr>
+
+                        <label class="question">Comments <a href="#" data-toggle="tooltip" title="Brief, descriptive help text for this question." class="help_tootltip"><i class="icon-question-sign"></i></a></label>
+                        <textarea rows="3"></textarea>
+                        
+                        <hr>
+                        
+                        <label class="question">Gender <a href="#" data-toggle="tooltip" title="Brief, descriptive help text for this question." class="help_tootltip"><i class="icon-question-sign"></i></a></label>
+                        <label class="radio inline">
+                          <input type="radio" name="optionsRadios2" id="optionsRadios2" value="option1">
+                          Male
+                        </label>
+                        <label class="radio inline">
+                          <input type="radio" name="optionsRadios2" id="optionsRadios2" value="option2">
+                          Female
                         </label>
                         
                         <hr>
                         
-                        <label class="question">Does the agent ever leave the staging area? <a href="#" data-toggle="tooltip" title="Brief, descriptive help text for this question." class="help_tootltip"><i class="icon-question-sign"></i></a></label>
+                        <label class="question">Age Range <a href="#" data-toggle="tooltip" title="Brief, descriptive help text for this question." class="help_tootltip"><i class="icon-question-sign"></i></a></label>
                         <label class="radio inline">
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                          <input type="radio" name="optionsRadios3" id="optionsRadios3" value="option1">
+                          &lt; 30 years old
+                        </label>
+                        <label class="radio inline">
+                          <input type="radio" name="optionsRadios3" id="optionsRadios3" value="option2">
+                          30-45 years old
+                        </label>
+                        <label class="radio">
+                          <input type="radio" name="optionsRadios3" id="optionsRadios3" value="option2">
+                          &gt; 45 years old
+                        </label>
+                        
+                        <hr>
+                        
+                        <label class="question">Kids Present <a href="#" data-toggle="tooltip" title="Brief, descriptive help text for this question." class="help_tootltip"><i class="icon-question-sign"></i></a></label>
+                        <label class="radio inline">
+                          <input type="radio" name="optionsRadios4" id="optionsRadios4" value="option1">
                           Yes
                         </label>
                         <label class="radio inline">
-                          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                          <input type="radio" name="optionsRadios4" id="optionsRadios4" value="option2">
                           No
                         </label>
-
+                        
                         <hr>
+                        
+                        <label class="question">Group Size <a href="#" data-toggle="tooltip" title="Brief, descriptive help text for this question." class="help_tootltip"><i class="icon-question-sign"></i></a></label>
+                        <label class="radio inline">
+                          <input type="radio" name="optionsRadios5" id="optionsRadios5" value="option1">
+                          1
+                        </label>
+                        <label class="radio inline">
+                          <input type="radio" name="optionsRadios5" id="optionsRadios5" value="option2">
+                          2
+                        </label>
+                        <label class="radio inline">
+                          <input type="radio" name="optionsRadios5" id="optionsRadios5" value="option2">
+                          3+
+                        </label>
+                        
+                        <hr>
+                        
+                        
 
-                        <label class="question">Additional comments for review <a href="#" data-toggle="tooltip" title="Brief, descriptive help text for this question." class="help_tootltip"><i class="icon-question-sign"></i></a></label>
-                        <textarea rows="3"></textarea>
                         
                         <button type="submit" class="btn-flat btn-flat-large primary"><i class="icon-white icon-check"></i> Save Score and Play Next</button>
                         
@@ -169,7 +214,7 @@
                   </div>
                 </div>
                 <div class="span6 videowell">
-                  <img src="img/custom/videomockup.jpg">
+                  <img src="img/custom/videomockup2.jpg">
                 </div>
                 <div class="span3 transactions_panel">
                 
@@ -190,12 +235,7 @@
                               <ul>
                               <li>Receipt Data Here.. TBD</li>
                               <li>Receipt Data Here.. TBD</li>
-                              <li>Receipt Data Here.. TBD</li>
-                              <li>Receipt Data Here.. TBD</li>
-                              <li>Receipt Data Here.. TBD</li>
-                              <li>Receipt Data Here.. TBD</li>
-                              <li>Receipt Data Here.. TBD</li>
-                              <li>Receipt Data Here.. TBD</li>
+                              <li>Receipt Data Here.. TBD</li>         
                               <li>Receipt Data Here.. TBD</li>
                               <li>Receipt Data Here.. TBD</li>
                               <li>Receipt Data Here.. TBD</li>
