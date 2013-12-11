@@ -1233,8 +1233,7 @@ input[readonly].knob {
 
 .big_orange_button_group {
   margin: -7px 0px 0px;
-  text-align: left;
-  /*width:100%;*/ }
+  text-align: left; }
   .big_orange_button_group .caret {
     border-top: 4px solid #ffffff; }
   .big_orange_button_group .dropdown-menu {
@@ -1262,6 +1261,8 @@ input[readonly].knob {
     -webkit-box-sizing: border-box; }
     .big_orange_button_group > a:first-child, .big_orange_button_group > button:first-child {
       width: 85%; }
+    .big_orange_button_group > a.widthoverride, .big_orange_button_group > button.widthoverride {
+      width: auto; }
     .big_orange_button_group > a:hover, .big_orange_button_group > a:focus, .big_orange_button_group > a.active, .big_orange_button_group > button:hover, .big_orange_button_group > button:focus, .big_orange_button_group > button.active {
       background: darkorange;
       text-decoration: none;
@@ -1617,6 +1618,52 @@ input[readonly].knob {
     transition: 0.3s;
     -o-transition: 0.3s;
     -webkit-backface-visibility: hidden; }
+
+#report_filter_bar .big_orange_button_group {
+  padding-right: 23px;
+  border-right: 1px dotted #e6e6e6;
+  margin-right: 20px; }
+
+.toggleable {
+  position: relative;
+  padding-top: 15px;
+  border-width: 1px 0 1px 0;
+  border-color: #f1f1f1;
+  border-style: solid; }
+
+.row_toggler {
+  position: absolute;
+  top: 0;
+  right: 0; }
+  .row_toggler a {
+    display: inline-block;
+    padding: 1px 4px;
+    background: #eee;
+    border-radius: 2px;
+    font-size: 11px;
+    text-align: center;
+    width: 50px; }
+  .row_toggler a:hover {
+    text-decoration: none; }
+
+.report_header_icon_actions {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 0 15px;
+  border-width: 0 1px 0 1px;
+  border-color: #cfcfcf;
+  border-style: dotted; }
+  .report_header_icon_actions a {
+    color: #ddd;
+    padding: 0 4px; }
+  .report_header_icon_actions a:hover {
+    text-decoration: none; }
+  .report_header_icon_actions #report_favorite_toggle:hover {
+    color: gold; }
+  .report_header_icon_actions #report_edit_toggle:hover {
+    color: #36abff; }
+  .report_header_icon_actions #report_share_toggle:hover {
+    color: #887777; }
 
 /*                                  */
 /* Webkit only scrollbar style      */

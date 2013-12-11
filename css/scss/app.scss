@@ -1580,7 +1580,6 @@ input[readonly].knob{
 .big_orange_button_group{
   margin: -7px 0px 0px;
   text-align:left;
-  /*width:100%;*/
   
   .caret {border-top: 4px solid #ffffff;}
   
@@ -1616,6 +1615,10 @@ input[readonly].knob{
   
     &:first-child{
       width:85%;
+    }
+    
+    &.widthoverride{
+      width:auto;
     }
   
   
@@ -2076,6 +2079,61 @@ input[readonly].knob{
       @include transition(.3s);
     }
   }
+}
+
+#report_filter_bar{
+  .big_orange_button_group{
+    padding-right:23px;
+    border-right:1px dotted #e6e6e6;
+    margin-right:20px;
+  }
+}
+.toggleable{
+  position:relative;
+  padding-top:15px;
+  border-width:1px 0 1px 0;
+  border-color:#f1f1f1;
+  border-style:solid;
+}
+.row_toggler{
+  position:absolute;
+  top:0;
+  right:0;
+  
+  a{
+    display:inline-block;
+    padding:1px 4px;
+    background:#eee;
+    border-radius:2px;
+    font-size:11px;
+    text-align:center;
+    width:50px;
+  }
+  
+  a:hover{
+    text-decoration:none;
+  }
+}
+
+.report_header_icon_actions{
+
+  display: inline-block;
+  margin: 0 15px;
+  padding: 0 15px;
+  border-width: 0 1px 0 1px;
+  border-color: #cfcfcf;
+  border-style: dotted;
+
+  a{
+    color:#ddd;
+    padding:0 4px
+  }
+  a:hover{
+    text-decoration:none;
+  }
+  #report_favorite_toggle:hover{color:gold;}
+  #report_edit_toggle:hover{color:$brightblue;}
+  #report_share_toggle:hover{color:$warmgray;}
 }
 
 /*                                  */

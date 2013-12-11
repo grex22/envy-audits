@@ -60,6 +60,14 @@ function get_nav_menus(){
       );
       $brand_img = "vindaloohot";
       break;      
+    case ("/envysion/report-base.php"):
+      $menu_array = array(
+        array("index.php","",'icon-tasks',"Dashboard"),
+        array("watch-video.php","",'icon-play-circle',"Watch Video"),
+        array("client-report-detail.php","active",'icon-bar-chart',"Intelligence")
+      );
+      $brand_img = "vindaloohot";
+      break;
     default:
       $menu_array = array(
         array("index.php","active",'icon-tasks',"Dashboard"),
