@@ -103,31 +103,94 @@ $(function(){
           }
         };
 // jQuery Flot Chart
-  var dashboard1 = [[1, 30], [2, 42], [3, 34], [4, 63],[5, 80],[6, 68],[7, 90],[8, 95],[9, 95],[10, 92]];
-  var dashboard2 = [[1, 20], [2, 40], [3, 50], [4, 43],[5, 68],[6, 80],[7, 49],[8, 53],[9, 76],[10, 82]];
-  var dashboard3 = [[1, 30], [2, 38], [3, 45], [4, 53],[5, 66],[6, 50],[7, 77],[8, 93],[9, 94],[10, 91]];
+  var dashboard1 = [[1, 30], [2, 42], [3, 34], [4, 63],[5, 80],[6, 68],[7, 90],[8, 95],[9, 95],[10, 92],[11, 30], [12, 42], [13, 34], [14, 63],[15, 80],[16, 68],[17, 90],[18, 95],[19, 95],[20, 92]];
   
-  
-  var lunch = [[1, 60], [2, 60], [3, 55], [4, 43],[5, 88],[6, 85],[7, 91],[8, 90], [9, 10], [10, 45]];
-  var dinner = [[1, 25], [2, 50], [3, 23], [4, 48],[5, 38],[6, 40],[7, 47],[8, 25], [9, 50], [10, 23]];
-
   
   if($("#widget01").length){
   var plot = $.plot($("#widget01"),
-      [ { data: dashboard1, label: "Combined" },{ data: dashboard2, label: "Cashier"},{ data: dashboard3, label: "Expeditor"}], flotDefaultsLines);
-      plot.getData()[0].lines.lineWidth = 3;
-      plot.draw();
-  }
-  if($("#widget02").length){
-  var plot = $.plot($("#widget02"),
-      [ { data: lunch, label: "Lunch" },{ data: dinner, label: "Dinner"}], flotDefaultsLines);
+      [ { data: dashboard1, label: "# Small Transactions" }], flotDefaultsLines);
       plot.getData()[0].lines.lineWidth = 3;
       plot.draw();
   }
   
+  function showTooltip(x, y, contents) {
+      $('<div id="tooltip">' + contents + '</div>').css( {
+          position: 'absolute',
+          display: 'none',
+          top: y - 30,
+          left: x - 50,
+          color: "#fff",
+          padding: '2px 5px',
+          'border-radius': '3px',
+          'background-color': '#000',
+          opacity: 0.80
+      }).appendTo("body").fadeIn(200);
+  }
+  
+  var previousPoint = null;
+  $("[id^=widget01]").bind("plothover", function (event, pos, item) {
+      if (item) {
+          if (previousPoint != item.dataIndex) {
+              previousPoint = item.dataIndex;
+
+              $("#tooltip").remove();
+              var x = item.datapoint[0].toFixed(0),
+                  y = item.datapoint[1].toFixed(0);
+
+              var month = item.series.xaxis.ticks[item.dataIndex].label;
+
+              showTooltip(item.pageX, item.pageY,
+                          item.series.label + " of " + month + ": " + y);
+          }
+      }
+      else {
+          $("#tooltip").remove();
+          previousPoint = null;
+      }
+  });
+  
+  $('.row_toggler').click(function(e){
+    e.preventDefault();
+    $('#widget01').slideToggle();
+    if($(this).find('span').html()=="hide graph"){
+      $(this).find('span').html("show graph");
+      $(this).find('i').removeClass('icon-minus-sign').addClass('icon-plus-sign');
+    }else{
+      $(this).find('span').html("hide graph");
+      $(this).find('i').removeClass('icon-plus-sign').addClass('icon-minus-sign');
+    }
+  });
   
   
+  //Samples Table expand
+  $(".samples_table > tbody > tr:not('.detail_row')").click(function(e){
+    $(this).toggleClass('open');
+    $(this).next('.detail_row').find('.sample_wrapper').slideToggle();
+  });
   
+  //Instantiate Date Range Picker
+  $('#report_daterange').daterangepicker({
+    ranges: {
+       'Last 7 Days': [moment().subtract('days', 6), new Date()],
+       'Last 30 Days': [moment().subtract('days', 29), new Date()],
+       'Prev Report Period': [moment().subtract('weeks',1).day('Wednesday'), moment().day('Tuesday')],
+       'This Report Period': [moment().day('Wednesday'), new Date()],
+       'This Month': [moment().startOf('month'), moment().endOf('month')],
+       'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+    },
+    opens: 'right',
+    separator: ' -- ',
+    startDate: moment().subtract('days', 6),
+    endDate: new Date(),
+    maxDate: new Date(),
+    buttonClasses: ['btn-flat btn-flat-small btn-info'],
+    format: "MMM D, YYYY",
+  },
+  function(start, end) {
+		$('#report_daterange span').html(moment(start).format('MMM D, YYYY') + ' - ' + moment(end).format('MMM D, YYYY'));
+	});
+  $('#report_daterange span').html(moment().subtract('days', 9).format('MMM D, YYYY') + ' - ' + moment().format('MMM D, YYYY'));
+
   
   
 });

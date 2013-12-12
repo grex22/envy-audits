@@ -30,15 +30,15 @@
                         
                         <i class="icon-bar-chart"></i> <span id="report_title_target">Small Transactions Report</span>
                             <div class="report_header_icon_actions">
-                              <a href="#" id="report_favorite_toggle" data-tooltip="Foo"?????????????><i class="icon-star"></i></a>
-                              <a href="#" id="report_edit_toggle"><i class="icon-pencil"></i></a>
-                              <a href="#" id="report_share_toggle"><i class="icon-share-alt"></i></a>
+                              <a href="#" id="report_favorite_toggle" data-toggle="tooltip" title="Favorite this Report"><i class="icon-star"></i></a>
+                              <a href="#" id="report_edit_toggle" data-toggle="tooltip" title="Edit Report"><i class="icon-pencil"></i></a>
+                              <a href="#" id="report_share_toggle" data-toggle="tooltip" title="Share Report"><i class="icon-share-alt"></i></a>
                             </div>
                             <div class="report_header_tags">
                               <i class="icon-tags"></i>
                               <ul class="tags_list">
-                                <li>Retail</li>
-                                <li>Loss Prevention</li>
+                                <li class="tag">Retail</li>
+                                <li class="tag">Loss Prevention</li>
                                 <li>3 more&hellip;</li>
                                 <li><a href="#" id="tags_edit_link">edit</a></li>
                               </ul>
@@ -91,18 +91,18 @@
                               <div class="report_links_wrap span12">
                                 <ul class="nav" id="audit_view_tabs">
                                     <li>
-                                      <a href="#" data-target="#dates_view" class="active">
-                                        <i class="icon-calendar"></i> Dates
+                                      <a href="#" class="active">
+                                        <i class="icon-home"></i> Overview
                                       </a>
                                     </li>
                                     <li>
-                                      <a href="#" data-target="#locations_view">
+                                      <a href="#">
+                                        <i class="icon-group"></i> Employees
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="#">
                                         <i class="icon-pushpin"></i> Locations
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="#" data-target="#datasets_view">
-                                        <i class="icon-th-large"></i> Datasets
                                       </a>
                                     </li>
                                 </ul>
@@ -115,20 +115,49 @@
                     </div>
                     <div class="padded">
                       <div class="row-fluid toggleable more_bottom_margin">
-                        <div class="span6">
-                          <h4 class="more_bottom_margin">Trend:</h4>
+                        <div class="span12">
+                          <h4 class="more_bottom_margin">Small Transactions, All Locations, Dec 3, 2013 - Dec 12, 2013:</h4>
                           <div id="widget01" style="height:150px;"></div>
-                        </div>                      
-                        <div class="span6">
-                          <h4 class="more_bottom_margin">Trend:</h4>
-                          <div id="widget02" style="height:150px;"></div>
-                        </div>
+                        </div>    
                         <span class="row_toggler">
-                          <a href="#"><span>hide</span> <i class="icon-minus-sign"></i></a>
+                          <a href="#"><span>hide graph</span> <i class="icon-minus-sign"></i></a>
                         </span>
                       </div>
                       
-                      
+                      <div class="row-fluid">
+                        <div class="span12"><h4 class="data_table_header">Employees with Largest Number of Small Transactions</div>                       
+                      </div>
+                      <div class="row-fluid">
+                        <table class="table table-condensed">
+                          <thead>
+                            <tr>
+                              <th class="sortable">Employee </th>
+                              <th class="sortable">Location </th>
+                              <th class="sortable">Transactions </th>
+                              <th class="sortable">Transactions Ratio </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr><td>Andre Swango</td><td>Georgetown - 1225</td><td>23</td><td>4</td></tr>
+                            <tr><td>Mihai Holme</td><td>Dry Creek - 0189</td><td>14</td><td>6</td></tr>
+                            <tr><td>Adrian MacDougall</td><td>Morse Road - 1690</td><td>13</td><td>4</td></tr>
+                            <tr><td>Grigori Knopf</td><td>Boulder - 0349</td><td>12</td><td>2</td></tr>
+                            <tr><td>Margrete Parsons</td><td>Fashion Mall - 2093</td><td>11</td><td>5</td></tr>
+                            <tr><td>Borbala Brinkerhoff</td><td>Brooksville - 1348</td><td>11</td><td>3</td></tr>
+                            <tr><td>Jai Wernher</td><td>8 Mile - 1648</td><td>11</td><td>3</td></tr>
+                            <tr><td>Vigi Payne</td><td>1231 6th - 0769</td><td>11</td><td>1</td></tr>
+                            <tr><td>Harun Newell</td><td>Annapolis - 0840</td><td>11</td><td>3</td></tr>
+                            <tr><td>Jeremias Holst</td><td>Caldwell - 1209</td><td>11</td><td>3</td></tr>
+                            <tr><td>Ales Allsopp</td><td>Hunter's College - 1394</td><td>11</td><td>2</td></tr>
+                            <tr><td>Michael Moore</td><td>Wheaton - 2055</td><td>11</td><td>4</td></tr>
+                            <tr><td>Mahdi Sultana</td><td>East End - 0345</td><td>11</td><td>3</td></tr>
+                            <tr><td>Winthrop Kavach</td><td>Piccadilly Circus - 1458</td><td>11</td><td>3</td></tr>
+                            <tr><td>Sharifa Rocha</td><td>Bastille - 1658</td><td>11</td><td>2</td></tr>
+
+                            <tr></tr>
+                          </tbody>
+                        </table>
+                      </div>
                       
                       
                       <div class="row-fluid">
@@ -166,13 +195,9 @@
                             <?php for($i=1; $i<15; $i++){ $pf = rand(0,2); ?>
                               <tr class="<?php $pf ? print"pass" : print"fail"; ?>">
                                 <td><img class="sample_thumb" src="img/custom/panera-cam-thumb.jpg"></td>
-                                <td><span class="label label-<?php $pf ? print"success" : print"fail";?>"><?php $pf ? print "Pass!":print "Fail"; ?></span><?php if($i == 1){ ?>
-                                    <br><span class="label label-<?php $pf ? print"success" : print"fail";?>"><?php $pf ? print "Pass!":print "Fail"; ?></span>
-                                  <?php } ?>
+                                <td><span class="label label-<?php $pf ? print"success" : print"fail";?>"><?php $pf ? print "Pass!":print "Fail"; ?></span>
                                 </td>
-                                <td>Cashier<?php if($i == 1){ ?>
-                                    <br>Quality Control
-                                  <?php } ?></td>
+                                <td>Cashier</td>
                                 <td>7/13/13</td>
                                 <td>3:32 pm EST</td>
                                 <td>Braintree</td>

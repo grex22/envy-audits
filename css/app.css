@@ -1626,10 +1626,16 @@ input[readonly].knob {
 
 .toggleable {
   position: relative;
-  padding-top: 15px;
+  background: #fdfdfd;
   border-width: 1px 0 1px 0;
   border-color: #f1f1f1;
-  border-style: solid; }
+  border-style: solid;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 11px 15px;
+  -moz-box-shadow: inset 0px 8px 8px -8px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0px 8px 8px -8px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 8px 8px -8px rgba(0, 0, 0, 0.1); }
 
 .row_toggler {
   position: absolute;
@@ -1642,15 +1648,15 @@ input[readonly].knob {
     border-radius: 2px;
     font-size: 11px;
     text-align: center;
-    width: 50px; }
+    width: 85px; }
   .row_toggler a:hover {
     text-decoration: none; }
 
 .report_header_icon_actions {
   display: inline-block;
-  margin: 0 15px;
+  margin: 0 15px 0 0;
   padding: 0 15px;
-  border-width: 0 1px 0 1px;
+  border-width: 0 1px 0 0px;
   border-color: #cfcfcf;
   border-style: dotted; }
   .report_header_icon_actions a {
@@ -1664,6 +1670,39 @@ input[readonly].knob {
     color: #36abff; }
   .report_header_icon_actions #report_share_toggle:hover {
     color: #887777; }
+
+.report_header_tags {
+  display: inline; }
+  .report_header_tags .icon-tags {
+    color: #ddd;
+    margin-right: 5px; }
+  .report_header_tags ul.tags_list {
+    display: inline;
+    list-style: none;
+    font-size: 0;
+    margin: 0;
+    padding: 0; }
+    .report_header_tags ul.tags_list li {
+      vertical-align: super;
+      display: inline-block;
+      padding: 2px 4px 2px 4px;
+      margin: 0 4px 0 0;
+      font-size: 11px; }
+      .report_header_tags ul.tags_list li.tag {
+        padding: 2px 14px 2px 4px;
+        background: #f3f3f3;
+        border-radius: 3px;
+        position: relative; }
+        .report_header_tags ul.tags_list li.tag:after {
+          content: "";
+          display: inline;
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          background: white;
+          border-radius: 50%;
+          top: 10px;
+          right: 3px; }
 
 /*                                  */
 /* Webkit only scrollbar style      */
