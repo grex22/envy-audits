@@ -3,13 +3,7 @@
             <div id="main_header_wrapper">
                 <div class="row-fluid main_header">
                     <div class="span12">
-                      <!--<a class="btn-flat large primary pull-right mt10" href="#" data-toggle="modal">
-                        <i class="icon-arrow-right"></i> Begin Scoring
-                      </a>-->
-                      <h3>
-                        Intelligence
-                      </h3>
-                      <!--<p><em>Not Sure Where to Start?</em> Simply click "Begin Scoring" to be taken to the highest-priority samples, in order</p>-->
+                      <h3>Intelligence &raquo; <a href="#">Reports Browser</a></h3>
                     </div>
                 </div>
             </div>
@@ -37,8 +31,8 @@
                             <div class="report_header_tags">
                               <i class="icon-tags"></i>
                               <ul class="tags_list">
-                                <li class="tag">Retail</li>
-                                <li class="tag">Loss Prevention</li>
+                                <li class="tag"><a href="#">Retail</a></li>
+                                <li class="tag"><a href="#">Loss Prevention</a></li>
                                 <li>3 more&hellip;</li>
                                 <li><a href="#" id="tags_edit_link">edit</a></li>
                               </ul>
@@ -83,7 +77,7 @@
                     </div>
                     
                     
-                    <div class="row-fluid">
+                    <!--<div class="row-fluid">
                       <div class="span12">
                         <div class="navbar report_navbar_compact thirds no_bottom_margin" id="report_navbar">
                           <div class="navbar-inner">
@@ -97,7 +91,7 @@
                                     </li>
                                     <li>
                                       <a href="#">
-                                        <i class="icon-group"></i> Employees
+                                        <i class="icon-group"></i> 
                                       </a>
                                     </li>
                                     <li>
@@ -112,7 +106,17 @@
                         </div>
                         
                       </div>
+                    </div>-->
+                    
+                    <div class="row-fluid report_tabs_wrap">
+                      <ul class="nav nav-tabs no_bottom_margin">
+                        <li><a href="#home" data-toggle="tab"><i class="icon-home"></i> Overview</a></li>
+                        <li class="active"><a href="#profile" data-toggle="tab"><i class="icon-group"></i> Employees</a></li>
+                        <li><a href="#messages" data-toggle="tab"><i class="icon-pushpin"></i> Locations</a></li>
+                      </ul>
                     </div>
+                    
+                    
                     <div class="padded">
                       <div class="row-fluid toggleable more_bottom_margin">
                         <div class="span12">
@@ -127,32 +131,32 @@
                       <div class="row-fluid">
                         <div class="span12"><h4 class="data_table_header">Employees with Largest Number of Small Transactions</div>                       
                       </div>
-                      <div class="row-fluid">
-                        <table class="table table-condensed">
+                      <div class="row-fluid more_bottom_margin">
+                        <table class="table table-condensed table-hover block_table">
                           <thead>
                             <tr>
                               <th class="sortable">Employee </th>
                               <th class="sortable">Location </th>
-                              <th class="sortable">Transactions </th>
-                              <th class="sortable">Transactions Ratio </th>
+                              <th class="sortable align-center">Transactions </th>
+                              <th class="sortable align-center">Transactions Ratio </th>
                             </tr>
                           </thead>
                           <tbody>
-                            <tr><td>Andre Swango</td><td>Georgetown - 1225</td><td>23</td><td>4</td></tr>
-                            <tr><td>Mihai Holme</td><td>Dry Creek - 0189</td><td>14</td><td>6</td></tr>
-                            <tr><td>Adrian MacDougall</td><td>Morse Road - 1690</td><td>13</td><td>4</td></tr>
-                            <tr><td>Grigori Knopf</td><td>Boulder - 0349</td><td>12</td><td>2</td></tr>
-                            <tr><td>Margrete Parsons</td><td>Fashion Mall - 2093</td><td>11</td><td>5</td></tr>
-                            <tr><td>Borbala Brinkerhoff</td><td>Brooksville - 1348</td><td>11</td><td>3</td></tr>
-                            <tr><td>Jai Wernher</td><td>8 Mile - 1648</td><td>11</td><td>3</td></tr>
-                            <tr><td>Vigi Payne</td><td>1231 6th - 0769</td><td>11</td><td>1</td></tr>
-                            <tr><td>Harun Newell</td><td>Annapolis - 0840</td><td>11</td><td>3</td></tr>
-                            <tr><td>Jeremias Holst</td><td>Caldwell - 1209</td><td>11</td><td>3</td></tr>
-                            <tr><td>Ales Allsopp</td><td>Hunter's College - 1394</td><td>11</td><td>2</td></tr>
-                            <tr><td>Michael Moore</td><td>Wheaton - 2055</td><td>11</td><td>4</td></tr>
-                            <tr><td>Mahdi Sultana</td><td>East End - 0345</td><td>11</td><td>3</td></tr>
-                            <tr><td>Winthrop Kavach</td><td>Piccadilly Circus - 1458</td><td>11</td><td>3</td></tr>
-                            <tr><td>Sharifa Rocha</td><td>Bastille - 1658</td><td>11</td><td>2</td></tr>
+                            <tr><td>Andre Swango</td><td>Georgetown - 1225</td><td class="align-center">23</td><td class="align-center">4</td></tr>
+                            <tr><td>Mihai Holme</td><td>Dry Creek - 0189</td><td class="align-center">14</td><td class="align-center">6</td></tr>
+                            <tr><td>Adrian MacDougall</td><td>Morse Road - 1690</td><td class="align-center">13</td><td class="align-center">4</td></tr>
+                            <tr><td>Grigori Knopf</td><td>Boulder - 0349</td><td class="align-center">12</td><td class="align-center">2</td></tr>
+                            <tr><td>Margrete Parsons</td><td>Fashion Mall - 2093</td><td class="align-center">11</td><td class="align-center">5</td></tr>
+                            <tr><td>Borbala Brinkerhoff</td><td>Brooksville - 1348</td><td class="align-center">11</td><td class="align-center">3</td></tr>
+                            <tr><td>Jai Wernher</td><td>8 Mile - 1648</td><td class="align-center">11</td><td class="align-center">3</td></tr>
+                            <tr><td>Vigi Payne</td><td>1231 6th - 0769</td><td class="align-center">11</td><td class="align-center">1</td></tr>
+                            <tr><td>Harun Newell</td><td>Annapolis - 0840</td><td class="align-center">11</td><td class="align-center">3</td></tr>
+                            <tr><td>Jeremias Holst</td><td>Caldwell - 1209</td><td class="align-center">11</td><td class="align-center">3</td></tr>
+                            <tr><td>Ales Allsopp</td><td>Hunter's College - 1394</td><td class="align-center">11</td><td class="align-center">2</td></tr>
+                            <tr><td>Michael Moore</td><td>Wheaton - 2055</td><td class="align-center">11</td><td class="align-center">4</td></tr>
+                            <tr><td>Mahdi Sultana</td><td>East End - 0345</td><td class="align-center">11</td><td class="align-center">3</td></tr>
+                            <tr><td>Winthrop Kavach</td><td>Piccadilly Circus - 1458</td><td class="align-center">11</td><td class="align-center">3</td></tr>
+                            <tr><td>Sharifa Rocha</td><td>Bastille - 1658</td><td class="align-center">11</td><td class="align-center">2</td></tr>
 
                             <tr></tr>
                           </tbody>
@@ -174,63 +178,39 @@
                             <a class="btn-flat btn-flat-small white right"><i class="icon-chevron-right"></i></a>
                           </div>
                           </div>
-                          <h4 class="data_table_header">Scored Events <div class="filter_links">
-                          Show: &nbsp; <a href="#" data-show="all" class="active">All (62)</a> | <a href="#" data-show="fail">Fails (13)</a> | <a href="#" data-show="pass">Passes (49)</a>
-                        </div></h4>
+                          <h4 class="data_table_header">Small Transactions Video Events</h4>
                           
                           <table class="table table-hover block_table samples_table">
                             <thead>
                               <tr>
                                 <th>Preview</th>
                                 <th class="sortable">Score </th>
-                                <th class="sortable">Metric </th>
                                 <th class="sortable">Date </th>
                                 <th class="sortable">Time </th>
                                 <th class="sortable">Location </th>
+                                <th class="sortable align-center">Transaction Amount</th>
                                 <th class="sortable align-center">Transaction </th>
                                 <th class="close_holder"> </th>
                               </tr>
                             </thead>
                             <tbody>
-                            <?php for($i=1; $i<15; $i++){ $pf = rand(0,2); ?>
-                              <tr class="<?php $pf ? print"pass" : print"fail"; ?>">
+                            <?php for($i=1; $i<15; $i++){  ?>
+                              <tr>
                                 <td><img class="sample_thumb" src="img/custom/panera-cam-thumb.jpg"></td>
-                                <td><span class="label label-<?php $pf ? print"success" : print"fail";?>"><?php $pf ? print "Pass!":print "Fail"; ?></span>
-                                </td>
-                                <td>Cashier</td>
+                                <td>10001</td>
                                 <td>7/13/13</td>
                                 <td>3:32 pm EST</td>
                                 <td>Braintree</td>
+                                <td class="align-center">$<?php echo rand(1,2).".".rand(0,9).rand(0,9); ?></td>
                                 <td class="align-center"><?php rand(0,1) ? print '<i class="icon-list-alt"></i>' : print ''; ?></td>
                                 <td class="close_holder"><i class="icon-remove"></i></td>
                               </tr>
-                              <tr class="detail_row <?php $pf ? print"pass" : print"fail"; ?>">
+                              <tr class="detail_row">
                                 <td colspan=20>
                                   <div class="sample_wrapper row-fluid">
                                     <div class="span4">
                                       <h5>Video</h5>
                                       <a href="#" class="enlarge_cam"><img src="img/custom/panera-cam-condensed.jpg"></a>
-                                    </div>
-                                    <div class="span4">
-                                      
-                                      <h5>Score, Cashier Metric</h5>
-                                        <div class="sample_receipt">
-                                        <table class="block_table">
-                                        <tr><td><strong>Score</strong></td><td><span class="label label-<?php $pf ? print"success" : print"fail";?>"><?php $pf ? print "Pass!":print "Fail"; ?></span></td></tr>
-                                        <tr><td><strong>Employee:</strong></td><td><a href="client-report-detail-employee.php">Elizabeth Jones</a></td></tr>
-                                        <tr><td colspan=2><strong>Comments:</strong></td></tr>
-                                        <tr><td colspan=2><?php $pf ? print"Cashier offered to list the ingredients for the order.":print"Cashier did not offer to list the ingredients for the Chicken Caesar Salad and Bacon Turkey Bravo"; ?></td></tr>                                       
-                                        </table>
-                                        </div>
-                                        <h5>Score, Quality Control</h5>
-                                        <div class="sample_receipt">
-                                        <table class="block_table">
-                                        <tr><td><strong>Score</strong></td><td><span class="label label-<?php $pf ? print"success" : print"fail";?>"><?php $pf ? print "Pass!":print "Fail"; ?></span></td></tr>
-                                        <tr><td><strong>Employee:</strong></td><td><a href="client-report-detail-employee.php">Elizabeth Jones</a></td></tr>
-                                        <tr><td colspan=2><strong>Comments:</strong></td></tr>
-                                        <tr><td colspan=2>An order was improperly entered.</td></tr>                                       
-                                        </table>
-                                        </div>
                                     </div>
                                     <div class="span4">
                                       <h5>Associated Receipt</h5>

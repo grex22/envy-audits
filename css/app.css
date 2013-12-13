@@ -688,7 +688,7 @@ h5.widget_sub_title {
 .report_header {
   padding-bottom: 15px;
   margin-bottom: 10px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); }
+  background: #eaeaea; }
   .report_header h3 {
     font-size: 22px; }
 
@@ -727,7 +727,7 @@ h5.widget_sub_title {
   display: block; }
 
 .select2-container .select2-choice {
-  background: none;
+  background: white;
   padding: 5px 30px 4px 30px;
   border: 1px solid #f2f2f2;
   font-size: 17px;
@@ -1621,21 +1621,19 @@ input[readonly].knob {
 
 #report_filter_bar .big_orange_button_group {
   padding-right: 23px;
-  border-right: 1px dotted #e6e6e6;
+  border-right: 1px dotted #aaa;
   margin-right: 20px; }
 
 .toggleable {
   position: relative;
   background: #fdfdfd;
-  border-width: 1px 0 1px 0;
+  border-width: 1px 0 4px 0;
   border-color: #f1f1f1;
   border-style: solid;
+  border-bottom: 4px solid #eee;
   margin-left: -15px;
   margin-right: -15px;
-  padding: 11px 15px;
-  -moz-box-shadow: inset 0px 8px 8px -8px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: inset 0px 8px 8px -8px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0px 8px 8px -8px rgba(0, 0, 0, 0.1); }
+  padding: 11px 15px; }
 
 .row_toggler {
   position: absolute;
@@ -1672,7 +1670,8 @@ input[readonly].knob {
     color: #887777; }
 
 .report_header_tags {
-  display: inline; }
+  display: inline-block;
+  margin-bottom: -3px; }
   .report_header_tags .icon-tags {
     color: #ddd;
     margin-right: 5px; }
@@ -1689,10 +1688,12 @@ input[readonly].knob {
       margin: 0 4px 0 0;
       font-size: 11px; }
       .report_header_tags ul.tags_list li.tag {
-        padding: 2px 14px 2px 4px;
+        margin-top: -3px;
+        padding: 2px 16px 2px 4px;
         background: #f3f3f3;
         border-radius: 3px;
-        position: relative; }
+        position: relative;
+        box-shadow: -1px 1px 0px #bbb; }
         .report_header_tags ul.tags_list li.tag:after {
           content: "";
           display: inline;
@@ -1702,7 +1703,36 @@ input[readonly].knob {
           background: white;
           border-radius: 50%;
           top: 10px;
-          right: 3px; }
+          right: 4px;
+          box-shadow: inset -1px 1px 0px #bbb; }
+
+.report_tabs_wrap {
+  padding-top: 25px; }
+  .report_tabs_wrap ul {
+    padding-left: 15px;
+    font-size: 0; }
+    .report_tabs_wrap ul li {
+      font-size: 12.5px; }
+      .report_tabs_wrap ul li a {
+        padding: 11px 20px 11px 16px; }
+
+.report_tabs_wrap + .padded {
+  padding-top: 5px; }
+
+.highlighted_tabs li {
+  background: #36abff; }
+  .highlighted_tabs li a {
+    color: white;
+    margin-bottom: 0px;
+    border-bottom-width: 0;
+    padding: 10px 20px; }
+  .highlighted_tabs li.active a, .highlighted_tabs li:hover a, .highlighted_tabs li.active > a:hover, .highlighted_tabs li.active > a:focus {
+    margin-bottom: -1px;
+    background: #0396ff;
+    border-width: 0 0 0px 0;
+    border-radius: 0;
+    color: white;
+    border-color: transparent; }
 
 /*                                  */
 /* Webkit only scrollbar style      */
