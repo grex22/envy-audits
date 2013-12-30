@@ -134,6 +134,7 @@ function get_nav_menus(){
                         <li style="margin-left:20px;"><strong>Client</strong></li>
                         <li><a href="index.php">Dashboard</a></li>
                         <li><a href="index-regional.php">Dashboard - Multi</a></li>
+                        <li><a href="report-base.php">Report - Base</a></li>
                         <li><a href="client-report-overview.php">Audit Overview</a></li>
                         <li><a href="client-report-detail.php">Audit Detail</a></li>
                         <li style="margin-left:20px;"><strong>Auditor</strong></li>

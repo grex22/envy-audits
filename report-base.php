@@ -3,14 +3,17 @@
             <div id="main_header_wrapper">
                 <div class="row-fluid main_header">
                     <div class="span12">
-                      <h3>Intelligence &raquo; <a href="#">Reports Browser</a></h3>
+                      <h3>Intelligence</h3>
                     </div>
                 </div>
             </div>
            
             
-            <div id="content_wrapper">
-            
+            <div id="content_wrapper" class="with_browser_button">
+              <div id="leftside_float_nav">
+                <a href="#" data-toggle="tooltip" title="Intelligence Dashbaord" data-placement="right"><i class="icon-th-large"></i></a>
+                <a href="#" data-toggle="tooltip" title="Reports Browser" data-placement="right"><i class="icon-file-alt"></i></a>
+              </div>
               <div class="row-fluid ui-elements minimum_width">
                 <div class="span12">
                 
