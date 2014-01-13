@@ -1,4 +1,9 @@
 $(function(){
+  $("#filter_box_wrapper_toggle").click(function(e){
+    e.preventDefault();
+    $("#filter_box_wrapper").slideToggle();
+  });
+
   $("#audit_view_tabs a").click(function(e){
     e.preventDefault();
     $("#audit_view_tabs a").removeClass('active');
@@ -188,8 +193,38 @@ $(function(){
   function(start, end) {
 		$('#report_daterange span').html(moment(start).format('MMM D, YYYY') + ' - ' + moment(end).format('MMM D, YYYY'));
 	});
+  
   $('#report_daterange span').html(moment().subtract('days', 9).format('MMM D, YYYY') + ' - ' + moment().format('MMM D, YYYY'));
-
+  
+  //Live Table Reload for .live_drilldown tables
+  $('.live_drilldown tbody tr').click(function(e){
+    e.preventDefault();
+  
+    var newscope = $(this).find("td:first-child").html();
+    var topwrap = $(this).closest('.live_drilldown');
+    var tableid = "#" + $(topwrap).attr('id');
+    var breadcrumbid = tableid+"_breadcrumbs";
+    
+    $(tableid).fadeTo('fast',0.3).delay(700).removeClass('block_table').hide(0);
+    $("#tablestate_02").show(0).fadeTo('fast',1.0);
+    $("#loading_overlay").show(0).delay(1000).hide(50,function(){});
+    
+    $(breadcrumbid).append("<i class='icon-caret-right'></i><span>"+newscope+"</span>").children('span').first().wrap("<a href='#' data-targetstate='tablestate_01' class='tablestate_breadcrumb_link'></a>");
+  });
+  
+  $(document).on('click','.tablestate_breadcrumb_link',function(e){
+    e.preventDefault();
+    $("#tablestate_02").fadeTo('fast',0.3).delay(700).removeClass('block_table').hide(0);
+    $("#loading_overlay").show(0).delay(1000).hide(50,function(){
+      $("#tablestate_01").show(0).fadeTo('fast',1.0);
+    });
+    
+    var lastlinktext = $("#tablestate_01_breadcrumbs a").last().html();
+    $("#tablestate_01_breadcrumbs i").last().remove();
+    $("#tablestate_01_breadcrumbs span").last().remove();
+    $("#tablestate_01_breadcrumbs a").last().replaceWith("<span>"+lastlinktext+"</span>");
+    
+  });
   
   
 });

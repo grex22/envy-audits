@@ -57,9 +57,10 @@
                     
                     
                     <div class="row-fluid report_header padded no_bottom_margin">
-                      <div class="span12" id="report_filter_bar">
+                      <div class="row-fluid">
+                        <div class="span12" id="report_filter_bar">
                         <div class="btn-group big_orange_button_group">
-                          <a href="#" class="btn widthoverride"><i class="icon-filter"></i> Filter Data</a>
+                          <a href="#" class="btn widthoverride" id="filter_box_wrapper_toggle"><i class="icon-filter"></i> Customize Report &hellip;</a>
                         </div>
                           <div class="select2-container inline select2_jump" id="s2id_report_location">    <a href="#" onclick="return false;" class="select2-choice">   <span>All Locations</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a>    <div class="select2-drop select2-offscreen">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select id="report_location" class="inline select2_jump" style="display: none;">
                             <option value="client-report-locations.php" selected="selected">All Locations</option>
@@ -77,39 +78,33 @@
                               <span>Dec 1, 2013 - Dec 10, 2013</span>
                           </div>
                       </div>
-                    </div>
-                    
-                    
-                    <!--<div class="row-fluid">
-                      <div class="span12">
-                        <div class="navbar report_navbar_compact thirds no_bottom_margin" id="report_navbar">
-                          <div class="navbar-inner">
-                            <div class="row-fluid">
-                              <div class="report_links_wrap span12">
-                                <ul class="nav" id="audit_view_tabs">
-                                    <li>
-                                      <a href="#" class="active">
-                                        <i class="icon-home"></i> Overview
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="#">
-                                        <i class="icon-group"></i> 
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a href="#">
-                                        <i class="icon-pushpin"></i> Locations
-                                      </a>
-                                    </li>
-                                </ul>
+                      </div>
+                      <!--<div class="row-fluid" id="filter_box_wrapper">
+                        <div class="span12">
+                          <form class="form-horizontal">
+                            <div class="control-group">
+                              <label class="control-label" for="reportTitle">Custom Report Title</label>
+                              <div class="controls">
+                                <input type="text" id="reportTitle" value="Small Transactions Report 2">
                               </div>
                             </div>
-                          </div>
+                            <div class="control-group">
+                              <label class="control-label" for="inputPassword">Filters</label>
+                              <div class="controls">
+                                <div class="form-inline">
+                                  <input type="text" class="input-small" placeholder="Email">
+                                  <input type="password" class="input-small" placeholder="Password">
+                                  <label class="checkbox">
+                                    <input type="checkbox"> Remember me
+                                  </label>
+                                  <button type="submit" class="btn">Sign in</button>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
                         </div>
-                        
-                      </div>
-                    </div>-->
+                      </div>-->        
+                    </div>
                     
                     <div class="row-fluid report_tabs_wrap">
                       <ul class="nav nav-tabs no_bottom_margin">
@@ -132,10 +127,29 @@
                       </div>
                       
                       <div class="row-fluid">
-                        <div class="span12"><h4 class="data_table_header">Employees with Largest Number of Small Transactions</div>                       
+                        <div class="span12">
+                        <div class="pull-right pagination_well">
+                          Show: 
+                          <select>
+                            <option selected='selected'>25 rows</option>
+                            <option>50 rows</option>
+                            <option>100 rows</option>
+                          </select>
+                          &nbsp;|&nbsp; Viewing 1-25 of 62 &nbsp;|&nbsp;
+                          
+                          <div class="btn-group">
+                            <a class="btn-flat btn-flat-small white left"><i class="icon-chevron-left"></i></a>
+                            <a class="btn-flat btn-flat-small white right"><i class="icon-chevron-right"></i></a>
+                          </div>
+                        </div>
+                        <h4 class="data_table_header" id="tablestate_01_breadcrumbs"><span>Small Transactions by Employee</span></h4></div>                      
                       </div>
-                      <div class="row-fluid more_bottom_margin">
-                        <table class="table table-condensed table-hover block_table">
+                      <div class="row-fluid more_bottom_margin live_drilldown_wrap">
+                        <div id="loading_overlay">
+                          <img src="img/custom/ajax-loader.gif">
+                        </div>
+                        
+                        <table class="table table-hover block_table live_drilldown" id="tablestate_01">
                           <thead>
                             <tr>
                               <th class="sortable">Employee </th>
@@ -164,26 +178,8 @@
                             <tr></tr>
                           </tbody>
                         </table>
-                      </div>
-                      
-                      
-                      <div class="row-fluid">
-                          <div class="pull-right pagination_well">
-                          Show: <select>
-                            <option selected='selected'>25 rows</option>
-                            <option>50 rows</option>
-                            <option>100 rows</option>
-                          </select>
-                          &nbsp;|&nbsp; Viewing 1-25 of 62 &nbsp;|&nbsp;
-                          
-                          <div class="btn-group">
-                            <a class="btn-flat btn-flat-small white left"><i class="icon-chevron-left"></i></a>
-                            <a class="btn-flat btn-flat-small white right"><i class="icon-chevron-right"></i></a>
-                          </div>
-                          </div>
-                          <h4 class="data_table_header">Small Transactions Video Events</h4>
-                          
-                          <table class="table table-hover block_table samples_table">
+                        
+                        <table class="table table-hover block_table samples_table" id="tablestate_02" style="display:none">
                             <thead>
                               <tr>
                                 <th>Preview</th>
@@ -247,21 +243,23 @@
 
                             </tbody>
                           </table>
+                          
                           <div class="pull-right pagination_well">
-                          Viewing 1-25 of 60 &nbsp;|&nbsp;
+                          Show: 
+                          <select>
+                            <option selected='selected'>25 rows</option>
+                            <option>50 rows</option>
+                            <option>100 rows</option>
+                          </select>
+                          &nbsp;|&nbsp; Viewing 1-25 of 62 &nbsp;|&nbsp;
                           
                           <div class="btn-group">
                             <a class="btn-flat btn-flat-small white left"><i class="icon-chevron-left"></i></a>
                             <a class="btn-flat btn-flat-small white right"><i class="icon-chevron-right"></i></a>
                           </div>
-                          </div>
                         </div>
-                        
-                        
-                        
-                        
-                        
-                      
+                          
+                      </div>
                       
                     </div>
                   </div>

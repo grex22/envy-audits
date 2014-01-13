@@ -593,7 +593,6 @@ h5.widget_sub_title {
   padding: 15px 0 25px; }
 
 .block_table {
-  display: table !important;
   width: 100%; }
 
 .row-fluid.left_column_nav {
@@ -1678,6 +1677,13 @@ input[readonly].knob {
     -o-transition: 0.3s;
     -webkit-backface-visibility: hidden; }
 
+/* Reports Base Pages */
+#filter_box_wrapper {
+  /* display:none; */ }
+
+.data_table_header i.icon-caret-right {
+  margin-left: 6px; }
+
 #report_filter_bar .big_orange_button_group {
   padding-right: 23px;
   border-right: 1px dotted #aaa;
@@ -1792,6 +1798,13 @@ input[readonly].knob {
     border-radius: 0;
     color: white;
     border-color: transparent; }
+
+.live_drilldown_wrap {
+  position: relative;
+  min-height: 350px; }
+
+table.live_drilldown tbody tr:hover {
+  cursor: pointer; }
 
 /*                                  */
 /* Webkit only scrollbar style      */
