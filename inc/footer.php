@@ -80,6 +80,7 @@
       <script src="js/pages/auditor-dashboard.js"></script>
     <?php endif; ?>
     <?php if($_SERVER['PHP_SELF']=="/envysion/report-base.php"): ?>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
       <script src="js/pages/report-base.js"></script>
     <?php endif; ?>
     

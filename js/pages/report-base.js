@@ -224,7 +224,5 @@ $(function(){
     $("#tablestate_01_breadcrumbs span").last().remove();
     $("#tablestate_01_breadcrumbs a").last().replaceWith("<span>"+lastlinktext+"</span>");
     
-  });
-  
-  
+  });  
 });
