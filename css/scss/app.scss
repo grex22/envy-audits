@@ -177,6 +177,7 @@ $warmgray: #887777;
 
 h1,h2,h3,h4,h5,h6{font-weight:300;}
 
+
 .table-wrapper table tr:first-child td{border-top:0 none}
 .table-wrapper{margin-bottom:20px;}
 
@@ -2220,7 +2221,6 @@ input[readonly].knob{
     text-decoration:none;
   }
   #report_favorite_toggle:hover{color:gold;}
-  #report_edit_toggle:hover{color:$brightblue;}
   #report_share_toggle:hover{color:$warmgray;}
 }
 
@@ -2267,13 +2267,20 @@ input[readonly].knob{
   }
 }
 .report_tabs_wrap{
-  padding-top:25px;
+  padding-top:10px;
+  padding-bottom:15px;
   
   ul{
     padding-left:15px;
     font-size:0;
     li{
       font-size:12.5px;
+      
+      &.active a, &.active:hover a,&:hover a{
+        border: 1px solid transparent;
+        border-bottom:2px solid #999;
+        background:none;
+      }
       a{
         padding:11px 20px 11px 16px;
       }
@@ -2282,6 +2289,7 @@ input[readonly].knob{
 }
 
 .report_tabs_wrap + .padded{padding-top:5px;}
+
 .highlighted_tabs{
   li{
     background:$brightblue;

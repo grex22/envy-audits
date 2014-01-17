@@ -24,7 +24,7 @@
                 <?php
                 $dasharray = array(
                   array(
-                    'title' => 'Panera 2.0',
+                    'title' => 'ModFoods 2.0',
                     'gauges' => array(
                       'Combined' => 75,
                       'Cashier' => 75,

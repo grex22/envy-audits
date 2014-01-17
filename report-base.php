@@ -28,7 +28,6 @@
                         <i class="icon-bar-chart"></i> <span id="report_title_target">Small Transactions Report</span>
                             <div class="report_header_icon_actions">
                               <a href="#" id="report_favorite_toggle" data-toggle="tooltip" title="Favorite this Report"><i class="icon-star"></i></a>
-                              <a href="#" id="report_edit_toggle" data-toggle="tooltip" title="Edit Report"><i class="icon-pencil"></i></a>
                               <a href="#" id="report_share_toggle" data-toggle="tooltip" title="Share Report"><i class="icon-share-alt"></i></a>
                             </div>
                             <div class="report_header_tags">
@@ -108,9 +107,9 @@
                     
                     <div class="row-fluid report_tabs_wrap">
                       <ul class="nav nav-tabs no_bottom_margin">
-                        <li><a href="#home" data-toggle="tab"><i class="icon-home"></i> Overview</a></li>
-                        <li class="active"><a href="#profile" data-toggle="tab"><i class="icon-group"></i> Employees</a></li>
-                        <li><a href="#messages" data-toggle="tab"><i class="icon-pushpin"></i> Locations</a></li>
+                        <li class="active"><a href="#home" data-toggle="tab">Overview</a></li>
+                        <li><a href="#profile" data-toggle="tab">Employees</a></li>
+                        <li><a href="#messages" data-toggle="tab">Locations</a></li>
                       </ul>
                     </div>
                     
@@ -118,7 +117,7 @@
                     <div class="padded">
                       <div class="row-fluid toggleable more_bottom_margin">
                         <div class="span12">
-                          <h4 class="more_bottom_margin">Small Transactions, All Locations, Dec 3, 2013 - Dec 12, 2013:</h4>
+                          <h4 class="more_bottom_margin">Number of Small Transactions, All Locations</h4>
                           <div id="widget01" style="height:150px;"></div>
                         </div>    
                         <span class="row_toggler">

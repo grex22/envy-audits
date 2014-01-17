@@ -1729,8 +1729,6 @@ input[readonly].knob {
     text-decoration: none; }
   .report_header_icon_actions #report_favorite_toggle:hover {
     color: gold; }
-  .report_header_icon_actions #report_edit_toggle:hover {
-    color: #36abff; }
   .report_header_icon_actions #report_share_toggle:hover {
     color: #887777; }
 
@@ -1772,12 +1770,17 @@ input[readonly].knob {
           box-shadow: inset -1px 1px 0px #bbb; }
 
 .report_tabs_wrap {
-  padding-top: 25px; }
+  padding-top: 10px;
+  padding-bottom: 15px; }
   .report_tabs_wrap ul {
     padding-left: 15px;
     font-size: 0; }
     .report_tabs_wrap ul li {
       font-size: 12.5px; }
+      .report_tabs_wrap ul li.active a, .report_tabs_wrap ul li.active:hover a, .report_tabs_wrap ul li:hover a {
+        border: 1px solid transparent;
+        border-bottom: 2px solid #999;
+        background: none; }
       .report_tabs_wrap ul li a {
         padding: 11px 20px 11px 16px; }
 
