@@ -238,6 +238,8 @@ $(function(){
     $("#loading_overlay_full").show(0).delay(1000).hide(50,function(){});
     
     $(".tab-pane.active .data_table_header").children('span').first().wrap("<a href='#' data-targetstate='tablestate_01' class='tablestate_breadcrumb_link'></a>");
+    $("#last_crumb").remove();
+    $(".tab-pane.active .data_table_header i").last().remove();
     $(".tab-pane.active .data_table_header").append("<i class='icon-caret-right'></i><span id='last_crumb'>"+newscope+"</span>");
     $('.tab-pane.active .title_variable').html('Employee: '+newscope);
     
