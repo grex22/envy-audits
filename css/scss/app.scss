@@ -727,6 +727,27 @@ h5.widget_sub_title{font-weight:500}
 
 /* Report Pages                     */
 
+#loading_overlay_full{
+  position: absolute;
+  display: none;
+  width: 220px;
+  margin-left: -15px;
+  z-index: 999;
+  height: 98%;
+  width: 100%;
+  background: rgba(255,255,255,.8);
+  text-align: center;
+  
+  img{
+    top:110px;
+    position: fixed;
+    z-index: 103900;
+    margin-left: -110px;
+  }
+}
+
+.tab-content{position:relative;}
+
 .chart{padding:10px 0 35px 0;box-sizing:border-box}
 .flotchartcontainer .tab-pane{height:220px;}
 .flot_fix{padding:10px 0!important;height:250px;}
@@ -2156,6 +2177,8 @@ input[readonly].knob{
 }
 
 /* Reports Base Pages */
+
+.flotgraph{width:auto;display:block;height:180px;}
 
 #filter_box_wrapper{
   /* display:none; */

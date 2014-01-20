@@ -1,4 +1,6 @@
 $(function(){
+
+
   $("#filter_box_wrapper_toggle").click(function(e){
     e.preventDefault();
     $("#filter_box_wrapper").slideToggle();
@@ -107,12 +109,21 @@ $(function(){
           }
         };
 // jQuery Flot Chart
-  var dashboard1 = [[1, 30], [2, 42], [3, 34], [4, 63],[5, 80],[6, 68],[7, 90],[8, 95],[9, 95],[10, 92],[11, 30], [12, 42], [13, 34], [14, 63],[15, 80],[16, 68],[17, 90],[18, 95],[19, 95],[20, 92]];
+
+  var datasets = [
+  
+    [[1, 30], [2, 42], [3, 34], [4, 63],[5, 80],[6, 68],[7, 90],[8, 95],[9, 95],[10, 92],[11, 30], [12, 42], [13, 34], [14, 63],[15, 80],[16, 68],[17, 90],[18, 95],[19, 95],[20, 92]],
+    [[1, 55], [2, 38], [3, 65], [4, 68],[5, 76],[6, 64],[7, 55],[8, 65],[9, 70],[10, 64],[11, 61], [12, 48], [13, 55], [14, 59],[15, 65],[16, 68],[17, 73],[18, 80],[19, 82],[20, 86]],
+    [[1, 15], [2, 28], [3, 35], [4, 40],[5, 32],[6, 18],[7, 25],[8, 55],[9, 60],[10, 64],[11, 36], [12, 55], [13, 85], [14, 65],[15, 53],[16, 68],[17, 73],[18, 40],[19, 82],[20, 82]],
+    
+  ];
+
   
   
-  if($("#widget01").length){
-  var plot = $.plot($("#widget01"),
-      [ { data: dashboard1, label: "# Small Transactions" }], flotDefaultsLines);
+  if($(".flotgraph").length){
+      var dataset = $(".tab-pane.active .flotgraph").attr('data-dataset');
+      var plot = $.plot($(".tab-pane.active .flotgraph"),
+      [ { data: datasets[dataset], label: "# Small Transactions" }], flotDefaultsLines);
       plot.getData()[0].lines.lineWidth = 3;
       plot.draw();
   }
@@ -132,7 +143,7 @@ $(function(){
   }
   
   var previousPoint = null;
-  $("[id^=widget01]").bind("plothover", function (event, pos, item) {
+  $("[id^=widget0]").bind("plothover", function (event, pos, item) {
       if (item) {
           if (previousPoint != item.dataIndex) {
               previousPoint = item.dataIndex;
@@ -153,9 +164,22 @@ $(function(){
       }
   });
   
+  
+  $('a[data-toggle="tab"]').on('shown', function (e) {
+    var targethash = $(e.target).attr('href');
+    var dataset = $(targethash).find(".flotgraph").attr('data-dataset');
+
+    var plot = $.plot($(targethash).find(".flotgraph"),
+    [ { data: datasets[dataset], label: "# Small Transactions" }], flotDefaultsLines);
+    plot.getData()[0].lines.lineWidth = 3;
+    plot.draw();
+    
+    
+  });
+  
   $('.row_toggler').click(function(e){
     e.preventDefault();
-    $('#widget01').slideToggle();
+    $(this).siblings('.span12').children('.flotgraph').slideToggle();
     if($(this).find('span').html()=="hide graph"){
       $(this).find('span').html("show graph");
       $(this).find('i').removeClass('icon-minus-sign').addClass('icon-plus-sign');
@@ -199,30 +223,46 @@ $(function(){
   //Live Table Reload for .live_drilldown tables
   $('.live_drilldown tbody tr').click(function(e){
     e.preventDefault();
+    
+    $("#report_tabbed_nav_1 a[href='#employees']").tab('show');
+    $("#employees").addClass('active');
+    
+    $('html,body').animate({
+      scrollTop: $("#top_scroll").offset().top
+    }, 700);
   
     var newscope = $(this).find("td:first-child").html();
-    var topwrap = $(this).closest('.live_drilldown');
-    var tableid = "#" + $(topwrap).attr('id');
-    var breadcrumbid = tableid+"_breadcrumbs";
     
-    $(tableid).fadeTo('fast',0.3).delay(700).removeClass('block_table').hide(0);
-    $("#tablestate_02").show(0).fadeTo('fast',1.0);
-    $("#loading_overlay").show(0).delay(1000).hide(50,function(){});
+    $(".tab-pane.active #tablestate_01").delay(700).removeClass('block_table').hide(0);
+    $(".tab-pane.active #tablestate_02").show(0);
+    $("#loading_overlay_full").show(0).delay(1000).hide(50,function(){});
     
-    $(breadcrumbid).append("<i class='icon-caret-right'></i><span>"+newscope+"</span>").children('span').first().wrap("<a href='#' data-targetstate='tablestate_01' class='tablestate_breadcrumb_link'></a>");
+    $(".tab-pane.active .data_table_header").children('span').first().wrap("<a href='#' data-targetstate='tablestate_01' class='tablestate_breadcrumb_link'></a>");
+    $(".tab-pane.active .data_table_header").append("<i class='icon-caret-right'></i><span id='last_crumb'>"+newscope+"</span>");
+    $('.tab-pane.active .title_variable').html('Employee: '+newscope);
+    
   });
   
   $(document).on('click','.tablestate_breadcrumb_link',function(e){
     e.preventDefault();
-    $("#tablestate_02").fadeTo('fast',0.3).delay(700).removeClass('block_table').hide(0);
-    $("#loading_overlay").show(0).delay(1000).hide(50,function(){
-      $("#tablestate_01").show(0).fadeTo('fast',1.0);
+    $(".tab-pane.active #tablestate_02").delay(700).removeClass('block_table').hide(0);
+    $("#loading_overlay_full").show(0).delay(1000).hide(50,function(){
+      $(".tab-pane.active #tablestate_01").show(0);
     });
     
-    var lastlinktext = $("#tablestate_01_breadcrumbs a").last().html();
-    $("#tablestate_01_breadcrumbs i").last().remove();
-    $("#tablestate_01_breadcrumbs span").last().remove();
-    $("#tablestate_01_breadcrumbs a").last().replaceWith("<span>"+lastlinktext+"</span>");
+    var lastlinktext = $(".tab-pane.active .data_table_header > a").last().children('span').html();
+    $(".tab-pane.active .data_table_header a").last().replaceWith("<span>"+lastlinktext+"</span>");
+    $(".tab-pane.active .data_table_header i").last().remove();
+    $("#last_crumb").remove();
+    $('.tab-pane.active .title_variable').html('All Employees');
     
-  });  
+  });
+  
+  
+  
+  
+  
+  
+  
+  
 });
