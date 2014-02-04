@@ -34,7 +34,7 @@
                           </ul>
                         </div>
                         
-                        <i class="icon-bar-chart"></i> <span id="report_title_target">Small Transactions Report</span>
+                        <i class="icon-bar-chart"></i> <span id="report_title_target">Foop Small Transactions Report</span>
                         <div class="report_header_icon_actions">
                           <a href="#" id="report_favorite_toggle" data-toggle="tooltip" title="Favorite this Report"><i class="icon-star"></i></a>
                         </div>
