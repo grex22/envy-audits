@@ -1741,8 +1741,8 @@ input[readonly].knob {
 
 .report_header_icon_actions {
   display: inline-block;
-  margin: 0 15px 0 0;
-  padding: 0 15px;
+  margin: 0 10px 0 0;
+  padding: 0 10px;
   border-width: 0 1px 0 0px;
   border-color: #cfcfcf;
   border-style: dotted; }

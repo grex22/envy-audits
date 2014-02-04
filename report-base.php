@@ -19,66 +19,41 @@
                 
                   <div class="row-fluid widget no_bottom_padding">                    
                     <h4 class="widget_title no_bottom_margin no_arrow" id="top_scroll">
-                        <div class="btn-group pull-right more_button_padding">
-                          <button class="glow left">Add to Dashboard <i class="icon-th-large"></i></button>
-                          <button class="glow middle">Export <i class="icon-download-alt"></i></button>
-                          <button class="glow right">Print <i class="icon-print"></i></button>
+                        
+                        <div class="btn-group big_orange_button_group pull-right">
+                          <a href="#" class="btn widthoverride" id="filter_box_wrapper_toggle"><i class="icon-tasks"></i> Customize Report</a>
+                          <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-caret-down"></i>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Share this Report</a></li>
+                            <li><a href="#">Add Widget to Dashboard</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Download Report</a></li>
+                            <li><a href="#">Print Report</a></li>
+                          </ul>
                         </div>
                         
                         <i class="icon-bar-chart"></i> <span id="report_title_target">Small Transactions Report</span>
-                            <div class="report_header_icon_actions">
-                              <a href="#" id="report_favorite_toggle" data-toggle="tooltip" title="Favorite this Report"><i class="icon-star"></i></a>
-                              <a href="#" id="report_share_toggle" data-toggle="tooltip" title="Share Report"><i class="icon-share-alt"></i></a>
-                            </div>
-                            <div class="report_header_tags">
-                              <i class="icon-tags"></i>
-                              <ul class="tags_list">
-                                <li class="tag"><a href="#">Retail</a></li>
-                                <li class="tag"><a href="#">Loss Prevention</a></li>
-                                <li>3 more&hellip;</li>
-                                <li><a href="#" id="tags_edit_link">edit</a></li>
-                              </ul>
-                              
-                            </div>
-                            <!--
-                            
-                            
-                            
-                            <div id="audit_dash_daterange" class="report_jump_menu inline">
-                              <i class="icon-calendar"></i> 
-                              <span>Nov 7, 2013 - Nov 13, 2013</span>
-                            </div>
-                            
-                            
-                            
-                            -->
+                        <div class="report_header_icon_actions">
+                          <a href="#" id="report_favorite_toggle" data-toggle="tooltip" title="Favorite this Report"><i class="icon-star"></i></a>
+                        </div>
+                        <div class="report_header_tags">
+                          <i class="icon-tags"></i>
+                          <ul class="tags_list">
+                            <li class="tag"><a href="#">Retail</a></li>
+                            <li class="tag"><a href="#">Loss Prevention</a></li>
+                            <li>3 more&hellip;</li>
+                            <li><a href="#" id="tags_edit_link">edit</a></li>
+                          </ul>
+                        </div>
+                        
                     </h4>
                     
                     
-                    <div class="row-fluid report_header padded no_bottom_margin">
-                      <div class="row-fluid">
-                        <div class="span12" id="report_filter_bar">
-                        <div class="btn-group big_orange_button_group">
-                          <a href="#" class="btn widthoverride" id="filter_box_wrapper_toggle"><i class="icon-filter"></i> Customize Report &hellip;</a>
-                        </div>
-                          <div class="select2-container inline select2_jump" id="s2id_report_location">    <a href="#" onclick="return false;" class="select2-choice">   <span>All Locations</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a>    <div class="select2-drop select2-offscreen">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div><select id="report_location" class="inline select2_jump" style="display: none;">
-                            <option value="client-report-locations.php" selected="selected">All Locations</option>
-                            <optgroup label="Southwest Region">
-                              <option value="client-report-locations-detail.php">Braintree</option>
-                              <option value="client-report-locations-detail.php">Lexington</option>
-                              <option value="client-report-locations-detail.php">Milford</option>
-                              <option value="client-report-locations-detail.php">Stanford</option>
-                              <option value="client-report-locations-detail.php">Tournay</option>
-                              <option value="client-report-locations-detail.php">Jackson</option>
-                            </optgroup>
-                          </select>
-                          <div id="report_daterange" class="report_jump_menu inline">
-                            <i class="icon-calendar"></i> 
-                              <span>Dec 1, 2013 - Dec 10, 2013</span>
-                          </div>
-                      </div>
-                      </div>
-                      <!--<div class="row-fluid" id="filter_box_wrapper">
+                    <!--<div class="row-fluid report_header padded no_bottom_margin">
+
+                      <div class="row-fluid" id="filter_box_wrapper">
                         <div class="span12">
                           <form class="form-horizontal">
                             <div class="control-group">
@@ -102,10 +77,30 @@
                             </div>
                           </form>
                         </div>
-                      </div>-->        
-                    </div>
+                      </div>        
+                    </div>-->
                     
                     <div class="row-fluid report_tabs_wrap">
+                      <div class="pull-right">
+                      <div class="select2-container inline select2_jump" id="s2id_report_location">
+                        <a href="#" onclick="return false;" class="select2-choice">
+                        <span>All Locations</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a>    <div class="select2-drop select2-offscreen">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div>
+                        <select id="report_location" class="inline select2_jump" style="display: none;">
+                          <option value="client-report-locations.php" selected="selected">All Locations</option>
+                          <optgroup label="Southwest Region">
+                            <option value="client-report-locations-detail.php">Braintree</option>
+                            <option value="client-report-locations-detail.php">Lexington</option>
+                            <option value="client-report-locations-detail.php">Milford</option>
+                            <option value="client-report-locations-detail.php">Stanford</option>
+                            <option value="client-report-locations-detail.php">Tournay</option>
+                            <option value="client-report-locations-detail.php">Jackson</option>
+                          </optgroup>
+                        </select>
+                        <div id="report_daterange" class="report_jump_menu inline">
+                          <i class="icon-calendar"></i> 
+                            <span>Dec 1, 2013 - Dec 10, 2013</span>
+                        </div>
+                      </div>
                       <ul class="nav nav-tabs no_bottom_margin" id="report_tabbed_nav_1">
                         <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
                         <li><a href="#employees" data-toggle="tab">Employees</a></li>
