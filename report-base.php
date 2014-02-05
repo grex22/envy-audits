@@ -1,11 +1,11 @@
 <?php include ('inc/head.php'); ?>
 
             <div id="main_header_wrapper">
-                <div class="row-fluid main_header">
+                <!--<div class="row-fluid main_header">
                     <div class="span12">
                       <h3>Intelligence</h3>
                     </div>
-                </div>
+                </div>-->
             </div>
            
             
@@ -20,25 +20,23 @@
                   <div class="row-fluid widget no_bottom_padding">                    
                     <h4 class="widget_title no_bottom_margin no_arrow" id="top_scroll">
                         
-                        <div class="btn-group big_orange_button_group pull-right">
-                          <a href="#" class="btn widthoverride" id="filter_box_wrapper_toggle"><i class="icon-tasks"></i> Customize Report</a>
-                          <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-                            <i class="icon-caret-down"></i>
-                          </button>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Share this Report</a></li>
-                            <li><a href="#">Add Widget to Dashboard</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Download Report</a></li>
-                            <li><a href="#">Print Report</a></li>
-                          </ul>
-                        </div>
-                        
-                        <i class="icon-bar-chart"></i> <span id="report_title_target">Foop Small Transactions Report</span>
+                        <i class="icon-file-alt"></i> <span id="report_title_target">Small Transactions Report</span>
                         <div class="report_header_icon_actions">
                           <a href="#" id="report_favorite_toggle" data-toggle="tooltip" title="Favorite this Report"><i class="icon-star"></i></a>
+                          <div class="inline" style="position:relative">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                <i class="icon-cog"></i>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                              <li><a href="#">Share this Report</a></li>
+                              <li><a href="#">Add Widget to Dashboard</a></li>
+                              <li class="divider"></li>
+                              <li><a href="#">Download Report</a></li>
+                              <li><a href="#">Print Report</a></li>
+                            </ul>
+                          </div>
                         </div>
-                        <div class="report_header_tags">
+                        <div class="report_header_tags pull-right">
                           <i class="icon-tags"></i>
                           <ul class="tags_list">
                             <li class="tag"><a href="#">Retail</a></li>
@@ -51,9 +49,24 @@
                     </h4>
                     
                     
-                    <!--<div class="row-fluid report_header padded no_bottom_margin">
+                    <div class="row-fluid report_header padded no_bottom_margin">
+                      <div class="span2">
+                        <div class="btn-group big_orange_button_group">
+                          <a href="#customize_report_modal" data-toggle="modal"  class="btn widthoverride" id="filter_box_wrapper_toggle"><i class="icon-tasks"></i> Customize Report</a>
 
-                      <div class="row-fluid" id="filter_box_wrapper">
+                        </div>
+                      </div>
+                      <div class="span6">
+                        <i class="icon-search for_search_input"></i> <input type="text" class="typeahead" placeholder="Search employees and locations..." data-provide="typeahead" autocomplete="off">
+                      </div>
+                      <div class="span4">
+                        <div id="report_daterange" class="report_jump_menu pull-right inline">
+                          <i class="icon-calendar"></i> 
+                            <span>Dec 1, 2013 - Dec 10, 2013</span>
+                        </div>
+                      </div>
+
+                      <!--<div class="row-fluid" id="filter_box_wrapper">
                         <div class="span12">
                           <form class="form-horizontal">
                             <div class="control-group">
@@ -77,34 +90,15 @@
                             </div>
                           </form>
                         </div>
-                      </div>        
-                    </div>-->
+                      </div>-->       
+                    </div>
                     
                     <div class="row-fluid report_tabs_wrap">
-                      <div class="pull-right">
-                      <div class="select2-container inline select2_jump" id="s2id_report_location">
-                        <a href="#" onclick="return false;" class="select2-choice">
-                        <span>All Locations</span><abbr class="select2-search-choice-close" style="display:none;"></abbr>   <div><b></b></div></a>    <div class="select2-drop select2-offscreen">   <div class="select2-search">       <input type="text" autocomplete="off" class="select2-input">   </div>   <ul class="select2-results">   </ul></div></div>
-                        <select id="report_location" class="inline select2_jump" style="display: none;">
-                          <option value="client-report-locations.php" selected="selected">All Locations</option>
-                          <optgroup label="Southwest Region">
-                            <option value="client-report-locations-detail.php">Braintree</option>
-                            <option value="client-report-locations-detail.php">Lexington</option>
-                            <option value="client-report-locations-detail.php">Milford</option>
-                            <option value="client-report-locations-detail.php">Stanford</option>
-                            <option value="client-report-locations-detail.php">Tournay</option>
-                            <option value="client-report-locations-detail.php">Jackson</option>
-                          </optgroup>
-                        </select>
-                        <div id="report_daterange" class="report_jump_menu inline">
-                          <i class="icon-calendar"></i> 
-                            <span>Dec 1, 2013 - Dec 10, 2013</span>
-                        </div>
-                      </div>
+                      
                       <ul class="nav nav-tabs no_bottom_margin" id="report_tabbed_nav_1">
-                        <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
-                        <li><a href="#employees" data-toggle="tab">Employees</a></li>
-                        <li><a href="#locations" data-toggle="tab">Locations</a></li>
+                        <li class="active"><a href="#overview" data-toggle="tab"><i class="icon-home"></i> Overview</a></li>
+                        <li><a href="#locations" data-toggle="tab"><i class="icon-pushpin"></i> Locations</a></li>
+                        <li><a href="#employees" data-toggle="tab"><i class="icon-user"></i> Employees</a></li>
                       </ul>
                     </div>
                   
@@ -125,6 +119,84 @@
                             <a href="#"><span>hide graph</span> <i class="icon-minus-sign"></i></a>
                           </span>
                         </div>
+                        
+                        <div class="row-fluid more_bottom_margin">
+                          <div class="span6">
+                            <h4 class="data_table_header no_bottom_margin"><a href="client-report-locations.php">Locations with the Most Small Transactions</a></h4>
+                            <table class="table table-condensed">
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td><a href="#">Braintree</a></td>
+                                  <td class="align-right">98</td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td><a href="#">Milford</a></td>
+                                  <td class="align-right">95</td>
+                                </tr>
+                                <tr>
+                                  <td>3</td>
+                                  <td><a href="#">Lexington</a></td>
+                                  <td class="align-right">95</td>
+                                </tr>
+                                <tr>
+                                  <td>4</td>
+                                  <td><a href="#">Fauxnombre</a></td>
+                                  <td class="align-right">91</td>
+                                </tr>
+                                <tr>
+                                  <td>5</td>
+                                  <td><a href="#">Pratton</a></td>
+                                  <td class="align-right">88</td>
+                                </tr>
+                                
+                              </tbody>
+                            </table>
+                            <div class="btn-group align-right block">
+                              <a href="client-report-locations.php" class="btn-flat primary">View All <i class="icon-circle-arrow-right icon-white"></i></a>
+                            </div>
+                          </div>
+                          <div class="span6">
+                          <h4 class="data_table_header  no_bottom_margin">
+                          
+                          <a href="client-report-employees.php">Employees with the Most Small Transactions</a>
+                          </h4>
+                          <table class="table table-condensed">
+
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td><a href="client-report-employees-detail.php">Missy Ambrose</a></td>
+                                <td class="align-right">33</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td><a href="client-report-employees-detail.php">Pat Franz</a></td>
+                                <td class="align-right">25</td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td><a href="client-report-employees-detail.php">Stacey Stans</a></td>
+                                <td class="align-right">25</td>
+                              </tr>
+                              <tr>
+                                <td>4</td>
+                                <td><a href="client-report-employees-detail.php">Mark Stevens</a></td>
+                                <td class="align-right">22</td>
+                              </tr>
+                              <tr>
+                                <td>5</td>
+                                <td><a href="client-report-employees-detail.php">Mark Otto</a></td>
+                                <td class="align-right">20</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                            <div class="btn-group align-right block">
+                            <a href="client-report-employees.php" class="btn-flat primary">View All <i class="icon-circle-arrow-right icon-white"></i></a>
+                            </div>
+                          </div>
+                          </div>
                         
                         <div class="row-fluid">
                           <div class="span12">
@@ -571,6 +643,16 @@
             </div>
             
         </div>
+    </div>
+    
+    <div class="row-fluid ui-elements modal big_modal hide fade" id="customize_report_modal">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Customize Report</h3>
+      </div>
+      <div class="row-fluid ui-elements padded">
+      <div class="span8" id="change_view_left_col"></div>
+      </div>
     </div>
     
     <?php include ('inc/footer.php'); ?>

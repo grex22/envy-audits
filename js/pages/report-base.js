@@ -260,8 +260,12 @@ $(function(){
     
   });
   
-  
-  
+
+
+  //Typeahead
+  $('.typeahead').typeahead({
+    source: ["Alberta"],
+  });
   
   
   
