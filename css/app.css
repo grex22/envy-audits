@@ -1863,14 +1863,14 @@ input:-moz-placeholder {
         color: white;
         border: 0;
         border-bottom: 0;
-        background: #0396ff;
+        background: #0087e9;
         position: relative; }
         .report_tabs_wrap > ul li.active a:after, .report_tabs_wrap > ul li.active:hover a:after, .report_tabs_wrap > ul li:hover a:after {
           content: "";
           display: inline-block;
           width: 12px;
           height: 12px;
-          background: #0396ff;
+          background: #0087e9;
           position: absolute;
           transform: rotate(0.125turn);
           -webkit-transform: rotate(45deg);

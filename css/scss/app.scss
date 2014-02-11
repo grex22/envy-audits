@@ -2349,7 +2349,7 @@ input:-moz-placeholder { color:#bbb;font-size:14px; }
         color:white;
         border: 0;
         border-bottom:0;
-        background:darken($brightblue,10);
+        background:darken($brightblue,15);
         position:relative;
         
         &:after{
@@ -2357,7 +2357,7 @@ input:-moz-placeholder { color:#bbb;font-size:14px; }
           display:inline-block;
           width:12px;
           height:12px;
-          background:darken($brightblue,10);
+          background:darken($brightblue,15);
           position:absolute;
           transform: rotate(.125turn);
           -webkit-transform: rotate(45deg);
