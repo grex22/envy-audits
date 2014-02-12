@@ -23,7 +23,7 @@
                         <i class="icon-file-alt"></i> <span id="report_title_target">Small Transactions Report</span>
                         <div class="report_header_icon_actions">
                           <a href="#" id="report_favorite_toggle" data-toggle="tooltip" title="Favorite this Report"><i class="icon-star"></i></a>
-                          <div class="inline" style="position:relative">
+                          <div class="inline pos_rel">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
                                 <i class="icon-cog"></i>
                             </a>
@@ -37,7 +37,7 @@
                           </div>
                         </div>
                         <div class="report_header_tags pull-right">
-                          <i class="icon-tags"></i>
+                          <span style="font-size:11px;">Tagged:</span> 
                           <ul class="tags_list">
                             <li class="tag"><a href="#">Retail</a></li>
                             <li class="tag"><a href="#">Loss Prevention</a></li>
@@ -56,10 +56,29 @@
 
                         </div>
                       </div>
-                      <div class="span6">
-                        <i class="icon-search for_search_input"></i> <input type="text" class="typeahead" placeholder="Search employees and locations..." data-provide="typeahead" autocomplete="off">
+                      <div class="span7">
+                        <div class="input-append no_bottom_margin pos_rel">
+                          <i class="icon-search for_search_input"></i> <input type="text" id="mega_search" class="typeahead" placeholder="Search employees and locations..." data-provide="typeahead" autocomplete="off">
+                          <button class="btn big-secondary-btn">Browse <i class="icon-caret-down"></i></button>
+                          <div id="mega_search_typeahead">
+                            <div id="ajax_results">
+                              <ul>
+                                <li class="ms_item"><a href="#"><i class="icon-user"></i> <strong>Bran</strong>don Line</a></li>
+                                <li class="ms_item"><a href="#"><i class="icon-user"></i> Elaine <strong>Bran</strong>son</a></li>
+                                <li class="ms_item"><a href="#"><i class="icon-pushpin"></i> <strong>Bran</strong>ford</a></li>
+                              </ul>
+                            </div>
+                            <div class="ms_header">Recently Viewed</div>
+                            <ul>
+                              <li class="ms_item"><a href="#"><i class="icon-user"></i> Small Transactions - Steve Scott</a></li>
+                              <li class="ms_item"><a href="#"><i class="icon-user"></i> Small Transactions - Jerry Seinfeld</a></li>
+                              <li class="ms_item"><a href="#"><i class="icon-pushpin"></i> Small Transactions - Braintree</a></li>
+                              <li class="ms_item"><a href="#"><i class="icon-user"></i> Small Transactions - George Costanza</a></li>
+                            </ul>
+                          </div>
+                        </div>
                       </div>
-                      <div class="span4">
+                      <div class="span3">
                         <div id="report_daterange" class="report_jump_menu pull-right inline">
                           <i class="icon-calendar"></i> 
                             <span>Dec 1, 2013 - Dec 10, 2013</span>
@@ -122,7 +141,7 @@
                         
                         <div class="row-fluid more_bottom_margin">
                           <div class="span6">
-                            <h4 class="data_table_header no_bottom_margin"><a href="client-report-locations.php">Locations with the Most Small Transactions</a></h4>
+                            <h4 class="data_table_header"><a href="client-report-locations.php">Locations with the Most Small Transactions</a></h4>
                             <table class="table table-condensed">
                               <tbody>
                                 <tr>
@@ -158,7 +177,7 @@
                             </div>
                           </div>
                           <div class="span6">
-                          <h4 class="data_table_header  no_bottom_margin">
+                          <h4 class="data_table_header">
                           
                           <a href="client-report-employees.php">Employees with the Most Small Transactions</a>
                           </h4>
