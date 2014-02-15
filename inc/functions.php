@@ -14,17 +14,13 @@ function get_nav_menus(){
 
   $menu_array = array();
   switch($current_page):
+    case ("/envysion/auditor-dashboard.php"):
     case ("/envysion/auditor-scoring.php"):
       $menu_array = array(
-        array("auditor-dashboard.php","",'icon-tasks',"Dashboard"),
-        array("auditor-scoring.php","active",'icon-edit',"Score Samples"),
-      );
-      $brand_img = "panera";
-      break;
-    case ("/envysion/auditor-dashboard.php"):
-      $menu_array = array(
-        array("auditor-dashboard.php","active",'icon-tasks',"Dashboard"),
-        array("auditor-scoring.php","",'icon-edit',"Score Samples"),
+        array("index.php","",'icon-tasks',"Dashboard"),
+        array("watch-video.php","",'icon-play-circle',"Watch Video"),
+        array("client-report-detail.php","",'icon-bar-chart',"Intelligence"),
+        array("auditor-dashboard.php","active",'icon-bar-chart',"Audits")
       );
       $brand_img = "panera";
       break;
@@ -48,7 +44,8 @@ function get_nav_menus(){
       $menu_array = array(
         array("index.php","",'icon-tasks',"Dashboard"),
         array("watch-video.php","active",'icon-play-circle',"Watch Video"),
-        array("client-report-detail.php","",'icon-bar-chart',"Intelligence")
+        array("client-report-detail.php","",'icon-bar-chart',"Intelligence"),
+        array("auditor-dashboard.php","",'icon-bar-chart',"Audits")
       );
       $brand_img = "panera";
       break;       
@@ -56,7 +53,8 @@ function get_nav_menus(){
       $menu_array = array(
         array("index.php","active",'icon-tasks',"Dashboard"),
         array("watch-video.php","",'icon-play-circle',"Watch Video"),
-        array("client-report-detail.php","",'icon-bar-chart',"Intelligence")
+        array("client-report-detail.php","",'icon-bar-chart',"Intelligence"),
+        array("auditor-dashboard.php","",'icon-bar-chart',"Audits")
       );
       $brand_img = "vindaloohot";
       break;      
@@ -64,7 +62,8 @@ function get_nav_menus(){
       $menu_array = array(
         array("index.php","",'icon-tasks',"Dashboard"),
         array("watch-video.php","",'icon-play-circle',"Watch Video"),
-        array("client-report-detail.php","active",'icon-bar-chart',"Intelligence")
+        array("client-report-detail.php","active",'icon-bar-chart',"Intelligence"),
+        array("auditor-dashboard.php","",'icon-bar-chart',"Audits")
       );
       $brand_img = "vindaloohot";
       break;
@@ -72,7 +71,8 @@ function get_nav_menus(){
       $menu_array = array(
         array("index.php","active",'icon-tasks',"Dashboard"),
         array("watch-video.php","",'icon-play-circle',"Watch Video"),
-        array("client-report-detail.php","",'icon-bar-chart',"Intelligence")
+        array("client-report-detail.php","",'icon-bar-chart',"Intelligence"),
+        array("auditor-dashboard.php","",'icon-bar-chart',"Audits")
       );
       $brand_img = "panera";
       break;
